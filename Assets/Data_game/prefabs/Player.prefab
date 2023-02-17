@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 1275058783}
   - component: {fileID: 1275058786}
   - component: {fileID: 1275058785}
-  - component: {fileID: 1275058784}
+  - component: {fileID: 4877054471901426554}
   m_Layer: 7
   m_Name: swing effects_0
   m_TagString: Untagged
@@ -180,7 +180,7 @@ PolygonCollider2D:
       - {x: 0.07853269, y: -0.40625}
       - {x: 0.36137915, y: -0.04728268}
       - {x: 0.375, y: 0.40625}
---- !u!114 &1275058784
+--- !u!114 &4877054471901426554
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,13 +189,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1275058782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a2e86ba5f9ac8c459a4e9708c4c45c3, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a27ba28d93a09c418bc02701091a87c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damageToGive: 0
-  damageFromGive: 10
-  damageBurst: {fileID: 2754937975515831534, guid: 899ca98741a5fca47b1ffceabab15350, type: 3}
-  damageNumber: {fileID: 4713038738293079610, guid: c1c9e3505e92b5c498812e14ab3250ee, type: 3}
+  damageBurst: {fileID: 0}
+  damageNumber: {fileID: 0}
+  playerAttack: {fileID: 0}
 --- !u!1 &1412310490
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1495607914}
   - component: {fileID: 1495607915}
-  - component: {fileID: 1495607917}
+  - component: {fileID: 8335465448269326496}
   - component: {fileID: 1495607916}
   m_Layer: 0
   m_Name: Bullet
@@ -394,7 +394,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1495607917
+--- !u!114 &8335465448269326496
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -403,13 +403,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1495607913}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a2e86ba5f9ac8c459a4e9708c4c45c3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b044eaff9c27564c8d0a827ffccfd67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damageToGive: 0
-  damageFromGive: 20
-  damageBurst: {fileID: 2754937975515831534, guid: 899ca98741a5fca47b1ffceabab15350, type: 3}
-  damageNumber: {fileID: 4713038738293079610, guid: c1c9e3505e92b5c498812e14ab3250ee, type: 3}
+  damageBurst: {fileID: 0}
+  damageNumber: {fileID: 0}
+  playerAttack: {fileID: 0}
 --- !u!58 &1495607916
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -594,7 +594,7 @@ MonoBehaviour:
   toHpUp: 00000000000000000a000000140000001e00000028000000320000003c0000004600000050000000
   toAttackUp: 0000000000000000020000000400000005000000060000000700000008000000090000000a000000
   toLevelUp: 000000000a00000019000000280000005500000096000000130100009001000058020000e2040000
-  hurtEnemy: {fileID: 0}
+  playerAttack: {fileID: 0}
 --- !u!114 &2351792378862334908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,3 +648,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 437d92537c69835479ee6d331b56a66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageToGive: 0
+  damagePlayer: 10
