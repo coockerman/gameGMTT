@@ -2864,14 +2864,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 0}
+  playerCtrl: {fileID: 0}
   dialogActive: 0
   dialogNPC:
-  - 
-  - Xin chao!
-  - Toi la bean
-  - Toi den tu rung xanh
-  - 5
-  indexDialog: 
+  - 1
+  - "Xin ch\xE0o"
+  - "T\xF4i l\xE0 bean"
+  - "V\xE0 l\xE0 ch\u1EE7 c\u1EE7a ng\xF4i nh\xE0 n\xE0y"
+  - "B\u1EA1n c\xF3 mu\u1ED1n l\xE0m 1 ch\xE9n tr\xE0 kh\xF4ng"
+  - "B\u1EA1n b\u1EADn sao"
+  - "N\u1EBFu r\u1EA3nh h\xE3y c\xF9ng t\xF4i u\u1ED1ng 1 \u1EA5m tr\xE0 n\xF3ng
+    nh\xE9"
+  listDialog: 0000000001000000020000000500000006000000e8030000
+  listIndex: 0
   dialogIndex: 0
 --- !u!61 &1937908911
 BoxCollider2D:
@@ -2886,7 +2891,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.019499779, y: -0.6042137}
+  m_Offset: {x: -0.021678925, y: -0.23359871}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2897,5 +2902,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.63601494, y: 2.9451218}
+  m_Size: {x: 0.27912903, y: 3.0274773}
   m_EdgeRadius: 0

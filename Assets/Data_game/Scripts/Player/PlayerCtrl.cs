@@ -33,7 +33,8 @@ public class PlayerCtrl : MonoBehaviour
 
     public string StartPoint;
 
-    private bool playerMoving;
+    public bool moveActive = true;
+    public bool playerMoving;
     private Vector2 lastMove;
     void Start()
     {
@@ -57,11 +58,22 @@ public class PlayerCtrl : MonoBehaviour
 
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
-
+        GetInput();
     }
-
+    public void GetInput()
+    {
+        if (moveActive == true)
+        {
+            horizontal = Input.GetAxisRaw("Horizontal");
+            vertical = Input.GetAxisRaw("Vertical");
+        }
+        else
+        {
+            horizontal = 0;
+            vertical = 0;
+        }
+        
+    }
     private void FixedUpdate()
     {
         this.LoadAttack();
