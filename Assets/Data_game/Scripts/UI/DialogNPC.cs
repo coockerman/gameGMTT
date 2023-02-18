@@ -10,15 +10,15 @@ public class DialogNPC : MonoBehaviour
 
     public string[] dialogNPC;
     public int[] listDialog;
-    public int listIndex;
-    public int dialogIndex;
+    public static int listIndex = 0;
+    public static int dialogIndex = 0;
     // Start is called before the first frame update
     void Start()
     {
         dialogManager = FindObjectOfType<DialogManager>();
         playerCtrl = FindObjectOfType<PlayerCtrl>();
-        dialogIndex = 0;
-        listIndex = 0;
+        //dialogIndex = 0;
+        //listIndex = 0;
         dialogActive = false;
     }
 
@@ -56,7 +56,7 @@ public class DialogNPC : MonoBehaviour
             return;
         }
 
-        if (dialogActive == true && Input.GetKeyUp(KeyCode.R))
+        if (dialogActive == true && Input.GetKeyDown(KeyCode.R))
         {
             dialogIndex++;
             if (dialogIndex >= listDialog[listIndex + 1] || dialogIndex < 0 || dialogIndex >= dialogNPC.Length) return;

@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class LoadNewArea : MonoBehaviour
 {
-    public string leverToload;
+    public int leverToload;
 
     public string ExitMap;
 

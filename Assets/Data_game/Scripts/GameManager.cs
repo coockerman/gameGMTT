@@ -5,11 +5,20 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     protected float waitToReload = 2;
-
+    private static bool gameManager = false;
     public PlayerCtrl Player;
     private void Start()
     {
         Player = FindObjectOfType<PlayerCtrl>();
+        if (!gameManager)
+        {
+            gameManager = true;
+            DontDestroyOnLoad(transform.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     // Update is called once per frame
     void Update()

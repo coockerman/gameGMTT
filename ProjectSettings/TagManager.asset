@@ -66,3 +66,6 @@ TagManager:
   - name: abc
     uniqueID: 799320533
     locked: 0
+  - name: Layer5
+    uniqueID: 3628127029
+    locked: 0
