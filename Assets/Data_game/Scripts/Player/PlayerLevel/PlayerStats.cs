@@ -17,13 +17,17 @@ public class PlayerStats : MonoBehaviour
 
     public int[] toLevelUp;
 
+    public float[] toSpeedManaUp;
+
     private PlayerHearthManager playerHearth;
-    public PlayerAttackManager playerAttack;
+    private PlayerAttackManager playerAttack;
+    private PlayerManaManager playerMana;
     // Start is called before the first frame update
     void Start()
     {
-        playerHearth = FindObjectOfType<PlayerHearthManager>();
-        playerAttack = FindObjectOfType<PlayerAttackManager>();
+        playerHearth = GetComponent<PlayerHearthManager>();
+        playerAttack = GetComponent<PlayerAttackManager>();
+        playerMana = GetComponent<PlayerManaManager>();
     }
 
     
@@ -44,6 +48,7 @@ public class PlayerStats : MonoBehaviour
             currentExp = currentExpRedundant;
             playerHearth.UpHp(toHpUp[currentLevel]);
             playerAttack.UpDamage(toAttackUp[currentLevel]);
+            playerMana.UpSpeedCreateMana(toSpeedManaUp[currentLevel]);
         }
     }
     
