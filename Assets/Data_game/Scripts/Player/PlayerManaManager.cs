@@ -8,6 +8,7 @@ public class PlayerManaManager : MonoBehaviour
     public int playerCurrentMana;
 
     private int CurrentCreateMana = 1;
+    private float speedCreateMana = 1;
     private float TimeCreateMana = 1;
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class PlayerManaManager : MonoBehaviour
     public void CreateMana()
     {
         if (playerCurrentMana >= playerMaxMana) return;
-        TimeCreateMana -= Time.deltaTime;
+        TimeCreateMana -= (Time.deltaTime * speedCreateMana);
         if(TimeCreateMana<=0)
         {
             TimeCreateMana = 1;
@@ -54,5 +55,9 @@ public class PlayerManaManager : MonoBehaviour
     {
         if (playerCurrentMana >= 20) return true;
         return false;
+    }
+    public void UpSpeedCreateMana(float Speed)
+    {
+        speedCreateMana = Speed;
     }
 }
