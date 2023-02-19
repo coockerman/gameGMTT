@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class FloatingNumberPlayer : FloatingNumber
 {
-    public HurtPlayer damageInPlayer;
+    public PlayerHearthManager damageInPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
-        damageInPlayer = FindObjectOfType<HurtPlayer>();
-        damageNumber = damageInPlayer.damageToGive;
+        damageInPlayer = FindObjectOfType<PlayerHearthManager>();
+        damageNumber = damageInPlayer.MatDame;
     }
 
     // Update is called once per frame

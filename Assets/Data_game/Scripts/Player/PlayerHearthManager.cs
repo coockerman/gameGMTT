@@ -6,6 +6,7 @@ public class PlayerHearthManager : MonoBehaviour
 {
     public int playerMaxHealth;
     public int playerCurrentHealth;
+    public int MatDame;
 
     private bool flashActive = false;
     private int flashCount = 3;
@@ -69,6 +70,7 @@ public class PlayerHearthManager : MonoBehaviour
     }
     public void HurtPlayer(int damageToGive)
     {
+        MatDame = damageToGive;
         playerCurrentHealth -= damageToGive;
         flashActive = true;
         flashCount = 0;

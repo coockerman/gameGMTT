@@ -9,8 +9,8 @@ public class ExitGame : MonoBehaviour
     
     public void ButtonExitGame()
     {
-        SceneManager.UnloadScene(SceneManager.sceneCount);
-        //Application.Quit();
+        
+        Application.Quit();
         Debug.Log("a");
     }
 }

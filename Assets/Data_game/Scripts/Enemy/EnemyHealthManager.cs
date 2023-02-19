@@ -7,16 +7,16 @@ public class EnemyHealthManager : MonoBehaviour
     public float EnemyMaxHealth;
     public float EnemyCurrentHealth;
 
-    private PlayerStats thePlayerStats;
-
+    protected PlayerStats thePlayerStats;
     public int expToGive;
+    protected PointSpawn pointSpawn;
 
     // Start is called before the first frame update
     void Start()
     {
         SetMaxHealth();
-
         thePlayerStats = FindObjectOfType<PlayerStats>();
+        pointSpawn = FindObjectOfType<PointSpawn>();
     }
 
     // Update is called once per frame
@@ -29,14 +29,15 @@ public class EnemyHealthManager : MonoBehaviour
         if (EnemyCurrentHealth <= 0)
         {
             thePlayerStats.AddExperience(expToGive);
+            pointSpawn.SpawnEnemy(gameObject);
             Destroy(gameObject);
         }
     }
-    public void HurtEnemy(float damageToGive)
+    public virtual void HurtEnemy(float damageToGive)
     {
         EnemyCurrentHealth -= damageToGive;
     }
-    public void SetMaxHealth()
+    public virtual void SetMaxHealth()
     {
         EnemyCurrentHealth = EnemyMaxHealth;
     }
