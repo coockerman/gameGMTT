@@ -6,6 +6,7 @@ public class PlayerCtrl : MonoBehaviour
 {
     protected Rigidbody2D body;
     private Animator anim;
+    protected PlayerManaManager playerManaManager;
 
     protected float horizontal;
     protected float vertical;
@@ -41,6 +42,8 @@ public class PlayerCtrl : MonoBehaviour
         attackTime = 0.25f;
         skillOneTime = 0.6f;
         skillTwoTime = 0.6f;
+
+        playerManaManager = GetComponent<PlayerManaManager>();
 
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -141,10 +144,13 @@ public class PlayerCtrl : MonoBehaviour
     }
     protected virtual void LoadSkillOne()
     {
-        if (Input.GetKey(KeyCode.K) && skillOnePlay == false)
+        
+        if (Input.GetKey(KeyCode.K) && skillOnePlay == false && playerManaManager.GetStatusSkill1() == true)
         {
             skillOneTimeCount = skillOneTime;
             SkillOne();
+            playerManaManager.GiamMana(10);
+
         }
         if (skillOnePlay == false) return;
         skillOneTimeCount -= Time.fixedDeltaTime;
@@ -157,6 +163,7 @@ public class PlayerCtrl : MonoBehaviour
     }
     protected virtual void SkillOne()
     {
+        
         body.velocity = new Vector2(0, 0);
         anim.SetBool("SkillOne", true);
         skillOnePlay = true;
@@ -164,10 +171,12 @@ public class PlayerCtrl : MonoBehaviour
 
     protected virtual void LoadSkillTwo()
     {
-        if (Input.GetKey(KeyCode.L) && skillTwoPlay == false)
+        
+        if (Input.GetKey(KeyCode.L) && skillTwoPlay == false && playerManaManager.GetStatusSkill2() == true)
         {
             skillTwoTimeCount = skillTwoTime;
             SkillTwo();
+            playerManaManager.GiamMana(20);
         }
         if (skillTwoPlay == false) return;
         skillTwoTimeCount -= Time.fixedDeltaTime;
@@ -180,6 +189,7 @@ public class PlayerCtrl : MonoBehaviour
     }
     protected virtual void SkillTwo()
     {
+        
         body.velocity = new Vector2(0, 0);
         anim.SetBool("SkillTwo", true);
         skillTwoPlay = true;

@@ -442,6 +442,7 @@ GameObject:
   - component: {fileID: 2537379392012979540}
   - component: {fileID: 2351792378862334908}
   - component: {fileID: 6326252990224358063}
+  - component: {fileID: 9119249406096677834}
   - component: {fileID: 3003024832835564592}
   m_Layer: 6
   m_Name: Player
@@ -536,6 +537,8 @@ MonoBehaviour:
   currentRunSpeed: 0
   diagonalMoveModifier: 0.75
   StartPoint: 
+  moveActive: 1
+  playerMoving: 0
 --- !u!50 &6326252990224358035
 Rigidbody2D:
   serializedVersion: 4
@@ -636,6 +639,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.45026404, y: 0.81085443}
   m_EdgeRadius: 0
+--- !u!114 &9119249406096677834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6326252990224358039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89cfe4dcd7a589c4988db6b19360e7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMaxMana: 50
+  playerCurrentMana: 0
 --- !u!114 &3003024832835564592
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,14 +7,16 @@ using UnityEngine.UI;
 public class UiManagerPlayer : UiManager
 {
     public PlayerHearthManager HealthObject;
+    public PlayerManaManager manaObject;
     public TextMeshProUGUI HPText;
-
+    public TextMeshProUGUI ManaText;
     private static bool UiExits = false;
 
     // Start is called before the first frame update
     void Start()
     {
         HealthObject = FindObjectOfType<PlayerHearthManager>();
+        manaObject= FindObjectOfType<PlayerManaManager>();
         healthBar.maxValue = HealthObject.playerMaxHealth;
 
         if (!UiExits)
@@ -32,11 +34,18 @@ public class UiManagerPlayer : UiManager
     void Update()
     {
         NowHealth();
+        NowMana();
     }
     protected override void NowHealth()
     {
         healthBar.maxValue = HealthObject.playerMaxHealth;
         healthBar.value = HealthObject.playerCurrentHealth;
         HPText.text = "HP: " + HealthObject.playerCurrentHealth + "/" + HealthObject.playerMaxHealth;
+    }
+    protected override void NowMana()
+    {
+        manaBar.maxValue = manaObject.playerMaxMana;
+        manaBar.value = manaObject.playerCurrentMana;
+        ManaText.text = "Mana: " + manaObject.playerCurrentMana + "/" + manaObject.playerMaxMana;
     }
 }

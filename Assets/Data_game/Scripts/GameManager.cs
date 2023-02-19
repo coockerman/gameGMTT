@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour
         if(waitToReload < 0)
         {
             waitToReload = 2;
-            Application.LoadLevel(Application.loadedLevel);
+            SceneManager.LoadScene(SceneManager.sceneCount-1);
             Player.transform.gameObject.SetActive(true);
 
         }
