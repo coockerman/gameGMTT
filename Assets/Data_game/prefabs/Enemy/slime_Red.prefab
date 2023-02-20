@@ -406,7 +406,6 @@ MonoBehaviour:
   EnemyMaxHealth: 50
   EnemyCurrentHealth: 0
   expToGive: 15
-  bloodRecovery: {fileID: 956220233630913494, guid: 0948bf984273b4c4a8223c549332821d, type: 3}
 --- !u!58 &3147431742016148874
 CircleCollider2D:
   m_ObjectHideFlags: 0

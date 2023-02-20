@@ -11,7 +11,6 @@ public class UiManagerEnemy : UiManager
     {
         HealthObject = gameObject.GetComponent<EnemyHealthManager>();
 
-        healthBar.maxValue = HealthObject.EnemyMaxHealth;
     }
 
     // Update is called once per frame
@@ -21,6 +20,7 @@ public class UiManagerEnemy : UiManager
     }
     protected override void NowHealth()
     {
+        healthBar.maxValue = HealthObject.EnemyMaxHealth;
         healthBar.value = HealthObject.EnemyCurrentHealth;
     }
 }

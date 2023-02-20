@@ -290,14 +290,14 @@ GameObject:
   - component: {fileID: 3147431742016148871}
   - component: {fileID: 3147431742016148876}
   - component: {fileID: 3147431742016148875}
-  - component: {fileID: 6453612164258221570}
+  - component: {fileID: 2278889143564900570}
   - component: {fileID: 3147431742016148874}
   - component: {fileID: 3147431742016148873}
   - component: {fileID: 3147431742016148872}
   - component: {fileID: -8089384406001030714}
   - component: {fileID: 7914874716073409439}
   m_Layer: 0
-  m_Name: slime_Red
+  m_Name: slime_Blue
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,7 +310,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3147431742016148870}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.7, y: -3.21, z: 0.53327}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -361,7 +361,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -1284785793, guid: 245aa9e6569f201478e005c19d3ec8bf, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.24836831, g: 0.48032075, b: 0.8584906, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -391,7 +391,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &6453612164258221570
+--- !u!114 &2278889143564900570
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -403,10 +403,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40aa2729a4149c4e80637bf64310f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyMaxHealth: 50
+  EnemyMaxHealth: 600
   EnemyCurrentHealth: 0
-  expToGive: 15
-  bloodRecovery: {fileID: 956220233630913494, guid: 0948bf984273b4c4a8223c549332821d, type: 3}
+  expToGive: 200
 --- !u!58 &3147431742016148874
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -456,7 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75670af73ddcd945889dd6f55a65831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 5
   timeBetweenMove: 2
   timeToMove: 2
 --- !u!114 &-8089384406001030714
@@ -471,7 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1269adcb68d42e8439b2285c0b0f4a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 8
+  damageToGive: 60
   damageNumber: {fileID: 4713038738293079610, guid: 262ef7bcc995bf1458811432f0a65ca4, type: 3}
   playerHearth: {fileID: 2351792378862334908, guid: 599f8c9d816ad2c47b858ae695627eed, type: 3}
 --- !u!114 &7914874716073409439
@@ -488,7 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 3454988652723343305}
   manaBar: {fileID: 0}
-  HealthObject: {fileID: 6453612164258221570}
+  HealthObject: {fileID: 2278889143564900570}
 --- !u!1 &5267642733615487796
 GameObject:
   m_ObjectHideFlags: 0

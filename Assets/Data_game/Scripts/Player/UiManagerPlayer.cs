@@ -46,6 +46,6 @@ public class UiManagerPlayer : UiManager
     {
         manaBar.maxValue = manaObject.playerMaxMana;
         manaBar.value = manaObject.playerCurrentMana;
-        ManaText.text = "Mana: " + manaObject.playerCurrentMana + "/" + manaObject.playerMaxMana;
+        ManaText.text = "KI: " + manaObject.playerCurrentMana + "/" + manaObject.playerMaxMana;
     }
 }

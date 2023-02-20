@@ -10,10 +10,14 @@ public class CameraCtrl : MonoBehaviour
 
     private static bool cameraExists = false;
 
+    private void Awake()
+    {
+        moveSpeed = 5;
+
+    }
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = 1;
         //DontDestroyOnLoad(transform.gameObject);
         if(!cameraExists)
         {

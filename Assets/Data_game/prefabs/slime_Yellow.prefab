@@ -422,6 +422,7 @@ MonoBehaviour:
   EnemyMaxHealth: 150
   EnemyCurrentHealth: 0
   expToGive: 50
+  bloodRecovery: {fileID: 956220233630913494, guid: 0948bf984273b4c4a8223c549332821d, type: 3}
 --- !u!50 &3147431742016148873
 Rigidbody2D:
   serializedVersion: 4

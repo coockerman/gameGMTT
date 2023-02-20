@@ -9,14 +9,14 @@ public class EnemyHealthManager : MonoBehaviour
 
     protected PlayerStats thePlayerStats;
     public int expToGive;
-    protected PointSpawn pointSpawn;
 
+    public GameObject bloodRecovery;
+    protected int ratio;
     // Start is called before the first frame update
     void Start()
     {
         SetMaxHealth();
         thePlayerStats = FindObjectOfType<PlayerStats>();
-        pointSpawn = FindObjectOfType<PointSpawn>();
     }
 
     // Update is called once per frame
@@ -29,9 +29,25 @@ public class EnemyHealthManager : MonoBehaviour
         if (EnemyCurrentHealth <= 0)
         {
             thePlayerStats.AddExperience(expToGive);
-            pointSpawn.SpawnEnemy(gameObject);
-            Destroy(gameObject);
+            DropHealingItem();
+            Invoke("HoiSinhEnemy", 3);
+
+            gameObject.SetActive(false);
         }
+    }
+    protected virtual void DropHealingItem()
+    {
+        ratio = Random.Range(1, 10);
+        if(ratio <= 3)
+        {
+            Instantiate(bloodRecovery, transform.position, transform.rotation);
+        }
+    }
+    protected virtual void HoiSinhEnemy()
+    {
+        gameObject.SetActive(true);
+        EnemyMaxHealth *= 1.2f;
+        EnemyCurrentHealth = EnemyMaxHealth;
     }
     public virtual void HurtEnemy(float damageToGive)
     {
