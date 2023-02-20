@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     protected float waitToReload = 2;
     private static bool gameManager = false;
     public PlayerCtrl Player;
+    
     private void Start()
     {
         Player = FindObjectOfType<PlayerCtrl>();

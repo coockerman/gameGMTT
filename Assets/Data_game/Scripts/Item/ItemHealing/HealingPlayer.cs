@@ -6,10 +6,13 @@ public class HealingPlayer : MonoBehaviour
 {
     protected int healing;
     protected PlayerHearthManager playerHearth;
+    private void Awake()
+    {
+        playerHearth = FindObjectOfType<PlayerHearthManager>();
+    }
     private void Start()
     {
-        healing = 20;
-        playerHearth = FindObjectOfType<PlayerHearthManager>();
+        healing = 5;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

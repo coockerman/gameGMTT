@@ -12,11 +12,15 @@ public class UiManagerPlayer : UiManager
     public TextMeshProUGUI ManaText;
     private static bool UiExits = false;
 
+    private void Awake()
+    {
+        HealthObject = FindObjectOfType<PlayerHearthManager>();
+        manaObject = FindObjectOfType<PlayerManaManager>();
+    }
     // Start is called before the first frame update
     void Start()
     {
-        HealthObject = FindObjectOfType<PlayerHearthManager>();
-        manaObject= FindObjectOfType<PlayerManaManager>();
+        
         healthBar.maxValue = HealthObject.playerMaxHealth;
 
         if (!UiExits)

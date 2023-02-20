@@ -12,11 +12,16 @@ public class EnemyHealthManager : MonoBehaviour
 
     public GameObject bloodRecovery;
     protected int ratio;
+
+    private void Awake()
+    {
+        thePlayerStats = FindObjectOfType<PlayerStats>();
+
+    }
     // Start is called before the first frame update
     void Start()
     {
         SetMaxHealth();
-        thePlayerStats = FindObjectOfType<PlayerStats>();
     }
 
     // Update is called once per frame

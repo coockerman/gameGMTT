@@ -8,8 +8,6 @@ public class DialogManager : MonoBehaviour
     public GameObject dBox;
     public TextMeshProUGUI dText;
 
-    
-
     public string dialogText;
     
 

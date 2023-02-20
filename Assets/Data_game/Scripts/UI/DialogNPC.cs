@@ -10,24 +10,23 @@ public class DialogNPC : MonoBehaviour
 
     public string[] dialogNPC;
     public int[] listDialog;
-    public static int listIndex = 0;
-    public static int dialogIndex = 0;
-    // Start is called before the first frame update
-    void Start()
+    public int listIndex = 0;
+    public int dialogIndex = 0;
+    private void Awake()
     {
         dialogManager = FindObjectOfType<DialogManager>();
         playerCtrl = FindObjectOfType<PlayerCtrl>();
-        //dialogIndex = 0;
-        //listIndex = 0;
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        
         dialogActive = false;
     }
-
     // Update is called once per frame
     void Update()
     {
-
         SetActiveDialog();
-
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -69,3 +68,5 @@ public class DialogNPC : MonoBehaviour
 
     }
 }
+
+

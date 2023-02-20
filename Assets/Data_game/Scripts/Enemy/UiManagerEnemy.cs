@@ -5,13 +5,13 @@ using UnityEngine.UI;
 public class UiManagerEnemy : UiManager
 {
     public EnemyHealthManager HealthObject;
-    
-    // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
         HealthObject = gameObject.GetComponent<EnemyHealthManager>();
 
     }
+    
 
     // Update is called once per frame
     void Update()

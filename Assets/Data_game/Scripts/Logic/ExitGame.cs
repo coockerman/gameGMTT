@@ -9,8 +9,7 @@ public class ExitGame : MonoBehaviour
     
     public void ButtonExitGame()
     {
-        
         Application.Quit();
-        Debug.Log("a");
+
     }
 }
