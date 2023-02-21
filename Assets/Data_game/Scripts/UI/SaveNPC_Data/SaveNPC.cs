@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class SaveNPC : MonoBehaviour
+public class SaveNPC : MonoBehaviour
 {
     protected string SAVE_1 = "";
     protected string SAVE_2 = "";
@@ -13,7 +13,11 @@ public abstract class SaveNPC : MonoBehaviour
         //PlayerPrefs.DeleteAll();
         LoadStringSave();
     }
-    protected abstract void LoadStringSave();
+    protected virtual void LoadStringSave()
+    {
+        SAVE_1 = "listIndex" + gameObject.name;
+        SAVE_2 = "dialogIndex" + gameObject.name;
+    }
     private void Start()
     {
         dialogNPC = GetComponent<DialogNPC>();
