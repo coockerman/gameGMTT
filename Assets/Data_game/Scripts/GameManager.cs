@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     
     private void Start()
     {
+        
         Player = FindObjectOfType<PlayerCtrl>();
         if (!gameManager)
         {
@@ -21,18 +22,25 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
     }
     // Update is called once per frame
     void Update()
     {
+        HoiSinh();
+    }
+    protected virtual void HoiSinh()
+    {
         if (Player.transform.gameObject.active == true) return;
         waitToReload -= Time.deltaTime;
-        if(waitToReload < 0)
+        if (waitToReload < 0)
         {
             waitToReload = 2;
-            SceneManager.LoadScene(SceneManager.sceneCount-1);
+            SceneManager.LoadScene(SceneManager.sceneCount - 1);
             Player.transform.gameObject.SetActive(true);
 
         }
     }
+
+    
 }
