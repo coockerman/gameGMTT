@@ -13,7 +13,6 @@ public class DialogManager : MonoBehaviour
 
     public void Start()
     {
-       
     }
     public void Update()
     {

@@ -12,7 +12,9 @@ public class EnemyHealthManager : MonoBehaviour
     public int expToGive;
 
     public GameObject bloodRecovery;
+    public GameObject VP1;
     protected int ratio;
+    protected int ratioVP1;
 
     private void Awake()
     {
@@ -47,9 +49,13 @@ public class EnemyHealthManager : MonoBehaviour
     protected virtual void DropHealingItem()
     {
         ratio = Random.Range(1, 10);
-        if(ratio <= 3)
+        if (ratio <= 3)
         {
             Instantiate(bloodRecovery, transform.position, transform.rotation);
+        }
+        else if (ratio <= 6)
+        {
+            Instantiate(VP1, transform.position, transform.rotation);
         }
     }
     protected virtual void HoiSinhEnemy()
@@ -58,7 +64,7 @@ public class EnemyHealthManager : MonoBehaviour
         EnemyUpHealth += EnemyMaxHealth * 0.2f;
         PlayerPrefs.SetFloat("enemyUpHealth" + gameObject.name, EnemyUpHealth);
         EnemyMaxHealth *= 1.2f;
-        
+
         EnemyCurrentHealth = EnemyMaxHealth;
     }
     public virtual void HurtEnemy(float damageToGive)

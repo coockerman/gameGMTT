@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     
     private void Start()
     {
-        
+        //PlayerPrefs.DeleteAll();
         Player = FindObjectOfType<PlayerCtrl>();
         if (!gameManager)
         {

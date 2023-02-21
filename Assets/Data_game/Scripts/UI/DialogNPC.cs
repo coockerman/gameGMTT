@@ -24,7 +24,6 @@ public class DialogNPC : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //PlayerPrefs.DeleteAll();
         listIndex = PlayerPrefs.GetInt(SAVE_1);
         dialogIndex = PlayerPrefs.GetInt(SAVE_2);
         dialogActive = false;
