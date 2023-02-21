@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DialogNPC : MonoBehaviour
 {
+    protected string SAVE_1 = "";
+    protected string SAVE_2 = "";
+
     public DialogManager dialogManager;
     public PlayerCtrl playerCtrl;
     public bool dialogActive;
@@ -16,19 +19,32 @@ public class DialogNPC : MonoBehaviour
     {
         dialogManager = FindObjectOfType<DialogManager>();
         playerCtrl = FindObjectOfType<PlayerCtrl>();
+        LoadStringSave();
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        //PlayerPrefs.DeleteAll();
+        listIndex = PlayerPrefs.GetInt(SAVE_1);
+        dialogIndex = PlayerPrefs.GetInt(SAVE_2);
         dialogActive = false;
     }
     // Update is called once per frame
     void Update()
     {
         SetActiveDialog();
+        //SetData();
     }
-
+    protected virtual void LoadStringSave()
+    {
+        SAVE_1 = "listIndex" + gameObject.name;
+        SAVE_2 = "dialogIndex" + gameObject.name;
+    }
+    protected virtual void SetData()
+    {
+        PlayerPrefs.SetInt(SAVE_1, listIndex);
+        PlayerPrefs.SetInt(SAVE_2, dialogIndex);
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.R))
@@ -49,6 +65,7 @@ public class DialogNPC : MonoBehaviour
             if (dialogIndex >= dialogNPC.Length) --listIndex;
 
             listIndex++;
+            SetData();
             dialogActive = false;
             playerCtrl.moveActive = true;
             dialogManager.CloseBox();

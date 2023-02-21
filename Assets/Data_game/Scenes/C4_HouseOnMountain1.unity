@@ -11248,6 +11248,8 @@ GameObject:
   - component: {fileID: 1384996953}
   - component: {fileID: 1384996954}
   - component: {fileID: 1384996955}
+  - component: {fileID: 1384996956}
+  - component: {fileID: 1384996957}
   m_Layer: 0
   m_Name: atan_3
   m_TagString: Untagged
@@ -11333,7 +11335,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.046886206, y: -0.23443079}
@@ -11349,6 +11351,50 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1875434, y: 1.5311384}
   m_EdgeRadius: 0
+--- !u!95 &1384996956
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384996952}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9f357a9ada9f1d34aa7beefdd39fd9ef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1384996957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384996952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0790bbf5c4d08014f872ed3fe43fec2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogManager: {fileID: 0}
+  playerCtrl: {fileID: 0}
+  dialogActive: 0
+  dialogNPC:
+  - "Xin Ch\xE0o!"
+  - "Ta l\xE0 Atan"
+  - "Ta c\xF3 mang theo nhi\u1EC1u lo\u1EA1i kho b\xE1u"
+  - "C\xF3 ti\u1EC1n th\xEC h\xE3y g\u1EB7p ta"
+  - "Nh\u1EA5n Y \u0111\u1EC3 mua b\xE1n"
+  listDialog: 00000000010000000200000003000000e7030000
+  listIndex: 0
+  dialogIndex: 0
 --- !u!1 &1451261004
 GameObject:
   m_ObjectHideFlags: 0
@@ -14392,7 +14438,7 @@ GameObject:
   - component: {fileID: 1858570540}
   - component: {fileID: 1858570539}
   - component: {fileID: 1858570538}
-  - component: {fileID: 1858570541}
+  - component: {fileID: 1858570542}
   m_Layer: 0
   m_Name: AnTrom_3
   m_TagString: Untagged
@@ -14523,18 +14569,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1858570541
-MonoBehaviour:
+--- !u!95 &1858570542
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858570536}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c1447999440a404789fa3c73afc3d23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 76ee64e9ab7caef478466c18bcd282fa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1943516464
 GameObject:
   m_ObjectHideFlags: 0
@@ -14546,8 +14600,8 @@ GameObject:
   - component: {fileID: 1943516465}
   - component: {fileID: 1943516468}
   - component: {fileID: 1943516467}
-  - component: {fileID: 1943516470}
   - component: {fileID: 1943516469}
+  - component: {fileID: 1943516471}
   m_Layer: 0
   m_Name: Brum_3
   m_TagString: Untagged
@@ -14674,18 +14728,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.593486, y: 1.9703274}
   m_EdgeRadius: 0
---- !u!114 &1943516470
-MonoBehaviour:
+--- !u!95 &1943516471
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943516464}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c1447999440a404789fa3c73afc3d23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e12d5676afbbcae449c83eecb7c6a9f1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1958337561
 GameObject:
   m_ObjectHideFlags: 0
