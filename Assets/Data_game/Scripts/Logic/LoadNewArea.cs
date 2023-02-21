@@ -11,7 +11,6 @@ public class LoadNewArea : MonoBehaviour
     public string ExitMap;
 
     private PlayerCtrl thePlayer;
-    
     private void Start()
     {
         thePlayer = FindObjectOfType<PlayerCtrl>();

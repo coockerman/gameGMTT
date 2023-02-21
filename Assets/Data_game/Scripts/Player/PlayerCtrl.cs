@@ -35,6 +35,7 @@ public class PlayerCtrl : MonoBehaviour
     public string StartPoint;
 
     public bool moveActive = true;
+    public bool moveActiveBag = true;
     public bool playerMoving;
     private Vector2 lastMove;
     void Start()
@@ -65,7 +66,7 @@ public class PlayerCtrl : MonoBehaviour
     }
     public void GetInput()
     {
-        if (moveActive == true)
+        if (moveActive == true && moveActiveBag == true)
         {
             horizontal = Input.GetAxisRaw("Horizontal");
             vertical = Input.GetAxisRaw("Vertical");
@@ -79,6 +80,7 @@ public class PlayerCtrl : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        
         this.LoadAttack();
         this.LoadSkillOne();
         this.LoadSkillTwo();
@@ -121,6 +123,7 @@ public class PlayerCtrl : MonoBehaviour
 
     protected virtual void LoadAttack()
     {
+        if (moveActive == false || moveActiveBag == false) return;
         if (Input.GetKey(KeyCode.J) && attacking == false)
         {
             attackTimeCount = attackTime;
@@ -144,7 +147,8 @@ public class PlayerCtrl : MonoBehaviour
     }
     protected virtual void LoadSkillOne()
     {
-        
+        if (moveActive == false || moveActiveBag == false) return;
+
         if (Input.GetKey(KeyCode.K) && skillOnePlay == false && playerManaManager.GetStatusSkill1() == true)
         {
             skillOneTimeCount = skillOneTime;
@@ -171,7 +175,8 @@ public class PlayerCtrl : MonoBehaviour
 
     protected virtual void LoadSkillTwo()
     {
-        
+        if (moveActive == false || moveActiveBag == false) return;
+
         if (Input.GetKey(KeyCode.L) && skillTwoPlay == false && playerManaManager.GetStatusSkill2() == true)
         {
             skillTwoTimeCount = skillTwoTime;
