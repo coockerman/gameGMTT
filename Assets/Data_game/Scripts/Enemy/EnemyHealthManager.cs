@@ -23,7 +23,7 @@ public class EnemyHealthManager : MonoBehaviour
     void Start()
     {
         EnemyUpHealth = PlayerPrefs.GetFloat("enemyUpHealth" + gameObject.name);
-        EnemyMaxHealth += EnemyUpHealth;
+        EnemyMaxHealth = EnemyMaxHealth + EnemyUpHealth;
         EnemyCurrentHealth = EnemyMaxHealth;
         SetMaxHealth();
     }
@@ -55,7 +55,7 @@ public class EnemyHealthManager : MonoBehaviour
     protected virtual void HoiSinhEnemy()
     {
         gameObject.SetActive(true);
-        EnemyUpHealth += EnemyMaxHealth *= 0.2f;
+        EnemyUpHealth += EnemyMaxHealth * 0.2f;
         PlayerPrefs.SetFloat("enemyUpHealth" + gameObject.name, EnemyUpHealth);
         EnemyMaxHealth *= 1.2f;
         
