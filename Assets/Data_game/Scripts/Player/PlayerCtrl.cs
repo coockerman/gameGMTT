@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
@@ -36,6 +37,7 @@ public class PlayerCtrl : MonoBehaviour
 
     public bool moveActive = true;
     public bool moveActiveBag = true;
+    public bool moveActiveMission = true;
     public bool playerMoving;
     private Vector2 lastMove;
     void Start()
@@ -66,7 +68,7 @@ public class PlayerCtrl : MonoBehaviour
     }
     public void GetInput()
     {
-        if (moveActive == true && moveActiveBag == true)
+        if (moveActive == true && moveActiveBag == true && moveActiveMission == true)
         {
             horizontal = Input.GetAxisRaw("Horizontal");
             vertical = Input.GetAxisRaw("Vertical");
@@ -76,15 +78,16 @@ public class PlayerCtrl : MonoBehaviour
             horizontal = 0;
             vertical = 0;
         }
-        
+
     }
+
     private void FixedUpdate()
     {
-        
+
         this.LoadAttack();
         this.LoadSkillOne();
         this.LoadSkillTwo();
-        if (attacking == true || skillOnePlay == true || skillTwoPlay == true ) return;
+        if (attacking == true || skillOnePlay == true || skillTwoPlay == true) return;
         this.GetMoving();
         this.SetMoveInAnim();
         this.SetPosition();
@@ -123,7 +126,7 @@ public class PlayerCtrl : MonoBehaviour
 
     protected virtual void LoadAttack()
     {
-        if (moveActive == false || moveActiveBag == false) return;
+        if (moveActive == false || moveActiveBag == false || moveActiveMission == false) return;
         if (Input.GetKey(KeyCode.J) && attacking == false)
         {
             attackTimeCount = attackTime;
@@ -147,8 +150,11 @@ public class PlayerCtrl : MonoBehaviour
     }
     protected virtual void LoadSkillOne()
     {
-        if (moveActive == false || moveActiveBag == false) return;
-
+        if (moveActive == false || moveActiveBag == false || moveActiveMission == false) return;
+        if (Input.GetKeyDown(KeyCode.K) && playerManaManager.playerCurrentMana < 10)
+        {
+            playerManaManager.HetMana();
+        }
         if (Input.GetKey(KeyCode.K) && skillOnePlay == false && playerManaManager.GetStatusSkill1() == true)
         {
             skillOneTimeCount = skillOneTime;
@@ -167,7 +173,7 @@ public class PlayerCtrl : MonoBehaviour
     }
     protected virtual void SkillOne()
     {
-        
+
         body.velocity = new Vector2(0, 0);
         anim.SetBool("SkillOne", true);
         skillOnePlay = true;
@@ -175,8 +181,11 @@ public class PlayerCtrl : MonoBehaviour
 
     protected virtual void LoadSkillTwo()
     {
-        if (moveActive == false || moveActiveBag == false) return;
-
+        if (moveActive == false || moveActiveBag == false || moveActiveMission == false) return;
+        if (Input.GetKeyDown(KeyCode.L) && playerManaManager.GetStatusSkill2() == false)
+        {
+            playerManaManager.HetMana();
+        }
         if (Input.GetKey(KeyCode.L) && skillTwoPlay == false && playerManaManager.GetStatusSkill2() == true)
         {
             skillTwoTimeCount = skillTwoTime;
@@ -194,9 +203,11 @@ public class PlayerCtrl : MonoBehaviour
     }
     protected virtual void SkillTwo()
     {
-        
+
         body.velocity = new Vector2(0, 0);
         anim.SetBool("SkillTwo", true);
         skillTwoPlay = true;
     }
+
+
 }

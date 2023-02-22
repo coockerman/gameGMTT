@@ -17,6 +17,5 @@ public class FloatingNumberEnemy : FloatingNumber
     void Update()
     {
         displayNumber.text = "" + damageNumber;
-        transform.position = new Vector3(transform.position.x, transform.position.y + moveSpeed * Time.deltaTime, 0);
     }
 }

@@ -19,11 +19,7 @@ public class HealingPlayer : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            playerHearth.playerCurrentHealth = playerHearth.playerCurrentHealth + healing;
-            if(playerHearth.playerCurrentHealth > playerHearth.playerMaxHealth)
-            {
-                playerHearth.playerCurrentHealth = playerHearth.playerMaxHealth;
-            }
+            playerHearth.HoiHp(healing);
             Destroy(gameObject);
         }
     }

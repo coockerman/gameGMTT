@@ -85,4 +85,10 @@ public class PlayerHearthManager : MonoBehaviour
         playerCurrentHealth += UpHp;
         playerMaxHealth += UpHp;
     }
+    public void HoiHp(int hoiHp)
+    {
+        playerCurrentHealth += hoiHp;
+        if (playerCurrentHealth > playerMaxHealth)
+            SetMaxHealth();
+    }
 }

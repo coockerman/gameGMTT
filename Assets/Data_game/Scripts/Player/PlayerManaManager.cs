@@ -10,6 +10,8 @@ public class PlayerManaManager : MonoBehaviour
     private int CurrentCreateMana = 1;
     private float speedCreateMana = 1;
     private float TimeCreateMana = 1;
+
+    public GameObject textHetMana;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,18 +48,28 @@ public class PlayerManaManager : MonoBehaviour
     {
         playerCurrentMana -= giamMana;
     }
+    public void HoiMana(int hoiMana)
+    {
+        playerCurrentMana += hoiMana;
+        if (playerCurrentMana > playerMaxMana) 
+            SetMaxMana();
+    }
     public bool GetStatusSkill1()
     {
-        if (playerCurrentMana >= 10) return true;
-        return false;
+        if (playerCurrentMana < 10) return false;
+        else return true;
     }
     public bool GetStatusSkill2()
     {
-        if (playerCurrentMana >= 20) return true;
-        return false;
+        if (playerCurrentMana < 20) return false;
+        else return true;
     }
     public void UpSpeedCreateMana(float Speed)
     {
         speedCreateMana = Speed;
+    }
+    public void HetMana()
+    {
+        Instantiate(textHetMana, transform.position, transform.rotation);
     }
 }

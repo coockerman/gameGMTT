@@ -1,21 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class BagManeger : MonoBehaviour
+public class CanvasManager : MonoBehaviour
 {
     public PlayerCtrl playerCtrl;
     public GameObject bag;
+    public GameObject mission;
     public int sceneNow;
     private void Awake()
     {
         playerCtrl = FindObjectOfType<PlayerCtrl>();
+
+    }
+    private void Start()
+    {
     }
     private void Update()
     {
         ChangeBagStatus();
+        ChangeMissionStatus();
     }
     public void ChangeBagStatus()
     {
@@ -40,4 +47,30 @@ public class BagManeger : MonoBehaviour
         playerCtrl.moveActiveBag = true;
         bag.SetActive(false);
     }
+
+    public void ChangeMissionStatus()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (mission.gameObject.active == false)
+            {
+                OnMission();
+            }
+            else
+            {
+                OffMission();
+            }
+        }
+    }
+    public void OnMission()
+    {
+        playerCtrl.moveActiveMission = false;
+        mission.SetActive(true);
+    }
+    public void OffMission()
+    {
+        playerCtrl.moveActiveMission = true;
+        mission.SetActive(false);
+    }
+
 }

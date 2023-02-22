@@ -9,13 +9,36 @@ public class SavePosition : MonoBehaviour
     private string dataPositonX = "DataPositionx";
     private string dataPositonY = "DataPositiony";
     private string dataScene = "DataScene";
+    protected PlayerManaManager playerMana;
+    protected int manaLoadPosition;
+    private void Awake()
+    {
+        playerMana= GetComponent<PlayerManaManager>();
+    }
+    private void Start()
+    {
+        manaLoadPosition = 100;
+
+    }
     private void Update()
     {
         ControlSave();
     }
     protected virtual void ControlSave()
     {
-        if (Input.GetKeyDown(KeyCode.Y)) LoadDataPosition();
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            if(playerMana.playerCurrentMana >= manaLoadPosition)
+            {
+                playerMana.GiamMana(manaLoadPosition);
+                LoadDataPosition();
+            }
+            else
+            {
+                playerMana.HetMana();
+            }
+        }
+        
         if (Input.GetKeyDown(KeyCode.T)) SaveDataPosition();
     }
     protected virtual void LoadDataPosition()
