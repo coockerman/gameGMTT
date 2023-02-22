@@ -48,7 +48,14 @@ public class SavePosition : MonoBehaviour
             SceneManager.LoadScene(PlayerPrefs.GetInt(dataScene));
 
         }
-        gameObject.transform.position = new Vector3(PlayerPrefs.GetFloat(dataPositonX), PlayerPrefs.GetFloat(dataPositonY), 0);
+        if(PlayerPrefs.GetFloat(dataPositonX)==0 && PlayerPrefs.GetFloat(dataPositonY)==0)
+        {
+            gameObject.transform.position = new Vector3(-10, 18, 0);
+        }
+        else
+        {
+            gameObject.transform.position = new Vector3(PlayerPrefs.GetFloat(dataPositonX), PlayerPrefs.GetFloat(dataPositonY), 0);
+        }
     }
     protected virtual void SaveDataPosition()
     {

@@ -8,7 +8,7 @@ public class PlayerManaManager : MonoBehaviour
     public int playerCurrentMana;
 
     private int CurrentCreateMana = 1;
-    private float speedCreateMana = 1;
+    public float speedCreateMana = 1;
     private float TimeCreateMana = 1;
 
     public GameObject textHetMana;
@@ -16,6 +16,7 @@ public class PlayerManaManager : MonoBehaviour
     void Start()
     {
         SetMaxMana();
+
     }
 
     // Update is called once per frame
@@ -37,6 +38,10 @@ public class PlayerManaManager : MonoBehaviour
     public void SetMaxMana()
     {
         playerCurrentMana = playerMaxMana;
+        if (PlayerPrefs.GetFloat("playerManaSpeed") != 0) speedCreateMana = PlayerPrefs.GetFloat("playerManaSpeed");
+        //else speedCreateMana = 1;
+
+        //speedCreateMana = PlayerPrefs.GetInt("playerManaSpeed");
     }
 
     public void UpMana(int UpMana)
@@ -67,6 +72,7 @@ public class PlayerManaManager : MonoBehaviour
     public void UpSpeedCreateMana(float Speed)
     {
         speedCreateMana = Speed;
+        //PlayerPrefs.SetFloat("playerManaSpeed", speedCreateMana);
     }
     public void HetMana()
     {

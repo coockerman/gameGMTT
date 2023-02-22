@@ -19,6 +19,7 @@ public class PlayerStats : MonoBehaviour
 
     public float[] toSpeedManaUp;
 
+    public float[] toManaUp;
     private PlayerHearthManager playerHearth;
     private PlayerAttackManager playerAttack;
     private PlayerManaManager playerMana;
@@ -35,6 +36,8 @@ public class PlayerStats : MonoBehaviour
         if (PlayerPrefs.GetInt("playerHearth") != 0) playerHearth.playerMaxHealth = PlayerPrefs.GetInt("playerHearth");
         if (PlayerPrefs.GetInt("playerAttack") != 0) playerAttack.damagePlayer = PlayerPrefs.GetInt("playerAttack");
         if (PlayerPrefs.GetInt("playerMana") != 0) playerMana.playerMaxMana = PlayerPrefs.GetInt("playerMana");
+        //if (PlayerPrefs.GetInt("playerManaSpeed") != 0) playerMana.speedCreateMana = PlayerPrefs.GetInt("playerManaSpeed");
+
         if (PlayerPrefs.GetInt("playerLV") != 0) currentLevel = PlayerPrefs.GetInt("playerLV");
         if (PlayerPrefs.GetInt("playerExp") != 0) currentExp = PlayerPrefs.GetInt("playerExp");
     }
@@ -62,6 +65,7 @@ public class PlayerStats : MonoBehaviour
             //Luu data
             PlayerPrefs.SetInt("playerHearth", playerHearth.playerMaxHealth);
             PlayerPrefs.SetInt("playerMana", playerMana.playerMaxMana);
+            PlayerPrefs.SetFloat("playerManaSpeed", playerMana.speedCreateMana);
             PlayerPrefs.SetInt("playerAttack", playerAttack.damagePlayer);
             PlayerPrefs.SetInt("playerLV", currentLevel);
 
