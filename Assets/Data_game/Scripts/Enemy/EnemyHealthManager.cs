@@ -15,7 +15,7 @@ public class EnemyHealthManager : MonoBehaviour
     public GameObject VP1;
     protected int ratio;
     protected int ratioVP1;
-
+    public float CreateHPdied;
     private void Awake()
     {
         thePlayerStats = FindObjectOfType<PlayerStats>();
@@ -61,9 +61,9 @@ public class EnemyHealthManager : MonoBehaviour
     protected virtual void HoiSinhEnemy()
     {
         gameObject.SetActive(true);
-        EnemyUpHealth += EnemyMaxHealth * 0.2f;
+        EnemyUpHealth += EnemyMaxHealth * CreateHPdied;
         PlayerPrefs.SetFloat("enemyUpHealth" + gameObject.name, EnemyUpHealth);
-        EnemyMaxHealth *= 1.2f;
+        EnemyMaxHealth *= (1+ CreateHPdied);
 
         EnemyCurrentHealth = EnemyMaxHealth;
     }
