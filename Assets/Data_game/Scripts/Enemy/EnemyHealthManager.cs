@@ -57,7 +57,8 @@ public class EnemyHealthManager : MonoBehaviour
         }
         else if (ratio <= 6)
         {
-            Instantiate(VP1, transform.position, transform.rotation);
+            GameObject vp1 = Instantiate(VP1, transform.position, transform.rotation);
+            vp1.name = VP1.name;
         }
         else if(ratio <=10)
         {

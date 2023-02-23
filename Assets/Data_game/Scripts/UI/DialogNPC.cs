@@ -10,6 +10,7 @@ public class DialogNPC : MonoBehaviour
     public DialogManager dialogManager;
     public PlayerCtrl playerCtrl;
     public bool dialogActive;
+    public string nameNPC;
 
     public string[] dialogNPC;
     public int[] listDialog;
@@ -27,6 +28,10 @@ public class DialogNPC : MonoBehaviour
         listIndex = PlayerPrefs.GetInt(SAVE_1);
         dialogIndex = PlayerPrefs.GetInt(SAVE_2);
         dialogActive = false;
+        for(int i =0; i<dialogNPC.Length; i++)
+        {
+            dialogNPC[i] = nameNPC + ": " + dialogNPC[i];
+        }
     }
     // Update is called once per frame
     void Update()

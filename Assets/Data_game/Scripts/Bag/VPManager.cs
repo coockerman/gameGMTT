@@ -23,6 +23,6 @@ public class VPManager : MonoBehaviour
     
     public void GetCountItem()
     {       
-        textCount.text = "" + PlayerPrefs.GetInt(gameObject.name + "(Clone)");
+        textCount.text = "" + PlayerPrefs.GetInt(gameObject.name);
     }
 }
