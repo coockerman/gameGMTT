@@ -13,6 +13,8 @@ public class EnemyHealthManager : MonoBehaviour
 
     public GameObject bloodRecovery;
     public GameObject VP1;
+    public GameObject manaRecovery;
+    
     protected int ratio;
     protected int ratioVP1;
     public float CreateHPdied;
@@ -56,6 +58,10 @@ public class EnemyHealthManager : MonoBehaviour
         else if (ratio <= 6)
         {
             Instantiate(VP1, transform.position, transform.rotation);
+        }
+        else if(ratio <=10)
+        {
+            Instantiate(manaRecovery, transform.position, transform.rotation);
         }
     }
     protected virtual void HoiSinhEnemy()
