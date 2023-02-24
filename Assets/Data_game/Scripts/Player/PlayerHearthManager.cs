@@ -84,6 +84,8 @@ public class PlayerHearthManager : MonoBehaviour
     {
         playerCurrentHealth += UpHp;
         playerMaxHealth += UpHp;
+        PlayerPrefs.SetInt("playerHearth", playerMaxHealth);
+
     }
     public void HoiHp(int hoiHp)
     {

@@ -8,22 +8,20 @@ public class NV1_OpenEntry : MonoBehaviour
     [Header("NV1: OpenEntry")]
     public GameObject entryObject;
     
-    protected virtual void Update()
+    
+    public virtual void NV1OpenEntryy()
     {
-        OpenEntryy();
-
-    }
-    protected virtual void OpenEntryy()
-    {      
+        if (PlayerPrefs.GetInt("MissionMng") >= 2)
+        {
+            OpenEntry();
+            return;
+        }
         if (PlayerPrefs.GetInt("dialogIndexBon") >= 13 && PlayerPrefs.GetInt("playerLV") >= 2)
         {
             OpenEntry();
             PlayerPrefs.SetInt("MissionMng", 2);
         }
-        if(PlayerPrefs.GetInt("MissionMng") >=2)
-        {
-            OpenEntry();
-        }
+        
     }
     protected virtual void OpenEntry()
     {

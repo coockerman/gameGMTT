@@ -22,5 +22,7 @@ public class PlayerAttackManager : MonoBehaviour
     public void UpDamage(int upDamege)
     {
         damagePlayer += upDamege;
+        PlayerPrefs.SetInt("playerAttack", damagePlayer);
+
     }
 }

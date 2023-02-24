@@ -48,6 +48,8 @@ public class PlayerManaManager : MonoBehaviour
     {
         playerCurrentMana += UpMana;
         playerMaxMana += UpMana;
+        PlayerPrefs.SetInt("playerMana", playerMaxMana);
+
     }
     public void GiamMana(int giamMana)
     {
@@ -72,7 +74,8 @@ public class PlayerManaManager : MonoBehaviour
     public void UpSpeedCreateMana(float Speed)
     {
         speedCreateMana = Speed;
-        //PlayerPrefs.SetFloat("playerManaSpeed", speedCreateMana);
+        PlayerPrefs.SetFloat("playerManaSpeed", speedCreateMana);
+
     }
     public void HetMana()
     {

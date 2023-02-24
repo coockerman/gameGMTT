@@ -63,10 +63,6 @@ public class PlayerStats : MonoBehaviour
             playerMana.UpSpeedCreateMana(toSpeedManaUp[currentLevel]);
 
             //Luu data
-            PlayerPrefs.SetInt("playerHearth", playerHearth.playerMaxHealth);
-            PlayerPrefs.SetInt("playerMana", playerMana.playerMaxMana);
-            PlayerPrefs.SetFloat("playerManaSpeed", playerMana.speedCreateMana);
-            PlayerPrefs.SetInt("playerAttack", playerAttack.damagePlayer);
             PlayerPrefs.SetInt("playerLV", currentLevel);
 
         }
