@@ -19,7 +19,7 @@ public class PlayerStats : MonoBehaviour
 
     public float[] toSpeedManaUp;
 
-    public float[] toManaUp;
+    public int[] toManaUp;
     private PlayerHearthManager playerHearth;
     private PlayerAttackManager playerAttack;
     private PlayerManaManager playerMana;
@@ -61,7 +61,7 @@ public class PlayerStats : MonoBehaviour
             playerHearth.UpHp(toHpUp[currentLevel]);
             playerAttack.UpDamage(toAttackUp[currentLevel]);
             playerMana.UpSpeedCreateMana(toSpeedManaUp[currentLevel]);
-
+            playerMana.UpMana(toManaUp[currentLevel]);
             //Luu data
             PlayerPrefs.SetInt("playerLV", currentLevel);
 

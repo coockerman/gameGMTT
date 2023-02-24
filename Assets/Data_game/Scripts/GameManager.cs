@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     }
     protected virtual void HoiSinh()
     {
-        if (Player.transform.gameObject.active == true) return;
+        if (Player.transform.gameObject.activeSelf == true) return;
         waitToReload -= Time.deltaTime;
         if (waitToReload < 0)
         {

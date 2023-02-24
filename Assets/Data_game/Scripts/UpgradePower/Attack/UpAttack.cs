@@ -18,8 +18,12 @@ public class UpAttack : MonoBehaviour
 
     public void UpMoreDame()
     {
-        Debug.Log("a");
-        PlayerAttack.UpDamage(TangDame);
-        
+        if(PlayerPrefs.GetInt("VatPham1")>0)
+        {
+            PlayerAttack.UpDamage(TangDame);
+            PlayerPrefs.SetInt("VatPham1", PlayerPrefs.GetInt("VatPham1") - 1);
+
+        }
+
     }
 }
