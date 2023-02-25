@@ -16,10 +16,14 @@ public class NV1_OpenEntry : MonoBehaviour
             OpenEntry();
             return;
         }
-        if (PlayerPrefs.GetInt("dialogIndexBon") >= 13 && PlayerPrefs.GetInt("playerLV") >= 2)
+        if (PlayerPrefs.GetInt("dialogIndexBon") >= 18 && PlayerPrefs.GetInt("playerLV") >= 2)
         {
             OpenEntry();
             PlayerPrefs.SetInt("MissionMng", 2);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("MissionMng", 1);
         }
         
     }

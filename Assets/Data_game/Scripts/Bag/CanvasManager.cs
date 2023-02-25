@@ -23,80 +23,56 @@ public class CanvasManager : MonoBehaviour
     }
     private void Update()
     {
-        ChangeBagStatus();
-        ChangeMissionStatus();
-        ChangeUpgradePowerStatus();
+        ChangeStatus(ref playerCtrl.moveActiveBag, bag, KeyCode.B);
+        ChangeStatus(ref playerCtrl.moveActiveMission, mission, KeyCode.Q);
+        if(PlayerPrefs.GetInt("UpgradePowerBox") == 1) 
+            ChangeStatus(ref playerCtrl.moveActiveUpgradePower, boxUpgrade, KeyCode.F);
+        
     }
-    public void ChangeBagStatus()
+    
+    public void ChangeStatus(ref bool playerActive, GameObject name, KeyCode key)
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(key))
         {
-            if (bag.gameObject.activeSelf == false)
-            {
-                OnBag();
-            }else           
-            {
-                OffBag();
-            }
+            ChangeStatusClick(ref playerActive, name);
         }
     }
-    public void OnBag()
+    
+
+    public void ChangeStatusClick(ref bool playerActive, GameObject name)
     {
-        playerCtrl.moveActiveBag = false;
-        bag.SetActive(true);
+        if (name.activeSelf == false)
+        {
+            OnObject(ref playerActive, name);
+        }
+        else
+        {
+            OffObject(ref playerActive, name);
+        }
     }
-    public void OffBag()
+    public void OnObject(ref bool playerActive, GameObject name)
     {
-        playerCtrl.moveActiveBag = true;
-        bag.SetActive(false);
+        playerActive = false;
+        name.SetActive(true);
+    }
+    public void OffObject(ref bool playerActive, GameObject name)
+    {
+        playerActive = true;
+        name.SetActive(false);
     }
 
-    public void ChangeMissionStatus()
+    public void ChangeStatusBagClick()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            if (mission.gameObject.activeSelf == false)
-            {
-                OnMission();
-            }
-            else
-            {
-                OffMission();
-            }
-        }
+        ChangeStatusClick(ref playerCtrl.moveActiveBag, bag);
     }
-    public void OnMission()
+    public void ChangeStatusMissionClick()
     {
-        playerCtrl.moveActiveMission = false;
-        mission.SetActive(true);
+        ChangeStatusClick(ref playerCtrl.moveActiveMission, mission);
     }
-    public void OffMission()
+    public void ChangeStatusUpgradePowerClick()
     {
-        playerCtrl.moveActiveMission = true;
-        mission.SetActive(false);
+        ChangeStatusClick(ref playerCtrl.moveActiveUpgradePower, boxUpgrade);
     }
-    public void ChangeUpgradePowerStatus()
-    {
-        if (Input.GetKeyDown(KeyCode.F) && PlayerPrefs.GetInt("UpgradePowerBox") == 1)
-        {
-            if (boxUpgrade.gameObject.activeSelf == false)
-            {
-                OnBoxPower();
-            }
-            else
-            {
-                OffBoxPower();
-            }
-        }
-    }
-    public void OnBoxPower()
-    {
-        playerCtrl.moveActiveUpgradePower = false;
-        boxUpgrade.SetActive(true);
-    }
-    public void OffBoxPower()
-    {
-        playerCtrl.moveActiveUpgradePower = true;
-        boxUpgrade.SetActive(false);
-    }
+
+
 }

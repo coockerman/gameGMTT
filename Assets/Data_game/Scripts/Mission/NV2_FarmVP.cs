@@ -4,30 +4,23 @@ using UnityEngine;
 
 public class NV2_FarmVP : MonoBehaviour
 {
-    [Header("NV2: FarmVP")]
-    public GameObject store;
-    
     
     public virtual void NV2FarmVP()
     {      
-        if (PlayerPrefs.GetInt("MissionMng")>=2)
+        if (PlayerPrefs.GetInt("MissionMng")>=2 )
         {
             if (PlayerPrefs.GetInt("MissionMng") >= 3)
             {
-                OpenStore();
+                //OpenStore();
                 return;
             }
-            if (PlayerPrefs.GetInt("VatPham1") >= 2)
+            if (PlayerPrefs.GetInt("VatPham1") >= 3 && PlayerPrefs.GetInt("dialogIndexBrum") >= 7)
             {
-                OpenStore();
+                //OpenStore();
                 PlayerPrefs.SetInt("MissionMng", 3);
-
             }
             
         }
     }
-    protected virtual void OpenStore()
-    {
-        store.SetActive(true);
-    }
+    
 }

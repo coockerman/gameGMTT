@@ -1755,6 +1755,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &76800419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 76800420}
+  m_Layer: 0
+  m_Name: NV1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &76800420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76800419}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.84815836, y: -1.1537231, z: 0.011802563}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1611227540}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &854647495
 GameObject:
   m_ObjectHideFlags: 0
@@ -2313,6 +2344,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &899753222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 899753223}
+  m_Layer: 0
+  m_Name: ---Mission---
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &899753223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899753222}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.083328, y: 43.95375, z: 0.36080784}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &919171497
 GameObject:
   m_ObjectHideFlags: 0
@@ -11251,7 +11313,7 @@ GameObject:
   - component: {fileID: 1384996956}
   - component: {fileID: 1384996957}
   m_Layer: 0
-  m_Name: atan_3
+  m_Name: Atan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11388,12 +11450,18 @@ MonoBehaviour:
   dialogActive: 0
   nameNPC: Atan
   dialogNPC:
-  - "Xin Ch\xE0o!"
   - "Ta l\xE0 Atan"
-  - "Ta c\xF3 mang theo nhi\u1EC1u lo\u1EA1i kho b\xE1u"
-  - "C\xF3 ti\u1EC1n th\xEC h\xE3y g\u1EB7p ta"
-  - "Nh\u1EA5n Y \u0111\u1EC3 mua b\xE1n"
-  listDialog: 00000000010000000200000003000000e7030000
+  - "\u0110\u01B0\u1EE3c m\u1ECDi ng\u01B0\u1EDDi bi\u1EBFt \u0111\u1EBFn v\u1EDBi
+    bi\u1EC7t danh \"K\u1EBB ban ph\xE1t\""
+  - "Ta s\u1EBD m\u1EDF kh\xF3a cho ng\u01B0\u01A1i ch\u1EE9c n\u0103ng c\u01B0\u1EDDng
+    h\xF3a s\u1EE9c m\u1EA1nh"
+  - .....
+  - "H\xE3y nh\u1EA5n F \u0111\u1EC3 m\u1EDF b\u1EA3ng n\xE2ng c\u1EA5p"
+  - "B\xE2y gi\u1EDD ta c\u1EA7n c\u1EADu t\xECm m\u1ED9t t\xEAn tr\u1ED9m \u0111ang
+    l\u1EA9n tr\u1ED1n trong nh\xE0"
+  - "H\u1EAFn khi\u1EBFn ta c\u1EA3m th\u1EA5y phi\u1EC1n ph\u1EE9c"
+  - .....
+  listDialog: 000000000300000007000000e7030000
   listIndex: 0
   dialogIndex: 0
 --- !u!1 &1451261004
@@ -11585,6 +11653,51 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.44530106, y: 0.9722662}
   m_EdgeRadius: 0
+--- !u!1 &1611227539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1611227540}
+  - component: {fileID: 1611227541}
+  m_Layer: 0
+  m_Name: MissionManager_C4_HouseOnMountain_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1611227540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611227539}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.84815836, y: 1.1537228, z: -0.011802562}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 76800420}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1611227541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611227539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53b429c9078509d40ab508ec75497f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1617528744
 GameObject:
   m_ObjectHideFlags: 0
@@ -14441,7 +14554,7 @@ GameObject:
   - component: {fileID: 1858570538}
   - component: {fileID: 1858570542}
   m_Layer: 0
-  m_Name: AnTrom_3
+  m_Name: AnTrom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14591,6 +14704,87 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!1 &1925846503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1925846507}
+  - component: {fileID: 1925846506}
+  - component: {fileID: 1925846505}
+  - component: {fileID: 1925846504}
+  m_Layer: 5
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1925846504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925846503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a410b213209442fb15a69799f0240a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1925846505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925846503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1925846506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925846503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1925846507
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925846503}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1943516464
 GameObject:
   m_ObjectHideFlags: 0
@@ -14605,7 +14799,7 @@ GameObject:
   - component: {fileID: 1943516469}
   - component: {fileID: 1943516471}
   m_Layer: 0
-  m_Name: Brum_3
+  m_Name: Brum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14644,13 +14838,36 @@ MonoBehaviour:
   dialogActive: 0
   nameNPC: Brum
   dialogNPC:
-  - "Xin Ch\xE0o"
-  - "T\xF4i l\xE0 Brum"
-  - "R\u1EA5t vui \u0111\u01B0\u1EE3c g\u1EB7p b\u1EA1n"
-  - 4
-  - 5
-  - sao
-  listDialog: 00000000020000000300000004000000e7030000
+  - "T\xF4i s\u1EBD n\xF3i cho b\u1EA1n m\u1ED9t s\u1ED1 \u0111i\u1EC1u khi b\u1EA1n
+    \u1EDF \u0111\xE2y"
+  - "B\u1EA1n c\xF3 th\u1EC3 bi\u1EBFt \u0111\u01B0\u1EE3c m\u1ED9t s\u1ED1 \u0111i\u1EC1u
+    v\u1EC1 m\xE1y m\xF3c"
+  - "B\u1EADt m\xED v\u1EDBi b\u1EA1n n\u01A1i \u0111\xE2y c\xF3 r\u1EA5t nhi\u1EC1u
+    ng\u01B0\u1EDDi am hi\u1EC3u v\u1EC1 m\xE1y t\xEDnh"
+  - "N\u1EBFu may m\u1EAFn, b\u1EA1n s\u1EBD h\u1ECDc h\u1ECFi \u0111\u01B0\u1EE3c
+    m\u1ED9t s\u1ED1 \u0111i\u1EC1u t\u1EEB h\u1ECD"
+  - ...
+  - "\u0110\u1EC3 sinh t\u1ED3n \u1EDF n\u01A1i n\xE0y b\u1EA1n c\u1EA7n c\xF3 m\u1ED9t
+    s\u1EE9c m\u1EA1nh c\u1EA7n thi\u1EBFt \u0111\u1EC3 ch\u1ED1ng l\u1EA1i l\u0169
+    qu\xE1i v\u1EADt"
+  - "B\u1EA1n c\u1EA7n c\xF3 \u0111\u1EE7 l\u01B0\u1EE3ng s\u1EE9c m\u1EA1nh m\u1EDBi
+    c\xF3 th\u1EC3 \u0111\xE1nh qu\xE1i v\xE0 t\u0103ng lv"
+  - "H\xE3y b\u1EAFt \u0111\u1EA7u v\u1EDBi nh\u1EEFng con qu\xE1i nh\u1ECF v\xE0
+    thu th\u1EADp 3 quy\u1EC3n s\xE1ch "
+  - ....
+  - "N\u1EBFu b\u1EA1n mu\u1ED1n tr\u1EDF v\u1EC1"
+  - "B\u1EA1n s\u1EBD c\u1EA7n \u0111\u1EBFn nhi\u1EC1u v\xF9ng \u0111\u1EA5t kh\xE1c
+    \u0111\u1EC3 g\u1EB7p nh\u1EEFng ng\u01B0\u1EDDi t\xF4i v\u1EEBa n\xF3i"
+  - "Chi\u1EBFc m\xE1y c\u1EE7a c\u1EADu ch\u1EC9 c\xF3 h\u1ECD c\xF3 th\u1EC3 s\u1EEDa
+    \u0111\u01B0\u1EE3c"
+  - "Ho\u1EB7c kh\xF4ng th\xEC b\u1EA1n v\u1EABn c\xF3 th\u1EC3 \u1EDF l\u1EA1i n\u01A1i
+    n\xE0y v\xE0 ti\u1EBFp t\u1EE5c kh\xE1m ph\xE1"
+  - "Quy\u1EBFt \u0111\u1ECBnh ph\u1EE5 thu\u1ED9c v\xE0o b\u1EA1n"
+  - "B\xE2y gi\u1EDD b\u1EA1n h\xE3y \u0111i t\xECm c\u1EEDa h\xE0ng \u1EDF ph\xEDa
+    b\xEAn ph\u1EA3i b\u1EA3n \u0111\u1ED3"
+  - "Ch\xFAc may m\u1EAFn"
+  - ....
+  listDialog: 00000000040000000800000010000000e7030000
   listIndex: 0
   dialogIndex: 0
 --- !u!212 &1943516468

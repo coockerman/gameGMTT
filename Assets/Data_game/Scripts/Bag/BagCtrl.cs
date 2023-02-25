@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class BagCtrl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void TangVatPham(int stt, int count)
     {
-        
+        PlayerPrefs.SetInt("VatPham" + stt, count);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void TangVatPham(string name,int count)
     {
-        
+        PlayerPrefs.SetInt(name, count);
     }
 }

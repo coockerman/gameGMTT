@@ -18,6 +18,7 @@ public class DialogNPC : MonoBehaviour
     public int dialogIndex = 0;
     private void Awake()
     {
+        //PlayerPrefs.DeleteAll();
         dialogManager = FindObjectOfType<DialogManager>();
         playerCtrl = FindObjectOfType<PlayerCtrl>();
         LoadStringSave();
