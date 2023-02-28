@@ -18,6 +18,11 @@ public class EnemyHealthManager : MonoBehaviour
     protected int ratio;
     protected int ratioVP1;
     public float CreateHPdied;
+
+    [SerializeField] int itemBlood;
+    [SerializeField] int itemMana;
+    [SerializeField] int itemVP1;
+
     private void Awake()
     {
         thePlayerStats = FindObjectOfType<PlayerStats>();
@@ -50,17 +55,17 @@ public class EnemyHealthManager : MonoBehaviour
     }
     protected virtual void DropHealingItem()
     {
-        ratio = Random.Range(1, 10);
-        if (ratio <= 3)
+        ratio = Random.Range(1, 100);
+        if (ratio <= itemBlood)
         {
             Instantiate(bloodRecovery, transform.position, transform.rotation);
         }
-        else if (ratio <= 6)
+        else if (ratio <= itemBlood + itemMana)
         {
             GameObject vp1 = Instantiate(VP1, transform.position, transform.rotation);
             vp1.name = VP1.name;
         }
-        else if(ratio <=10)
+        else if(ratio <= itemBlood + itemMana + itemVP1)
         {
             Instantiate(manaRecovery, transform.position, transform.rotation);
         }

@@ -405,8 +405,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyMaxHealth: 600
   EnemyCurrentHealth: 0
+  EnemyUpHealth: 0
   expToGive: 200
   bloodRecovery: {fileID: 956220233630913494, guid: 0948bf984273b4c4a8223c549332821d, type: 3}
+  VP1: {fileID: 1332446021846080876, guid: 3e58142c54422854eb69420a284cc048, type: 3}
+  manaRecovery: {fileID: 956220233630913494, guid: b61af3ec8be4fda40bc13af42cdea86d, type: 3}
+  CreateHPdied: 1
+  itemBlood: 20
+  itemMana: 20
+  itemVP1: 35
 --- !u!58 &3147431742016148874
 CircleCollider2D:
   m_ObjectHideFlags: 0

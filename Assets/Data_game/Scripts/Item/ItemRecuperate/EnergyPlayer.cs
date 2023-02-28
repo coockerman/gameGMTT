@@ -12,7 +12,7 @@ public class EnergyPlayer : MonoBehaviour
     }
     private void Start()
     {
-        ManaBuff = 50;
+        ManaBuff = 60;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

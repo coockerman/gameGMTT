@@ -12,7 +12,7 @@ public class HealingPlayer : MonoBehaviour
     }
     private void Start()
     {
-        healing = 5;
+        healing = 30;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -310,7 +310,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3147431742016148870}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.7, y: -3.21, z: 0.53327}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -421,7 +421,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyMaxHealth: 150
   EnemyCurrentHealth: 0
+  EnemyUpHealth: 0
   expToGive: 50
+  bloodRecovery: {fileID: 956220233630913494, guid: 0948bf984273b4c4a8223c549332821d, type: 3}
+  VP1: {fileID: 1332446021846080876, guid: 3e58142c54422854eb69420a284cc048, type: 3}
+  manaRecovery: {fileID: 956220233630913494, guid: b61af3ec8be4fda40bc13af42cdea86d, type: 3}
+  CreateHPdied: 0.5
+  itemBlood: 20
+  itemMana: 20
+  itemVP1: 40
 --- !u!50 &3147431742016148873
 Rigidbody2D:
   serializedVersion: 4
