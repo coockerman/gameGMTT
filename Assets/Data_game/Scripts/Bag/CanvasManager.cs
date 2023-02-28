@@ -11,6 +11,7 @@ public class CanvasManager : MonoBehaviour
     public GameObject bag;
     public GameObject mission;
     public GameObject boxUpgrade;
+    [SerializeField] GameObject settingCtrl;
 
     public int sceneNow;
     private void Awake()
@@ -20,6 +21,7 @@ public class CanvasManager : MonoBehaviour
     }
     private void Start()
     {
+        settingCtrl.SetActive(false);
     }
     private void Update()
     {
@@ -63,16 +65,32 @@ public class CanvasManager : MonoBehaviour
 
     public void ChangeStatusBagClick()
     {
+        if (settingCtrl.activeSelf == true) { return; }
         ChangeStatusClick(ref playerCtrl.moveActiveBag, bag);
     }
     public void ChangeStatusMissionClick()
     {
+        if (settingCtrl.activeSelf == true) { return; }
         ChangeStatusClick(ref playerCtrl.moveActiveMission, mission);
     }
     public void ChangeStatusUpgradePowerClick()
     {
+        if (settingCtrl.activeSelf == true) { return; }
         ChangeStatusClick(ref playerCtrl.moveActiveUpgradePower, boxUpgrade);
     }
 
+    public void ChangeStatusSettingClick()
+    {
+        if(Time.timeScale <1)
+        {
+            Time.timeScale = 1;
+        }
+        else
+        {
+            Time.timeScale = 0;
+        }
+         ChangeStatusClick(ref playerCtrl.moveActiveUiSetting, settingCtrl);
+
+    }
 
 }

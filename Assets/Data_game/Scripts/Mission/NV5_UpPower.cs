@@ -18,7 +18,7 @@ public class NV5_UpPower : MonoBehaviour
                 OpenMissionImage();
                 return;
             }
-            if (PlayerPrefs.GetInt("dialogIndexAtan") >= 6 && PlayerPrefs.GetInt("dialogIndexAnTrom")>=2);
+            if (PlayerPrefs.GetInt("dialogIndexAtan") >= 6 && PlayerPrefs.GetInt("dialogIndexAnTrom")>=2)
             {
                 OpenMissionImage();
                 PlayerPrefs.SetInt("MissionMng", 6);

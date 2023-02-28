@@ -448,6 +448,7 @@ GameObject:
   - component: {fileID: 1561545973}
   - component: {fileID: 1699387522059187034}
   - component: {fileID: 2413375912465762969}
+  - component: {fileID: 355975533640114542}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -545,6 +546,7 @@ MonoBehaviour:
   moveActiveBag: 1
   moveActiveMission: 1
   moveActiveUpgradePower: 1
+  moveActiveUiSetting: 1
   playerMoving: 0
 --- !u!50 &6326252990224358035
 Rigidbody2D:
@@ -615,17 +617,7 @@ MonoBehaviour:
   - 5
   - 6.5
   - 8.5
-  toManaUp:
-  - 0
-  - 10
-  - 20
-  - 30
-  - 40
-  - 50
-  - 50
-  - 50
-  - 50
-  - 50
+  toManaUp: 000000000a000000140000001e000000280000003200000032000000320000003200000032000000
 --- !u!114 &2351792378862334908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,6 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaf5a45e94e732e4bb3b4fd6855ea872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHearth: {fileID: 0}
 --- !u!114 &2413375912465762969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,5 +738,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d9456fb1c28a4b44aac9f35f770adf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMana: {fileID: 0}
+--- !u!114 &355975533640114542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6326252990224358039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d5cbce8dfc85f44a9dd1859feb399f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -39,6 +39,7 @@ public class PlayerCtrl : MonoBehaviour
     public bool moveActiveBag = true;
     public bool moveActiveMission = true;
     public bool moveActiveUpgradePower = true;
+    public bool moveActiveUiSetting = true;
     public bool playerMoving;
     private Vector2 lastMove;
     void Start()
@@ -69,7 +70,7 @@ public class PlayerCtrl : MonoBehaviour
     }
     public void GetInput()
     {
-        if (moveActive == true && moveActiveBag == true && moveActiveMission == true && moveActiveUpgradePower == true)
+        if (moveActive == true && moveActiveBag == true && moveActiveMission == true && moveActiveUpgradePower == true && moveActiveUiSetting == true)
         {
             horizontal = Input.GetAxisRaw("Horizontal");
             vertical = Input.GetAxisRaw("Vertical");
@@ -131,8 +132,7 @@ public class PlayerCtrl : MonoBehaviour
 
     protected virtual void LoadAttack()
     {
-        
-        if (moveActive == false || moveActiveBag == false || moveActiveMission == false || moveActiveUpgradePower == false) return;
+        if (moveActive == false || moveActiveBag == false || moveActiveMission == false || moveActiveUpgradePower == false || moveActiveUiSetting == false) return;
         if (Input.GetKey(KeyCode.J) && attacking == false)
         {
             attackTimeCount = attackTime;
@@ -156,7 +156,7 @@ public class PlayerCtrl : MonoBehaviour
     }
     protected virtual void LoadSkillOne()
     {
-        if (moveActive == false || moveActiveBag == false || moveActiveMission == false || moveActiveUpgradePower == false) return;
+        if (moveActive == false || moveActiveBag == false || moveActiveMission == false || moveActiveUpgradePower == false || moveActiveUiSetting == false) return;
         if (Input.GetKeyDown(KeyCode.K) && playerManaManager.playerCurrentMana < 10)
         {
             playerManaManager.HetMana();
@@ -187,7 +187,7 @@ public class PlayerCtrl : MonoBehaviour
 
     protected virtual void LoadSkillTwo()
     {
-        if (moveActive == false || moveActiveBag == false || moveActiveMission == false || moveActiveUpgradePower == false ) return;
+        if (moveActive == false || moveActiveBag == false || moveActiveMission == false || moveActiveUpgradePower == false || moveActiveUiSetting == false) return;
         if (Input.GetKeyDown(KeyCode.L) && playerManaManager.GetStatusSkill2() == false)
         {
             playerManaManager.HetMana();
