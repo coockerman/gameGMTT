@@ -37,6 +37,7 @@ public class DialogNPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         SetActiveDialog();
         //SetData();
     }

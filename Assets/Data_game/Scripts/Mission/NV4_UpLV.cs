@@ -10,12 +10,10 @@ public class NV4_UpLV : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("MissionMng") >= 5)
             {
-                //OpenStore();
                 return;
             }
             if (PlayerPrefs.GetInt("playerLV") >= 4 && PlayerPrefs.GetInt("dialogIndexMai") >= 9)
             {
-                //OpenStore();
                 PlayerPrefs.SetInt("MissionMng", 5);
             }
 
