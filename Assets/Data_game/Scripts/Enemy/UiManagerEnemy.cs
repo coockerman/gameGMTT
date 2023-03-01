@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 public class UiManagerEnemy : UiManager
 {
     public EnemyHealthManager HealthObject;
-
-    private void Awake()
+    public TextMeshProUGUI nameEnm;
+    public string nameEnemy;
+    
+    private void Start()
     {
         HealthObject = gameObject.GetComponent<EnemyHealthManager>();
-
+        nameEnm = GetComponentInChildren<TextMeshProUGUI>();
     }
     
 
@@ -22,5 +25,9 @@ public class UiManagerEnemy : UiManager
     {
         healthBar.maxValue = HealthObject.EnemyMaxHealth;
         healthBar.value = HealthObject.EnemyCurrentHealth;
+    }
+    public void UpdateName(int lv)
+    {
+        nameEnm.text = nameEnemy + " lv " + lv;
     }
 }
