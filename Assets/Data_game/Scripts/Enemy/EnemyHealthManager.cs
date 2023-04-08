@@ -27,9 +27,9 @@ public class EnemyHealthManager : MonoBehaviour
     int itemVP1;
     int itemVP2;
     int itemVP3;
-    int itemVP4;
-    int itemVP5;
-    int itemVP6;
+    //int itemVP4;
+    //int itemVP5;
+    //int itemVP6;
 
     private void Awake()
     {
@@ -136,7 +136,7 @@ public class EnemyHealthManager : MonoBehaviour
             itemVP1 = 45;
             itemVP2 = 20;
             itemVP3 = 8;
-            itemVP4 = 2;
+            //itemVP4 = 2;
         }else if(EnemyMaxHealth <= 4000)
         {
             itemBlood = 5;
@@ -144,8 +144,8 @@ public class EnemyHealthManager : MonoBehaviour
             itemVP1 = 40;
             itemVP2 = 20;
             itemVP3 = 10;
-            itemVP4 = 5;
-            itemVP5 = 5;
+            //itemVP4 = 5;
+            //itemVP5 = 5;
         }
         else
         {
@@ -154,8 +154,8 @@ public class EnemyHealthManager : MonoBehaviour
             itemVP1 = 40;
             itemVP2 = 20;
             itemVP3 = 10;
-            itemVP4 = 5;
-            itemVP5 = 5;
+            //itemVP4 = 5;
+            //itemVP5 = 5;
         }
     }
     protected virtual void HoiSinhEnemy()

@@ -39435,7 +39435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e73068ffe6106f4cb2ba8bf1827f32e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leverToload: 11
+  leverToload: 7
   ExitMap: In_School_stair
 --- !u!1 &2054495745
 GameObject:

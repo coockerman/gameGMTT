@@ -3039,6 +3039,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &899753222
 GameObject:
   m_ObjectHideFlags: 0
@@ -12394,6 +12395,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1384996952
 GameObject:
   m_ObjectHideFlags: 0
@@ -12530,6 +12532,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1384996957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12690,7 +12693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e73068ffe6106f4cb2ba8bf1827f32e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leverToload: 6
+  leverToload: 2
   ExitMap: In_HouseOnMountain2
 --- !u!1 &1534258562
 GameObject:
@@ -15803,6 +15806,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1893466219
 GameObject:
   m_ObjectHideFlags: 0
@@ -15908,6 +15912,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1925846503
 GameObject:
   m_ObjectHideFlags: 0
@@ -16174,6 +16179,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1958337561
 GameObject:
   m_ObjectHideFlags: 0

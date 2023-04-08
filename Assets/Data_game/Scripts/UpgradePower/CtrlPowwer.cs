@@ -14,7 +14,7 @@ public class CtrlPowwer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PlayerPrefs.GetInt("UpgradePowerBox") == 1)
+        if(PlayerPrefs.GetInt("UpgradePowerBox") >= 0)
         {
             ImageUpgradePower.SetActive(true);
         }

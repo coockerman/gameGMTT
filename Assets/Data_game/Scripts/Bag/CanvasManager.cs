@@ -27,7 +27,7 @@ public class CanvasManager : MonoBehaviour
     {
         ChangeStatus(ref playerCtrl.moveActiveBag, bag, KeyCode.B);
         ChangeStatus(ref playerCtrl.moveActiveMission, mission, KeyCode.Q);
-        if(PlayerPrefs.GetInt("UpgradePowerBox") == 1) 
+        if(PlayerPrefs.GetInt("UpgradePowerBox") >=0) 
             ChangeStatus(ref playerCtrl.moveActiveUpgradePower, boxUpgrade, KeyCode.F);
         
     }

@@ -13883,7 +13883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e73068ffe6106f4cb2ba8bf1827f32e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leverToload: 5
+  leverToload: 1
   ExitMap: Out_HouseOnMountain2
 --- !u!1 &1892266870
 GameObject:
