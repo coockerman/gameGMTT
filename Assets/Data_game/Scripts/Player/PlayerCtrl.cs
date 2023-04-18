@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
+    [SerializeField] AudioSource audioPlayer;
     protected Rigidbody2D body;
     private Animator anim;
     protected PlayerManaManager playerManaManager;
@@ -74,6 +75,17 @@ public class PlayerCtrl : MonoBehaviour
         {
             horizontal = Input.GetAxisRaw("Horizontal");
             vertical = Input.GetAxisRaw("Vertical");
+            if(horizontal != 0 || vertical != 0)
+            {
+                if(audioPlayer.isPlaying == false)
+                {
+                    audioPlayer.Play();
+                }
+            }
+            else
+            {
+                audioPlayer.Pause();
+            }
         }
         else
         {

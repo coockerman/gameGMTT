@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HealingPlayer : MonoBehaviour
 {
+    [SerializeField] AudioSource audioSource;
     protected int healing;
     protected PlayerHearthManager playerHearth;
     private void Awake()
@@ -19,6 +20,7 @@ public class HealingPlayer : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            audioSource.Play();
             playerHearth.HoiHp(healing);
             Destroy(gameObject);
         }

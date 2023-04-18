@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class VPimpact : MonoBehaviour
 {
-    
+    [SerializeField] AudioSource audioSource;
     protected int t;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
+            audioSource.Play();
             PlayerPrefs.SetInt(gameObject.name, PlayerPrefs.GetInt(gameObject.name) + 1);
             Destroy(gameObject);
 
         }
     }
-    void HuyObject()
-    {
-        
-    }
+    
     
 }

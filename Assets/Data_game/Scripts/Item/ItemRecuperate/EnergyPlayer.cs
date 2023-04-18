@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnergyPlayer : MonoBehaviour
 {
+    [SerializeField] AudioSource m_AudioSource;
     protected int ManaBuff;
     protected PlayerManaManager playerMana;
     private void Awake()
@@ -19,6 +20,7 @@ public class EnergyPlayer : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            m_AudioSource.Play();
             playerMana.HoiMana(ManaBuff);
             Destroy(gameObject);
         }

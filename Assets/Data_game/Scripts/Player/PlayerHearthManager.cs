@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerHearthManager : MonoBehaviour
 {
+    [SerializeField] AudioSource audioPlayer;
+    [SerializeField] AudioClip danh;
     public int playerMaxHealth;
     public int playerCurrentHealth;
     public int MatDame;
@@ -70,6 +72,7 @@ public class PlayerHearthManager : MonoBehaviour
     }
     public void HurtPlayer(int damageToGive)
     {
+        audioPlayer.PlayOneShot(danh);
         MatDame = damageToGive;
         playerCurrentHealth -= damageToGive;
         flashActive = true;
