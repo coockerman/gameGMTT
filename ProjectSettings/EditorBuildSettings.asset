@@ -8,18 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Data_game/Scenes/C4_NgHai.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Data_game/Scenes/Map1.unity
-    guid: 7b2994fe0d7279743bc07e6683097067
-  - enabled: 0
-    path: Assets/Data_game/Scenes/Map2.unity
-    guid: 11028c277e6625b4e93868e0c52c466a
-  - enabled: 0
-    path: Assets/Data_game/Scenes/Map3.unity
-    guid: 75764784d2a7c674c9516fb5f7f5c7c0
-  - enabled: 0
-    path: Assets/Data_game/Scenes/Map4.unity
-    guid: ede90389ef806424386c556e914ca4d0
   - enabled: 1
     path: Assets/Data_game/Scenes/C4_HouseOnMountain1.unity
     guid: 6235a86ad8bd4c74b85941ed1a02ef89

@@ -5,13 +5,10 @@ using UnityEngine;
 
 public class GetName : MonoBehaviour
 {
-    DialogNPC dialogNPC;
-    TextMeshProUGUI nameNPC;
+    [SerializeField]TextMeshProUGUI nameNPC;
     private void Start()
     {
-        dialogNPC = GetComponentInParent<DialogNPC>();
-        nameNPC = GetComponent<TextMeshProUGUI>();
-        nameNPC.text = dialogNPC.name;
+        nameNPC.text = gameObject.name;
     }
 
 }

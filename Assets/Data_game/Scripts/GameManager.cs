@@ -8,10 +8,10 @@ public class GameManager : MonoBehaviour
     protected float waitToReload = 2;
     private static bool gameManager = false;
     public PlayerCtrl Player;
+    public bool playDialog;
     
     private void Start()
     {
-        //PlayerPrefs.DeleteAll();
         Player = FindObjectOfType<PlayerCtrl>();
         if (!gameManager)
         {

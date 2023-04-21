@@ -9,7 +9,7 @@ public class PlayerCtrl : MonoBehaviour
     protected Rigidbody2D body;
     private Animator anim;
     protected PlayerManaManager playerManaManager;
-
+    [SerializeField] GameManager gameManager;
     protected float horizontal;
     protected float vertical;
 
@@ -45,6 +45,7 @@ public class PlayerCtrl : MonoBehaviour
     private Vector2 lastMove;
     void Start()
     {
+        PlayerPrefs.DeleteAll();
         attackTime = 0.25f;
         skillOneTime = 0.6f;
         skillTwoTime = 0.6f;
@@ -71,7 +72,7 @@ public class PlayerCtrl : MonoBehaviour
     }
     public void GetInput()
     {
-        if (moveActive == true && moveActiveBag == true && moveActiveMission == true && moveActiveUpgradePower == true && moveActiveUiSetting == true)
+        if (moveActive == true && moveActiveBag == true && moveActiveMission == true && moveActiveUpgradePower == true && moveActiveUiSetting == true && gameManager.playDialog == false)
         {
             horizontal = Input.GetAxisRaw("Horizontal");
             vertical = Input.GetAxisRaw("Vertical");
@@ -89,6 +90,7 @@ public class PlayerCtrl : MonoBehaviour
         }
         else
         {
+            audioPlayer.Pause();
             horizontal = 0;
             vertical = 0;
         }
