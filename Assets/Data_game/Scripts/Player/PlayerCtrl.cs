@@ -45,7 +45,6 @@ public class PlayerCtrl : MonoBehaviour
     private Vector2 lastMove;
     void Start()
     {
-        PlayerPrefs.DeleteAll();
         attackTime = 0.25f;
         skillOneTime = 0.6f;
         skillTwoTime = 0.6f;
@@ -99,14 +98,11 @@ public class PlayerCtrl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(PlayerPrefs.GetInt("dialogIndexBon")>=13)
-        {
-            this.LoadAttack();
+        this.LoadAttack();
 
-            this.LoadSkillOne();
-            this.LoadSkillTwo();
-        }
-        
+        this.LoadSkillOne();
+        this.LoadSkillTwo();
+
         if (attacking == true || skillOnePlay == true || skillTwoPlay == true) return;
         this.GetMoving();
         this.SetMoveInAnim();

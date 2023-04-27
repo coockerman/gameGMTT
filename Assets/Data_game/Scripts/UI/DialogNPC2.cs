@@ -6,6 +6,7 @@ using UnityEngine;
 public class DialogNPC2 : MonoBehaviour
 {
     [SerializeField] string nameDialog;
+    [SerializeField] string addressDialog;
     [SerializeField] string[] dataDialog;
     GameManager gameManager;
     DialogManager dialogManager;
@@ -15,11 +16,11 @@ public class DialogNPC2 : MonoBehaviour
     private void OnEnable()
     {
         countDialog = 0;
-        //dialogText = GetComponentInChildren<TextMeshProUGUI>();
         gameManager = FindObjectOfType<GameManager>();
         dialogManager = GameObject.Find(nameDialog).GetComponent<DialogManager>();
         dialogText.text = dataDialog[countDialog];
         gameManager.playDialog = true;
+        PlayerPrefs.SetInt(addressDialog, 1);
     }
 
     private void Update()
@@ -30,15 +31,13 @@ public class DialogNPC2 : MonoBehaviour
     {
         if(Input.GetKeyUp(KeyCode.T))
         {
-            if(countDialog < dataDialog.Length-1)
+            if (countDialog < dataDialog.Length-1)
             {
                 countDialog++;
                 dialogText.text = dataDialog[countDialog];
             }
             else
             {
-                string DATAFinaly = "" + nameDialog;
-                PlayerPrefs.SetInt(DATAFinaly, 1);
                 gameManager.playDialog = false;
                 Destroy(gameObject);
             }

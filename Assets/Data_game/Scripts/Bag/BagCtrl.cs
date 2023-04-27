@@ -6,10 +6,10 @@ public class BagCtrl : MonoBehaviour
 {
     public void TangVatPham(int stt, int count)
     {
-        PlayerPrefs.SetInt("VatPham" + stt, count);
+        PlayerPrefs.SetInt("VatPham" + stt, PlayerPrefs.GetInt("VatPham" + stt) + count);
     }
     public void TangVatPham(string name,int count)
     {
-        PlayerPrefs.SetInt(name, count);
+        PlayerPrefs.SetInt(name, PlayerPrefs.GetInt(name) + count);
     }
 }
