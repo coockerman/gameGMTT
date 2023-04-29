@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -91,6 +91,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -451,22 +463,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      npc_male_young_1_5: -313705192
+      npc_male_young_1_0: 314922008
+      npc_male_young_1_1: 1954807017
+      npc_male_young_1_10: -1178862704
       npc_male_young_1_11: -378625254
       npc_male_young_1_12: 1607805998
-      npc_male_young_1_2: 1079805857
-      npc_male_young_1_8: -228279563
-      npc_male_young_1_10: -1178862704
-      npc_male_young_1_3: -1831271323
-      npc_male_young_1_9: -1060931336
-      npc_male_young_1_0: 314922008
-      npc_male_young_1_4: 41759243
-      npc_male_young_1_1: 1954807017
-      npc_male_young_1_15: 18952575
-      npc_male_young_1_14: -68263187
-      npc_male_young_1_7: -1318748730
       npc_male_young_1_13: -1078606831
+      npc_male_young_1_14: -68263187
+      npc_male_young_1_15: 18952575
+      npc_male_young_1_2: 1079805857
+      npc_male_young_1_3: -1831271323
+      npc_male_young_1_4: 41759243
+      npc_male_young_1_5: -313705192
       npc_male_young_1_6: -1418080853
+      npc_male_young_1_7: -1318748730
+      npc_male_young_1_8: -228279563
+      npc_male_young_1_9: -1060931336
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

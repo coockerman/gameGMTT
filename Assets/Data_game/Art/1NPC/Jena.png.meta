@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -91,6 +91,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -451,22 +463,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      female_character_14: 815250110
-      female_character_8: -1768664709
-      female_character_6: 1929314468
-      female_character_4: -762199348
-      female_character_10: 618333661
-      female_character_3: -492310176
-      female_character_15: -332944491
-      female_character_2: 1337232449
       female_character_0: 649905650
-      female_character_13: -1380412738
-      female_character_7: 1679549457
       female_character_1: -1018025095
-      female_character_9: 1469401776
+      female_character_10: 618333661
       female_character_11: -2103469366
       female_character_12: -1479342244
+      female_character_13: -1380412738
+      female_character_14: 815250110
+      female_character_15: -332944491
+      female_character_2: 1337232449
+      female_character_3: -492310176
+      female_character_4: -762199348
       female_character_5: 1977049484
+      female_character_6: 1929314468
+      female_character_7: 1679549457
+      female_character_8: -1768664709
+      female_character_9: 1469401776
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 3
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -3004,143 +3004,143 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      13_Conference_Hall_16x16_13: 1673570026
-      13_Conference_Hall_16x16_16: 1249111783
-      13_Conference_Hall_16x16_86: -584359368
-      13_Conference_Hall_16x16_29: 709848002
-      13_Conference_Hall_16x16_97: 728241289
-      13_Conference_Hall_16x16_45: -1749519899
-      13_Conference_Hall_16x16_58: -1381756143
-      13_Conference_Hall_16x16_67: -2138767516
-      13_Conference_Hall_16x16_113: 1069721252
-      13_Conference_Hall_16x16_24: -1277995252
-      13_Conference_Hall_16x16_115: -1227871151
-      13_Conference_Hall_16x16_92: -318810716
-      13_Conference_Hall_16x16_110: 747087565
-      13_Conference_Hall_16x16_44: 1769590931
-      13_Conference_Hall_16x16_87: -159715997
-      13_Conference_Hall_16x16_46: 1260297945
-      13_Conference_Hall_16x16_7: 973562426
-      13_Conference_Hall_16x16_128: 1815401629
-      13_Conference_Hall_16x16_3: -337480191
-      13_Conference_Hall_16x16_12: -790817675
-      13_Conference_Hall_16x16_98: -572538486
-      13_Conference_Hall_16x16_100: 1986336470
-      13_Conference_Hall_16x16_122: -1485039170
-      13_Conference_Hall_16x16_30: 1877647985
-      13_Conference_Hall_16x16_55: 604713071
-      13_Conference_Hall_16x16_88: 1134271136
-      13_Conference_Hall_16x16_50: -2122246779
-      13_Conference_Hall_16x16_91: 1793639305
-      13_Conference_Hall_16x16_5: -1919237478
-      13_Conference_Hall_16x16_96: -2109971867
-      13_Conference_Hall_16x16_107: 1717890677
-      13_Conference_Hall_16x16_121: -1538333863
-      13_Conference_Hall_16x16_102: 1657779745
-      13_Conference_Hall_16x16_14: 459261246
-      13_Conference_Hall_16x16_65: 1118909563
-      13_Conference_Hall_16x16_22: -1222407702
-      13_Conference_Hall_16x16_62: -2002319515
-      13_Conference_Hall_16x16_85: -1352169025
-      13_Conference_Hall_16x16_43: -1470505556
-      13_Conference_Hall_16x16_17: -719854293
-      13_Conference_Hall_16x16_52: 40947143
-      13_Conference_Hall_16x16_90: 307208905
-      13_Conference_Hall_16x16_116: -1516491527
-      13_Conference_Hall_16x16_71: 357870167
-      13_Conference_Hall_16x16_27: 647399096
-      13_Conference_Hall_16x16_105: 1602735082
-      13_Conference_Hall_16x16_38: -1949909391
-      13_Conference_Hall_16x16_117: -1883474473
-      13_Conference_Hall_16x16_99: 400070794
-      13_Conference_Hall_16x16_42: -9362236
       13_Conference_Hall_16x16_0: -1099090797
-      13_Conference_Hall_16x16_134: -1648986094
-      13_Conference_Hall_16x16_132: 903067271
-      13_Conference_Hall_16x16_23: -2046229080
-      13_Conference_Hall_16x16_20: -430716198
-      13_Conference_Hall_16x16_84: -360364317
+      13_Conference_Hall_16x16_1: -1300807892
+      13_Conference_Hall_16x16_10: 360805465
+      13_Conference_Hall_16x16_100: 1986336470
+      13_Conference_Hall_16x16_101: -1415250131
+      13_Conference_Hall_16x16_102: 1657779745
+      13_Conference_Hall_16x16_103: -1144495294
+      13_Conference_Hall_16x16_104: -1083333428
+      13_Conference_Hall_16x16_105: 1602735082
+      13_Conference_Hall_16x16_106: -885209556
+      13_Conference_Hall_16x16_107: 1717890677
+      13_Conference_Hall_16x16_108: -1499982348
+      13_Conference_Hall_16x16_109: -1247681712
+      13_Conference_Hall_16x16_11: 86259288
+      13_Conference_Hall_16x16_110: 747087565
+      13_Conference_Hall_16x16_111: -603801143
+      13_Conference_Hall_16x16_112: 2035382219
+      13_Conference_Hall_16x16_113: 1069721252
+      13_Conference_Hall_16x16_114: 155524752
+      13_Conference_Hall_16x16_115: -1227871151
+      13_Conference_Hall_16x16_116: -1516491527
+      13_Conference_Hall_16x16_117: -1883474473
       13_Conference_Hall_16x16_118: 916548923
-      13_Conference_Hall_16x16_26: -871532444
-      13_Conference_Hall_16x16_131: -416575790
-      13_Conference_Hall_16x16_31: 874288418
-      13_Conference_Hall_16x16_36: -510125664
-      13_Conference_Hall_16x16_75: -476763257
-      13_Conference_Hall_16x16_61: 815292515
-      13_Conference_Hall_16x16_94: -1064910492
-      13_Conference_Hall_16x16_37: 241661522
-      13_Conference_Hall_16x16_56: 1953188692
-      13_Conference_Hall_16x16_136: -1824431442
-      13_Conference_Hall_16x16_59: 828012453
-      13_Conference_Hall_16x16_4: 1427276573
-      13_Conference_Hall_16x16_39: 1799795077
-      13_Conference_Hall_16x16_54: 1446935319
-      13_Conference_Hall_16x16_80: 68646547
-      13_Conference_Hall_16x16_9: 686224374
       13_Conference_Hall_16x16_119: -2023943806
-      13_Conference_Hall_16x16_49: 886543466
+      13_Conference_Hall_16x16_12: -790817675
+      13_Conference_Hall_16x16_120: 820872993
+      13_Conference_Hall_16x16_121: -1538333863
+      13_Conference_Hall_16x16_122: -1485039170
+      13_Conference_Hall_16x16_123: 522177575
       13_Conference_Hall_16x16_124: 1196528538
       13_Conference_Hall_16x16_125: -799978254
-      13_Conference_Hall_16x16_95: -1394338733
-      13_Conference_Hall_16x16_1: -1300807892
-      13_Conference_Hall_16x16_53: 473547572
-      13_Conference_Hall_16x16_123: 522177575
-      13_Conference_Hall_16x16_11: 86259288
-      13_Conference_Hall_16x16_6: -206264010
-      13_Conference_Hall_16x16_40: -1265318148
-      13_Conference_Hall_16x16_106: -885209556
-      13_Conference_Hall_16x16_10: 360805465
-      13_Conference_Hall_16x16_73: -729934995
-      13_Conference_Hall_16x16_57: 865092697
-      13_Conference_Hall_16x16_78: -1820697408
-      13_Conference_Hall_16x16_135: -179051765
-      13_Conference_Hall_16x16_74: -1040566663
-      13_Conference_Hall_16x16_21: -1881909170
-      13_Conference_Hall_16x16_66: -1561252355
-      13_Conference_Hall_16x16_111: -603801143
-      13_Conference_Hall_16x16_89: 1654522077
-      13_Conference_Hall_16x16_120: 820872993
-      13_Conference_Hall_16x16_108: -1499982348
-      13_Conference_Hall_16x16_133: 1921757631
-      13_Conference_Hall_16x16_51: 59756451
-      13_Conference_Hall_16x16_64: -143401931
-      13_Conference_Hall_16x16_130: 1118142284
-      13_Conference_Hall_16x16_47: 202314540
-      13_Conference_Hall_16x16_114: 155524752
-      13_Conference_Hall_16x16_76: 1513331214
-      13_Conference_Hall_16x16_35: -2080889738
-      13_Conference_Hall_16x16_25: 284720771
-      13_Conference_Hall_16x16_63: -296119969
-      13_Conference_Hall_16x16_2: -2077147804
       13_Conference_Hall_16x16_126: -429659081
-      13_Conference_Hall_16x16_69: 2045223869
-      13_Conference_Hall_16x16_82: -314195296
-      13_Conference_Hall_16x16_103: -1144495294
-      13_Conference_Hall_16x16_79: 34115152
-      13_Conference_Hall_16x16_34: 1151930177
-      13_Conference_Hall_16x16_60: 416182135
-      13_Conference_Hall_16x16_70: 500306891
-      13_Conference_Hall_16x16_109: -1247681712
-      13_Conference_Hall_16x16_72: 1158759472
-      13_Conference_Hall_16x16_15: 1963102521
-      13_Conference_Hall_16x16_77: -1762197411
-      13_Conference_Hall_16x16_8: -1823735285
-      13_Conference_Hall_16x16_112: 2035382219
-      13_Conference_Hall_16x16_81: 505921244
-      13_Conference_Hall_16x16_28: 2127427093
-      13_Conference_Hall_16x16_68: 100683946
-      13_Conference_Hall_16x16_18: 1078619216
-      13_Conference_Hall_16x16_104: -1083333428
-      13_Conference_Hall_16x16_33: -1742369389
-      13_Conference_Hall_16x16_32: 1013658412
-      13_Conference_Hall_16x16_129: 314755289
-      13_Conference_Hall_16x16_48: -488520473
-      13_Conference_Hall_16x16_101: -1415250131
-      13_Conference_Hall_16x16_83: 147156671
       13_Conference_Hall_16x16_127: -1809523076
-      13_Conference_Hall_16x16_41: 133867088
+      13_Conference_Hall_16x16_128: 1815401629
+      13_Conference_Hall_16x16_129: 314755289
+      13_Conference_Hall_16x16_13: 1673570026
+      13_Conference_Hall_16x16_130: 1118142284
+      13_Conference_Hall_16x16_131: -416575790
+      13_Conference_Hall_16x16_132: 903067271
+      13_Conference_Hall_16x16_133: 1921757631
+      13_Conference_Hall_16x16_134: -1648986094
+      13_Conference_Hall_16x16_135: -179051765
+      13_Conference_Hall_16x16_136: -1824431442
+      13_Conference_Hall_16x16_14: 459261246
+      13_Conference_Hall_16x16_15: 1963102521
+      13_Conference_Hall_16x16_16: 1249111783
+      13_Conference_Hall_16x16_17: -719854293
+      13_Conference_Hall_16x16_18: 1078619216
       13_Conference_Hall_16x16_19: 572614039
+      13_Conference_Hall_16x16_2: -2077147804
+      13_Conference_Hall_16x16_20: -430716198
+      13_Conference_Hall_16x16_21: -1881909170
+      13_Conference_Hall_16x16_22: -1222407702
+      13_Conference_Hall_16x16_23: -2046229080
+      13_Conference_Hall_16x16_24: -1277995252
+      13_Conference_Hall_16x16_25: 284720771
+      13_Conference_Hall_16x16_26: -871532444
+      13_Conference_Hall_16x16_27: 647399096
+      13_Conference_Hall_16x16_28: 2127427093
+      13_Conference_Hall_16x16_29: 709848002
+      13_Conference_Hall_16x16_3: -337480191
+      13_Conference_Hall_16x16_30: 1877647985
+      13_Conference_Hall_16x16_31: 874288418
+      13_Conference_Hall_16x16_32: 1013658412
+      13_Conference_Hall_16x16_33: -1742369389
+      13_Conference_Hall_16x16_34: 1151930177
+      13_Conference_Hall_16x16_35: -2080889738
+      13_Conference_Hall_16x16_36: -510125664
+      13_Conference_Hall_16x16_37: 241661522
+      13_Conference_Hall_16x16_38: -1949909391
+      13_Conference_Hall_16x16_39: 1799795077
+      13_Conference_Hall_16x16_4: 1427276573
+      13_Conference_Hall_16x16_40: -1265318148
+      13_Conference_Hall_16x16_41: 133867088
+      13_Conference_Hall_16x16_42: -9362236
+      13_Conference_Hall_16x16_43: -1470505556
+      13_Conference_Hall_16x16_44: 1769590931
+      13_Conference_Hall_16x16_45: -1749519899
+      13_Conference_Hall_16x16_46: 1260297945
+      13_Conference_Hall_16x16_47: 202314540
+      13_Conference_Hall_16x16_48: -488520473
+      13_Conference_Hall_16x16_49: 886543466
+      13_Conference_Hall_16x16_5: -1919237478
+      13_Conference_Hall_16x16_50: -2122246779
+      13_Conference_Hall_16x16_51: 59756451
+      13_Conference_Hall_16x16_52: 40947143
+      13_Conference_Hall_16x16_53: 473547572
+      13_Conference_Hall_16x16_54: 1446935319
+      13_Conference_Hall_16x16_55: 604713071
+      13_Conference_Hall_16x16_56: 1953188692
+      13_Conference_Hall_16x16_57: 865092697
+      13_Conference_Hall_16x16_58: -1381756143
+      13_Conference_Hall_16x16_59: 828012453
+      13_Conference_Hall_16x16_6: -206264010
+      13_Conference_Hall_16x16_60: 416182135
+      13_Conference_Hall_16x16_61: 815292515
+      13_Conference_Hall_16x16_62: -2002319515
+      13_Conference_Hall_16x16_63: -296119969
+      13_Conference_Hall_16x16_64: -143401931
+      13_Conference_Hall_16x16_65: 1118909563
+      13_Conference_Hall_16x16_66: -1561252355
+      13_Conference_Hall_16x16_67: -2138767516
+      13_Conference_Hall_16x16_68: 100683946
+      13_Conference_Hall_16x16_69: 2045223869
+      13_Conference_Hall_16x16_7: 973562426
+      13_Conference_Hall_16x16_70: 500306891
+      13_Conference_Hall_16x16_71: 357870167
+      13_Conference_Hall_16x16_72: 1158759472
+      13_Conference_Hall_16x16_73: -729934995
+      13_Conference_Hall_16x16_74: -1040566663
+      13_Conference_Hall_16x16_75: -476763257
+      13_Conference_Hall_16x16_76: 1513331214
+      13_Conference_Hall_16x16_77: -1762197411
+      13_Conference_Hall_16x16_78: -1820697408
+      13_Conference_Hall_16x16_79: 34115152
+      13_Conference_Hall_16x16_8: -1823735285
+      13_Conference_Hall_16x16_80: 68646547
+      13_Conference_Hall_16x16_81: 505921244
+      13_Conference_Hall_16x16_82: -314195296
+      13_Conference_Hall_16x16_83: 147156671
+      13_Conference_Hall_16x16_84: -360364317
+      13_Conference_Hall_16x16_85: -1352169025
+      13_Conference_Hall_16x16_86: -584359368
+      13_Conference_Hall_16x16_87: -159715997
+      13_Conference_Hall_16x16_88: 1134271136
+      13_Conference_Hall_16x16_89: 1654522077
+      13_Conference_Hall_16x16_9: 686224374
+      13_Conference_Hall_16x16_90: 307208905
+      13_Conference_Hall_16x16_91: 1793639305
+      13_Conference_Hall_16x16_92: -318810716
       13_Conference_Hall_16x16_93: -1928426668
+      13_Conference_Hall_16x16_94: -1064910492
+      13_Conference_Hall_16x16_95: -1394338733
+      13_Conference_Hall_16x16_96: -2109971867
+      13_Conference_Hall_16x16_97: 728241289
+      13_Conference_Hall_16x16_98: -572538486
+      13_Conference_Hall_16x16_99: 400070794
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

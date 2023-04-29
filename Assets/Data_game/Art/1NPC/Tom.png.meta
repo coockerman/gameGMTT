@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -91,6 +91,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -451,22 +463,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      npc_female_young_1_5: -911105243
       npc_female_young_1_0: -991554269
       npc_female_young_1_1: 88251078
       npc_female_young_1_10: 331713302
-      npc_female_young_1_9: -1062399795
-      npc_female_young_1_14: -1123737966
-      npc_female_young_1_7: -1974073293
-      npc_female_young_1_2: 886946758
-      npc_female_young_1_13: 580481586
-      npc_female_young_1_12: 72810582
-      npc_female_young_1_8: 538763587
-      npc_female_young_1_4: -1988235734
-      npc_female_young_1_15: -648481302
-      npc_female_young_1_3: 225706912
-      npc_female_young_1_6: 1448236845
       npc_female_young_1_11: 148407724
+      npc_female_young_1_12: 72810582
+      npc_female_young_1_13: 580481586
+      npc_female_young_1_14: -1123737966
+      npc_female_young_1_15: -648481302
+      npc_female_young_1_2: 886946758
+      npc_female_young_1_3: 225706912
+      npc_female_young_1_4: -1988235734
+      npc_female_young_1_5: -911105243
+      npc_female_young_1_6: 1448236845
+      npc_female_young_1_7: -1974073293
+      npc_female_young_1_8: 538763587
+      npc_female_young_1_9: -1062399795
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

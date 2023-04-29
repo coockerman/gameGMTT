@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 3
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -757,36 +757,36 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Room_Builder_Baseboards_16x16_21: -983125546
-      Room_Builder_Baseboards_16x16_13: 1877909037
-      Room_Builder_Baseboards_16x16_5: 440189978
-      Room_Builder_Baseboards_16x16_29: -1642819562
-      Room_Builder_Baseboards_16x16_18: -1106897000
-      Room_Builder_Baseboards_16x16_2: 1995391262
-      Room_Builder_Baseboards_16x16_14: 780544878
-      Room_Builder_Baseboards_16x16_16: -789239367
-      Room_Builder_Baseboards_16x16_28: 955656777
-      Room_Builder_Baseboards_16x16_4: -553361667
-      Room_Builder_Baseboards_16x16_3: -479549781
-      Room_Builder_Baseboards_16x16_27: -1416819597
-      Room_Builder_Baseboards_16x16_19: 1301301507
-      Room_Builder_Baseboards_16x16_24: -1576667621
-      Room_Builder_Baseboards_16x16_12: 1562686939
-      Room_Builder_Baseboards_16x16_25: -901886075
-      Room_Builder_Baseboards_16x16_9: -1219784922
-      Room_Builder_Baseboards_16x16_1: 444390070
-      Room_Builder_Baseboards_16x16_20: -160714304
-      Room_Builder_Baseboards_16x16_23: -422475143
       Room_Builder_Baseboards_16x16_0: 247590044
-      Room_Builder_Baseboards_16x16_11: 1975007180
-      Room_Builder_Baseboards_16x16_15: 1447771283
-      Room_Builder_Baseboards_16x16_22: 786786340
-      Room_Builder_Baseboards_16x16_6: -419838242
+      Room_Builder_Baseboards_16x16_1: 444390070
       Room_Builder_Baseboards_16x16_10: -1058348628
-      Room_Builder_Baseboards_16x16_8: 448360883
-      Room_Builder_Baseboards_16x16_7: -357715506
-      Room_Builder_Baseboards_16x16_26: 822409202
+      Room_Builder_Baseboards_16x16_11: 1975007180
+      Room_Builder_Baseboards_16x16_12: 1562686939
+      Room_Builder_Baseboards_16x16_13: 1877909037
+      Room_Builder_Baseboards_16x16_14: 780544878
+      Room_Builder_Baseboards_16x16_15: 1447771283
+      Room_Builder_Baseboards_16x16_16: -789239367
       Room_Builder_Baseboards_16x16_17: 730336450
+      Room_Builder_Baseboards_16x16_18: -1106897000
+      Room_Builder_Baseboards_16x16_19: 1301301507
+      Room_Builder_Baseboards_16x16_2: 1995391262
+      Room_Builder_Baseboards_16x16_20: -160714304
+      Room_Builder_Baseboards_16x16_21: -983125546
+      Room_Builder_Baseboards_16x16_22: 786786340
+      Room_Builder_Baseboards_16x16_23: -422475143
+      Room_Builder_Baseboards_16x16_24: -1576667621
+      Room_Builder_Baseboards_16x16_25: -901886075
+      Room_Builder_Baseboards_16x16_26: 822409202
+      Room_Builder_Baseboards_16x16_27: -1416819597
+      Room_Builder_Baseboards_16x16_28: 955656777
+      Room_Builder_Baseboards_16x16_29: -1642819562
+      Room_Builder_Baseboards_16x16_3: -479549781
+      Room_Builder_Baseboards_16x16_4: -553361667
+      Room_Builder_Baseboards_16x16_5: 440189978
+      Room_Builder_Baseboards_16x16_6: -419838242
+      Room_Builder_Baseboards_16x16_7: -357715506
+      Room_Builder_Baseboards_16x16_8: 448360883
+      Room_Builder_Baseboards_16x16_9: -1219784922
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
