@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemyHealthManager : MonoBehaviour
 {
@@ -15,21 +16,32 @@ public class EnemyHealthManager : MonoBehaviour
     public GameObject VP1;
     public GameObject VP2;
     public GameObject VP3;
+    public GameObject VP4;
+    public GameObject VP5;
+    public GameObject VP6;
+    public GameObject VP7;
+    public GameObject VP8;
+    public GameObject VP9;
+    public GameObject VP10;
     public GameObject manaRecovery;
     public UiManagerEnemy uiManagerEnemy;
     
     protected int ratio;
-    protected int ratioVP1;
+    protected int ratioHealthy;
     public float CreateHPdied;
 
-    int itemBlood;
-    int itemMana;
-    int itemVP1;
-    int itemVP2;
-    int itemVP3;
-    //int itemVP4;
-    //int itemVP5;
-    //int itemVP6;
+    [SerializeField]int itemBlood;
+    [SerializeField] int itemMana;
+    [SerializeField] int itemVP1;
+    [SerializeField] int itemVP2;
+    [SerializeField] int itemVP3;
+    [SerializeField] int itemVP4;
+    [SerializeField] int itemVP5;
+    [SerializeField] int itemVP6;
+    [SerializeField] int itemVP7;
+    [SerializeField] int itemVP8;
+    [SerializeField] int itemVP9;
+    [SerializeField] int itemVP10;
 
     private void Awake()
     {
@@ -48,10 +60,32 @@ public class EnemyHealthManager : MonoBehaviour
         SetMaxHealth();
         SetMaxHealth();
         uiManagerEnemy.UpdateName(PlayerPrefs.GetInt("enemyLv" + gameObject.name));
-        CheckTiLeRoiVP();
 
     }
-
+    void SetTiLe()
+    {
+        itemMana += itemBlood;
+        itemVP2 += itemVP1;
+        itemVP3 += itemVP2;
+        itemVP4 += itemVP3;
+        itemVP5 += itemVP4;
+        itemVP6 += itemVP5;
+        itemVP7 += itemVP6;
+        itemVP8 += itemVP7;
+        itemVP9 += itemVP8;
+        itemVP10 += itemVP9;
+    }
+    void DebugTile()
+    {
+        Debug.Log(itemVP1);
+        Debug.Log(itemVP2);
+        Debug.Log(itemVP3);
+        Debug.Log(itemVP4);
+        Debug.Log(itemVP5);
+        Debug.Log(itemVP6);
+        Debug.Log(itemVP7);
+        Debug.Log(itemVP8);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -62,6 +96,9 @@ public class EnemyHealthManager : MonoBehaviour
         if (EnemyCurrentHealth <= 0)
         {
             thePlayerStats.AddExperience(expToGive);
+            SetTiLe();
+
+            DebugTile();
             DropHealingItem();
             Invoke("HoiSinhEnemy", 10);
 
@@ -70,94 +107,72 @@ public class EnemyHealthManager : MonoBehaviour
     }
     protected virtual void DropHealingItem()
     {
+        Vector3 posHealth = new Vector3(transform.position.x-0.5f,transform.position.y,transform.position.z);
+        Vector3 posItem = new Vector3(transform.position.x+0.5f,transform.position.y,transform.position.z);
+        ratioHealthy = Random.Range(1, 100);
         ratio = Random.Range(1, 100);
-        CheckTiLeRoiVP();
-        if (ratio <= itemBlood)
+        if(ratioHealthy <= itemBlood)
         {
-            Instantiate(bloodRecovery, transform.position, transform.rotation);
+            GameObject blood = Instantiate(bloodRecovery, posHealth, transform.rotation);
+            blood.name = bloodRecovery.name;
+        }else if(ratioHealthy <= itemMana)
+        {
+            GameObject mana = Instantiate(manaRecovery, posHealth, transform.rotation);
+            mana.name = manaRecovery.name;
         }
-        else if (ratio <= itemBlood + itemMana)
+        //////////////////////////////////////
+        if (ratio <= itemVP1)
         {
-            Instantiate(manaRecovery, transform.position, transform.rotation);
-        }
-        else if (ratio <= itemBlood + itemMana + itemVP1)
-        {
-            GameObject vp1 = Instantiate(VP1, transform.position, transform.rotation);
+            GameObject vp1 = Instantiate(VP1, posItem, transform.rotation);
             vp1.name = VP1.name;
         }
-        else if (ratio <= itemBlood + itemMana + itemVP1 + itemVP2)
+        else if (ratio <= itemVP2)
         {
-            GameObject vp2 = Instantiate(VP2, transform.position, transform.rotation);
+            GameObject vp2 = Instantiate(VP2, posItem, transform.rotation);
             vp2.name = VP2.name;
         }
-        else if(ratio <= itemBlood + itemMana + itemVP1 + itemVP2 + itemVP3)
+        else if(ratio <= itemVP3)
         {
-            GameObject vp3 = Instantiate(VP3, transform.position, transform.rotation);
+            GameObject vp3 = Instantiate(VP3, posItem, transform.rotation);
             vp3.name = VP3.name;
         }
-    }
-    protected virtual void CheckTiLeRoiVP()
-    {
-        if(EnemyMaxHealth <=55)
+        else if (ratio <= itemVP4)
         {
-            itemBlood = 0;
-            itemMana = 0;
-            itemVP1 = 100;
-        }else if(EnemyMaxHealth < 200)
-        {
-            itemBlood = 25;
-            itemMana = 25;
-            itemVP1 = 15;
+            GameObject vp4 = Instantiate(VP4, posItem, transform.rotation);
+            vp4.name = VP4.name;
         }
-        else if(EnemyMaxHealth <= 500)
+        else if (ratio <= itemVP5)
         {
-            itemBlood = 20;
-            itemMana = 20;
-            itemVP1 = 30;
-            itemVP2 = 10;
-        }else if(EnemyMaxHealth <= 1000)
-        {
-            itemBlood = 20;
-            itemMana = 20;
-            itemVP1 = 40;
-            itemVP2 = 15;
-            itemVP3 = 3;
-        }else if(EnemyMaxHealth <= 2000)
-        {
-            itemBlood = 10;
-            itemMana = 15;
-            itemVP1 = 45;
-            itemVP2 = 20;
-            itemVP3 = 5;
-        }else if(EnemyMaxHealth <= 3000)
-        {
-            itemBlood = 5;
-            itemMana = 10;
-            itemVP1 = 45;
-            itemVP2 = 20;
-            itemVP3 = 8;
-            //itemVP4 = 2;
-        }else if(EnemyMaxHealth <= 4000)
-        {
-            itemBlood = 5;
-            itemMana = 10;
-            itemVP1 = 40;
-            itemVP2 = 20;
-            itemVP3 = 10;
-            //itemVP4 = 5;
-            //itemVP5 = 5;
+            GameObject vp5 = Instantiate(VP5, posItem, transform.rotation);
+            vp5.name = VP5.name;
         }
-        else
+        else if (ratio <= itemVP6)
         {
-            itemBlood = 5;
-            itemMana = 10;
-            itemVP1 = 40;
-            itemVP2 = 20;
-            itemVP3 = 10;
-            //itemVP4 = 5;
-            //itemVP5 = 5;
+            GameObject vp6 = Instantiate(VP6, posItem, transform.rotation);
+            vp6.name = VP6.name;
+        }
+        else if (ratio <= itemVP7)
+        {
+            GameObject vp7 = Instantiate(VP7, posItem, transform.rotation);
+            vp7.name = VP7.name;
+        }
+        else if (ratio <= itemVP8)
+        {
+            GameObject vp8 = Instantiate(VP8, posItem, transform.rotation);
+            vp8.name = VP8.name;
+        }
+        else if (ratio <= itemVP9)
+        {
+            GameObject vp9 = Instantiate(VP9, posItem, transform.rotation);
+            vp9.name = VP9.name;
+        }
+        else if (ratio <= itemVP10)
+        {
+            GameObject vp10 = Instantiate(VP10, posItem, transform.rotation);
+            vp10.name = VP10.name;
         }
     }
+    
     protected virtual void HoiSinhEnemy()
     {
         gameObject.SetActive(true);

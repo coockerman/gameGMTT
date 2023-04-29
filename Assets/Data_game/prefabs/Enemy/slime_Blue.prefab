@@ -392,6 +392,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &2278889143564900570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,14 +409,13 @@ MonoBehaviour:
   EnemyCurrentHealth: 0
   EnemyUpHealth: 0
   expToGive: 200
-  bloodRecovery: {fileID: 0}
-  VP1: {fileID: 0}
-  manaRecovery: {fileID: 0}
+  bloodRecovery: {fileID: 956220233630913494, guid: 0948bf984273b4c4a8223c549332821d, type: 3}
+  VP1: {fileID: 1332446021846080876, guid: 3e58142c54422854eb69420a284cc048, type: 3}
+  VP2: {fileID: 1332446021846080876, guid: b9eff655ecc8bca4d83a5db47ac8b2d2, type: 3}
+  VP3: {fileID: 1332446021846080876, guid: 94ea3b4cfa6c323469f5d885004ffeac, type: 3}
+  manaRecovery: {fileID: 956220233630913494, guid: b61af3ec8be4fda40bc13af42cdea86d, type: 3}
   uiManagerEnemy: {fileID: 0}
   CreateHPdied: 0
-  itemBlood: 0
-  itemMana: 0
-  itemVP1: 0
 --- !u!58 &3147431742016148874
 CircleCollider2D:
   m_ObjectHideFlags: 0
