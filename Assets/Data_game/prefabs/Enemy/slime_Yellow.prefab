@@ -429,9 +429,28 @@ MonoBehaviour:
   VP1: {fileID: 1332446021846080876, guid: 3e58142c54422854eb69420a284cc048, type: 3}
   VP2: {fileID: 1332446021846080876, guid: b9eff655ecc8bca4d83a5db47ac8b2d2, type: 3}
   VP3: {fileID: 1332446021846080876, guid: 94ea3b4cfa6c323469f5d885004ffeac, type: 3}
+  VP4: {fileID: 1332446021846080876, guid: 88f0079ae8c876b458453cb8dd286098, type: 3}
+  VP5: {fileID: 1332446021846080876, guid: 43f7577ea781ff3438aaa7e3bf6602e1, type: 3}
+  VP6: {fileID: 1332446021846080876, guid: 747ab05eff112de4aa68a17ce8be9eb9, type: 3}
+  VP7: {fileID: 1332446021846080876, guid: 41cf8327bfbfde44483d71738b040f8f, type: 3}
+  VP8: {fileID: 1332446021846080876, guid: 1716c3f5fc644f342bfcc2a64dcf7414, type: 3}
+  VP9: {fileID: 1332446021846080876, guid: 67caff680b8b8664d9f58d38222ae356, type: 3}
+  VP10: {fileID: 1332446021846080876, guid: 5fff0fef8fc967e4ead652ea51951909, type: 3}
   manaRecovery: {fileID: 956220233630913494, guid: b61af3ec8be4fda40bc13af42cdea86d, type: 3}
   uiManagerEnemy: {fileID: 0}
   CreateHPdied: 0.5
+  itemBlood: 30
+  itemMana: 35
+  itemVP1: 20
+  itemVP2: 35
+  itemVP3: 10
+  itemVP4: 0
+  itemVP5: 0
+  itemVP6: 0
+  itemVP7: 0
+  itemVP8: 0
+  itemVP9: 0
+  itemVP10: 0
 --- !u!50 &3147431742016148873
 Rigidbody2D:
   serializedVersion: 4
@@ -465,7 +484,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75670af73ddcd945889dd6f55a65831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  moveSpeed: 5
+  xRangeMove: 5
+  yRangeMove: 5
   timeBetweenMove: 2
   timeToMove: 2
 --- !u!114 &-8089384406001030714

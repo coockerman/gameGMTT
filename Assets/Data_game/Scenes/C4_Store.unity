@@ -13342,7 +13342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2c5520370d6b6d48b942eb3d7256fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogs: []
+  dialogData: []
+  dialog: []
   gameManager: {fileID: 0}
   AniQuestion: {fileID: 466531722}
 --- !u!1 &1034172665
@@ -13983,7 +13984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 0.6
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0

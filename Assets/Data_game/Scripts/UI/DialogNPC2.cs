@@ -9,7 +9,6 @@ public class DialogNPC2 : MonoBehaviour
     [SerializeField] string addressDialog;
     [SerializeField] string[] dataDialog;
     GameManager gameManager;
-    DialogManager dialogManager;
     [SerializeField] TextMeshProUGUI dialogText;
 
     int countDialog;
@@ -17,7 +16,6 @@ public class DialogNPC2 : MonoBehaviour
     {
         countDialog = 0;
         gameManager = FindObjectOfType<GameManager>();
-        dialogManager = GameObject.Find(nameDialog).GetComponent<DialogManager>();
         dialogText.text = dataDialog[countDialog];
         gameManager.playDialog = true;
         PlayerPrefs.SetInt(addressDialog, 1);
