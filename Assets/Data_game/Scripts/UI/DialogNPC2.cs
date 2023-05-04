@@ -27,7 +27,7 @@ public class DialogNPC2 : MonoBehaviour
     }
     void NextDialog()
     {
-        if(Input.GetKeyUp(KeyCode.T))
+        if(Input.GetKeyUp(KeyCode.E))
         {
             if (countDialog < dataDialog.Length-1)
             {

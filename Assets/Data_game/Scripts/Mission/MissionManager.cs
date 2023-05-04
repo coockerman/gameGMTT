@@ -157,7 +157,14 @@ public class MissionManager : MonoBehaviour
     void NV10()
     {
         textMission.text = missionData[10];
-
+        if (PlayerPrefs.GetInt("NV10Check") != 1)
+        {
+            PlayerPrefs.SetInt("NV10Check", 1);
+        }
+        if (PlayerPrefs.GetInt("BonDialog4") == 1)
+        {
+            indexNV = 11;
+        }
     }
     void NV11()
     {
