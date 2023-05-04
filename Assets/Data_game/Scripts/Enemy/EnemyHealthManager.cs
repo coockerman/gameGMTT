@@ -75,17 +75,7 @@ public class EnemyHealthManager : MonoBehaviour
         itemVP9 += itemVP8;
         itemVP10 += itemVP9;
     }
-    void DebugTile()
-    {
-        Debug.Log(itemVP1);
-        Debug.Log(itemVP2);
-        Debug.Log(itemVP3);
-        Debug.Log(itemVP4);
-        Debug.Log(itemVP5);
-        Debug.Log(itemVP6);
-        Debug.Log(itemVP7);
-        Debug.Log(itemVP8);
-    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -98,7 +88,6 @@ public class EnemyHealthManager : MonoBehaviour
             thePlayerStats.AddExperience(expToGive);
             SetTiLe();
 
-            DebugTile();
             DropHealingItem();
             Invoke("HoiSinhEnemy", 10);
 
