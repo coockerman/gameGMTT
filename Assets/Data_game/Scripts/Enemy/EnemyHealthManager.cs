@@ -109,7 +109,6 @@ public class EnemyHealthManager : MonoBehaviour
             GameObject mana = Instantiate(manaRecovery, posHealth, transform.rotation);
             mana.name = manaRecovery.name;
         }
-        Debug.Log(ratio);
         //////////////////////////////////////
         if (ratio <= itemVP1)
         {

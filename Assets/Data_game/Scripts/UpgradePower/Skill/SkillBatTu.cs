@@ -8,35 +8,31 @@ public class SkillBatTu : MonoBehaviour
     [Header("Up = VatPham2")]
     [SerializeField] int[] dataNLUpBatTu;
     [SerializeField] float[] dataLVTimeBatTu;
+
     [SerializeField] PlayerHearthManager playerHearth;
-    [SerializeField] GameObject BoxChuThich;
+
     [SerializeField] GameObject ImageThongBao;
     [SerializeField] GameObject HieuUng;
+
     [SerializeField] TextMeshProUGUI ChuThichBatTu;
     [SerializeField] TextMeshProUGUI textLvBatTu;
     [SerializeField] TextMeshProUGUI textNeedNL;
+
     string SAVE_LVBatTu;
     public float timeBattu;
     int lvBatTu;
-    public bool activeBatTu = false;
+    //public bool activeBatTu = false;
     
     private void Start()
     {
-        SAVE_LVBatTu = "lvBatTu";
-        lvBatTu = PlayerPrefs.GetInt(SAVE_LVBatTu);
-        timeBattu = dataLVTimeBatTu[lvBatTu];
+        SetTimeBatTu();
         SetChuThich();
     }
-    private void Update()
-    {
-        
-    }
+    
     public void OnBatTu()
     {
-        activeBatTu = true;
-        SAVE_LVBatTu = "lvBatTu";
-        lvBatTu = PlayerPrefs.GetInt(SAVE_LVBatTu);
-        timeBattu = dataLVTimeBatTu[lvBatTu];
+        //activeBatTu = true;
+        SetTimeBatTu();
 
         ImageThongBao.SetActive(true);
         HieuUng.SetActive(true);
@@ -47,10 +43,16 @@ public class SkillBatTu : MonoBehaviour
     }
     void OffBatTu()
     {
-        activeBatTu = false;
+        //activeBatTu = false;
         HieuUng.SetActive(false);
         ImageThongBao.SetActive(false);
         playerHearth.BatTu2 = false;
+    }
+    void SetTimeBatTu()
+    {
+        SAVE_LVBatTu = "lvBatTu";
+        lvBatTu = PlayerPrefs.GetInt(SAVE_LVBatTu);
+        timeBattu = dataLVTimeBatTu[lvBatTu];
     }
     public void TangLVBattu()
     {
@@ -69,13 +71,5 @@ public class SkillBatTu : MonoBehaviour
         textLvBatTu.text = "Cấp " + lvBatTu;
         textNeedNL.text = "x" + dataNLUpBatTu[lvBatTu];
     }
-    private void OnMouseEnter()
-    {
-        BoxChuThich.SetActive(true);
-    }
     
-    private void OnMouseExit()
-    {
-        BoxChuThich.SetActive(false);
-    }
 }

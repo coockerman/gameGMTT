@@ -30,7 +30,7 @@ public class PlayerCtrl : MonoBehaviour
     private float skillTwoTime;
     private float skillTwoTimeCount;
 
-    [SerializeField] protected float runSpeed = 2.0f;
+    public float runSpeed;
     [SerializeField] protected float currentRunSpeed;
     [SerializeField] protected float diagonalMoveModifier = 0.75f;
 
