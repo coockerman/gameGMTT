@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 3
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -3277,156 +3277,156 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Room_Builder_Floor_Connectors_16x16_0: 1073438503
+      Room_Builder_Floor_Connectors_16x16_1: -745772500
+      Room_Builder_Floor_Connectors_16x16_10: -1225025826
+      Room_Builder_Floor_Connectors_16x16_100: 1277568254
+      Room_Builder_Floor_Connectors_16x16_101: 271920531
+      Room_Builder_Floor_Connectors_16x16_102: 1589742446
+      Room_Builder_Floor_Connectors_16x16_103: 1896098195
+      Room_Builder_Floor_Connectors_16x16_104: 1595710922
+      Room_Builder_Floor_Connectors_16x16_105: -1297628968
+      Room_Builder_Floor_Connectors_16x16_106: 1224612149
+      Room_Builder_Floor_Connectors_16x16_107: 850599009
+      Room_Builder_Floor_Connectors_16x16_108: 2114510987
+      Room_Builder_Floor_Connectors_16x16_109: 831155575
+      Room_Builder_Floor_Connectors_16x16_11: -759758917
+      Room_Builder_Floor_Connectors_16x16_110: 1220232353
+      Room_Builder_Floor_Connectors_16x16_111: 1086094005
       Room_Builder_Floor_Connectors_16x16_112: -581816014
-      Room_Builder_Floor_Connectors_16x16_140: -1137882882
+      Room_Builder_Floor_Connectors_16x16_113: 1680754398
       Room_Builder_Floor_Connectors_16x16_114: 684057916
-      Room_Builder_Floor_Connectors_16x16_90: -1439444202
+      Room_Builder_Floor_Connectors_16x16_115: -1479451789
+      Room_Builder_Floor_Connectors_16x16_116: 172926811
+      Room_Builder_Floor_Connectors_16x16_117: -1796118440
+      Room_Builder_Floor_Connectors_16x16_118: 104448454
+      Room_Builder_Floor_Connectors_16x16_119: 1326528495
+      Room_Builder_Floor_Connectors_16x16_12: -1597278151
+      Room_Builder_Floor_Connectors_16x16_120: 468714548
+      Room_Builder_Floor_Connectors_16x16_121: 590517952
+      Room_Builder_Floor_Connectors_16x16_122: -915794022
+      Room_Builder_Floor_Connectors_16x16_123: 1843984357
+      Room_Builder_Floor_Connectors_16x16_124: -1423247177
+      Room_Builder_Floor_Connectors_16x16_125: 1976645875
+      Room_Builder_Floor_Connectors_16x16_126: -965663423
+      Room_Builder_Floor_Connectors_16x16_127: 316127013
+      Room_Builder_Floor_Connectors_16x16_128: -1108833806
+      Room_Builder_Floor_Connectors_16x16_129: 50156139
+      Room_Builder_Floor_Connectors_16x16_13: 208006660
+      Room_Builder_Floor_Connectors_16x16_130: -1013005374
+      Room_Builder_Floor_Connectors_16x16_131: -478244401
+      Room_Builder_Floor_Connectors_16x16_132: -282808072
+      Room_Builder_Floor_Connectors_16x16_133: -1630775622
+      Room_Builder_Floor_Connectors_16x16_134: -1905823394
+      Room_Builder_Floor_Connectors_16x16_135: -809825962
+      Room_Builder_Floor_Connectors_16x16_136: -1372201405
+      Room_Builder_Floor_Connectors_16x16_137: -1531234869
+      Room_Builder_Floor_Connectors_16x16_138: 1340224735
+      Room_Builder_Floor_Connectors_16x16_139: -1457664708
+      Room_Builder_Floor_Connectors_16x16_14: 907869269
+      Room_Builder_Floor_Connectors_16x16_140: -1137882882
+      Room_Builder_Floor_Connectors_16x16_141: -1721363843
+      Room_Builder_Floor_Connectors_16x16_142: -1073792101
+      Room_Builder_Floor_Connectors_16x16_143: 1326799785
+      Room_Builder_Floor_Connectors_16x16_144: -1385782561
+      Room_Builder_Floor_Connectors_16x16_145: -1424496565
+      Room_Builder_Floor_Connectors_16x16_146: -2056713331
+      Room_Builder_Floor_Connectors_16x16_147: 1474461773
+      Room_Builder_Floor_Connectors_16x16_148: 1520167568
+      Room_Builder_Floor_Connectors_16x16_149: 339171076
       Room_Builder_Floor_Connectors_16x16_15: -1626935598
       Room_Builder_Floor_Connectors_16x16_16: -1012103622
-      Room_Builder_Floor_Connectors_16x16_133: -1630775622
-      Room_Builder_Floor_Connectors_16x16_5: 1391078183
-      Room_Builder_Floor_Connectors_16x16_79: -1261741974
-      Room_Builder_Floor_Connectors_16x16_4: 426754286
-      Room_Builder_Floor_Connectors_16x16_147: 1474461773
-      Room_Builder_Floor_Connectors_16x16_144: -1385782561
-      Room_Builder_Floor_Connectors_16x16_56: -1240123155
-      Room_Builder_Floor_Connectors_16x16_38: -1292247954
-      Room_Builder_Floor_Connectors_16x16_104: 1595710922
-      Room_Builder_Floor_Connectors_16x16_138: 1340224735
-      Room_Builder_Floor_Connectors_16x16_145: -1424496565
-      Room_Builder_Floor_Connectors_16x16_102: 1589742446
-      Room_Builder_Floor_Connectors_16x16_141: -1721363843
-      Room_Builder_Floor_Connectors_16x16_8: 385045815
-      Room_Builder_Floor_Connectors_16x16_139: -1457664708
-      Room_Builder_Floor_Connectors_16x16_59: 339799619
-      Room_Builder_Floor_Connectors_16x16_99: -25962472
-      Room_Builder_Floor_Connectors_16x16_123: 1843984357
-      Room_Builder_Floor_Connectors_16x16_42: -254336911
-      Room_Builder_Floor_Connectors_16x16_135: -809825962
-      Room_Builder_Floor_Connectors_16x16_6: 1274933646
-      Room_Builder_Floor_Connectors_16x16_48: 1193986872
-      Room_Builder_Floor_Connectors_16x16_89: 1022713816
-      Room_Builder_Floor_Connectors_16x16_97: -1348090623
-      Room_Builder_Floor_Connectors_16x16_131: -478244401
-      Room_Builder_Floor_Connectors_16x16_115: -1479451789
-      Room_Builder_Floor_Connectors_16x16_65: 1957517473
-      Room_Builder_Floor_Connectors_16x16_3: 230324519
-      Room_Builder_Floor_Connectors_16x16_149: 339171076
-      Room_Builder_Floor_Connectors_16x16_24: -733696499
-      Room_Builder_Floor_Connectors_16x16_78: -920565120
-      Room_Builder_Floor_Connectors_16x16_92: -1368387998
-      Room_Builder_Floor_Connectors_16x16_7: 1372824319
-      Room_Builder_Floor_Connectors_16x16_13: 208006660
-      Room_Builder_Floor_Connectors_16x16_136: -1372201405
-      Room_Builder_Floor_Connectors_16x16_74: -1522638952
-      Room_Builder_Floor_Connectors_16x16_27: -1794802624
-      Room_Builder_Floor_Connectors_16x16_71: -42102805
-      Room_Builder_Floor_Connectors_16x16_21: 1434152575
-      Room_Builder_Floor_Connectors_16x16_1: -745772500
-      Room_Builder_Floor_Connectors_16x16_73: 1704037373
-      Room_Builder_Floor_Connectors_16x16_39: -1480739052
-      Room_Builder_Floor_Connectors_16x16_63: -6401639
-      Room_Builder_Floor_Connectors_16x16_127: 316127013
-      Room_Builder_Floor_Connectors_16x16_0: 1073438503
-      Room_Builder_Floor_Connectors_16x16_113: 1680754398
-      Room_Builder_Floor_Connectors_16x16_117: -1796118440
-      Room_Builder_Floor_Connectors_16x16_45: 1108642480
-      Room_Builder_Floor_Connectors_16x16_60: 1099182823
-      Room_Builder_Floor_Connectors_16x16_82: 953152759
-      Room_Builder_Floor_Connectors_16x16_142: -1073792101
-      Room_Builder_Floor_Connectors_16x16_94: 1579034747
-      Room_Builder_Floor_Connectors_16x16_22: -404713161
-      Room_Builder_Floor_Connectors_16x16_54: -668248552
-      Room_Builder_Floor_Connectors_16x16_87: 526827179
-      Room_Builder_Floor_Connectors_16x16_12: -1597278151
-      Room_Builder_Floor_Connectors_16x16_72: 1991884032
-      Room_Builder_Floor_Connectors_16x16_33: 1597737426
-      Room_Builder_Floor_Connectors_16x16_14: 907869269
-      Room_Builder_Floor_Connectors_16x16_88: 191269826
-      Room_Builder_Floor_Connectors_16x16_116: 172926811
-      Room_Builder_Floor_Connectors_16x16_101: 271920531
-      Room_Builder_Floor_Connectors_16x16_81: 1679068291
-      Room_Builder_Floor_Connectors_16x16_125: 1976645875
-      Room_Builder_Floor_Connectors_16x16_100: 1277568254
-      Room_Builder_Floor_Connectors_16x16_103: 1896098195
-      Room_Builder_Floor_Connectors_16x16_53: -1167794667
-      Room_Builder_Floor_Connectors_16x16_146: -2056713331
-      Room_Builder_Floor_Connectors_16x16_44: 1775911311
-      Room_Builder_Floor_Connectors_16x16_32: 1726723713
-      Room_Builder_Floor_Connectors_16x16_119: 1326528495
-      Room_Builder_Floor_Connectors_16x16_37: 1381364988
-      Room_Builder_Floor_Connectors_16x16_91: 717316611
-      Room_Builder_Floor_Connectors_16x16_52: -1587584963
-      Room_Builder_Floor_Connectors_16x16_105: -1297628968
-      Room_Builder_Floor_Connectors_16x16_126: -965663423
-      Room_Builder_Floor_Connectors_16x16_36: 1046757514
-      Room_Builder_Floor_Connectors_16x16_132: -282808072
-      Room_Builder_Floor_Connectors_16x16_85: 664483751
-      Room_Builder_Floor_Connectors_16x16_130: -1013005374
-      Room_Builder_Floor_Connectors_16x16_18: -1026089398
-      Room_Builder_Floor_Connectors_16x16_68: 1539743304
-      Room_Builder_Floor_Connectors_16x16_58: -1220544259
-      Room_Builder_Floor_Connectors_16x16_47: 146332785
-      Room_Builder_Floor_Connectors_16x16_50: -395380094
-      Room_Builder_Floor_Connectors_16x16_86: -907066699
-      Room_Builder_Floor_Connectors_16x16_108: 2114510987
-      Room_Builder_Floor_Connectors_16x16_10: -1225025826
-      Room_Builder_Floor_Connectors_16x16_106: 1224612149
-      Room_Builder_Floor_Connectors_16x16_26: -1405247128
-      Room_Builder_Floor_Connectors_16x16_30: -1461373332
-      Room_Builder_Floor_Connectors_16x16_148: 1520167568
-      Room_Builder_Floor_Connectors_16x16_76: -1566049054
-      Room_Builder_Floor_Connectors_16x16_80: -1474619038
-      Room_Builder_Floor_Connectors_16x16_77: -1952128023
-      Room_Builder_Floor_Connectors_16x16_107: 850599009
-      Room_Builder_Floor_Connectors_16x16_34: -1527731186
-      Room_Builder_Floor_Connectors_16x16_137: -1531234869
-      Room_Builder_Floor_Connectors_16x16_49: -1126696071
-      Room_Builder_Floor_Connectors_16x16_128: -1108833806
-      Room_Builder_Floor_Connectors_16x16_84: -579409864
-      Room_Builder_Floor_Connectors_16x16_109: 831155575
-      Room_Builder_Floor_Connectors_16x16_35: -2138782716
-      Room_Builder_Floor_Connectors_16x16_110: 1220232353
-      Room_Builder_Floor_Connectors_16x16_120: 468714548
-      Room_Builder_Floor_Connectors_16x16_124: -1423247177
-      Room_Builder_Floor_Connectors_16x16_129: 50156139
-      Room_Builder_Floor_Connectors_16x16_40: 1888928444
-      Room_Builder_Floor_Connectors_16x16_62: -701729307
-      Room_Builder_Floor_Connectors_16x16_9: 88007844
-      Room_Builder_Floor_Connectors_16x16_75: -238399862
-      Room_Builder_Floor_Connectors_16x16_57: 1888625314
-      Room_Builder_Floor_Connectors_16x16_69: 1236921713
-      Room_Builder_Floor_Connectors_16x16_2: 8124645
-      Room_Builder_Floor_Connectors_16x16_70: 26230508
-      Room_Builder_Floor_Connectors_16x16_51: -763479824
-      Room_Builder_Floor_Connectors_16x16_55: -102159328
-      Room_Builder_Floor_Connectors_16x16_61: 553272207
-      Room_Builder_Floor_Connectors_16x16_95: 76651957
-      Room_Builder_Floor_Connectors_16x16_43: -1456589544
-      Room_Builder_Floor_Connectors_16x16_20: 1305868488
-      Room_Builder_Floor_Connectors_16x16_64: -934768976
       Room_Builder_Floor_Connectors_16x16_17: -1483642261
-      Room_Builder_Floor_Connectors_16x16_66: -1719420270
-      Room_Builder_Floor_Connectors_16x16_98: 349871776
-      Room_Builder_Floor_Connectors_16x16_96: -245803618
-      Room_Builder_Floor_Connectors_16x16_122: -915794022
-      Room_Builder_Floor_Connectors_16x16_11: -759758917
-      Room_Builder_Floor_Connectors_16x16_25: -844405240
-      Room_Builder_Floor_Connectors_16x16_111: 1086094005
-      Room_Builder_Floor_Connectors_16x16_143: 1326799785
+      Room_Builder_Floor_Connectors_16x16_18: -1026089398
       Room_Builder_Floor_Connectors_16x16_19: -1559543183
+      Room_Builder_Floor_Connectors_16x16_2: 8124645
+      Room_Builder_Floor_Connectors_16x16_20: 1305868488
+      Room_Builder_Floor_Connectors_16x16_21: 1434152575
+      Room_Builder_Floor_Connectors_16x16_22: -404713161
       Room_Builder_Floor_Connectors_16x16_23: 1120977320
+      Room_Builder_Floor_Connectors_16x16_24: -733696499
+      Room_Builder_Floor_Connectors_16x16_25: -844405240
+      Room_Builder_Floor_Connectors_16x16_26: -1405247128
+      Room_Builder_Floor_Connectors_16x16_27: -1794802624
       Room_Builder_Floor_Connectors_16x16_28: -542738694
-      Room_Builder_Floor_Connectors_16x16_118: 104448454
-      Room_Builder_Floor_Connectors_16x16_121: 590517952
       Room_Builder_Floor_Connectors_16x16_29: -1811320535
-      Room_Builder_Floor_Connectors_16x16_67: -577351334
-      Room_Builder_Floor_Connectors_16x16_46: 617378582
-      Room_Builder_Floor_Connectors_16x16_83: 1096149520
+      Room_Builder_Floor_Connectors_16x16_3: 230324519
+      Room_Builder_Floor_Connectors_16x16_30: -1461373332
       Room_Builder_Floor_Connectors_16x16_31: -1301218624
-      Room_Builder_Floor_Connectors_16x16_134: -1905823394
+      Room_Builder_Floor_Connectors_16x16_32: 1726723713
+      Room_Builder_Floor_Connectors_16x16_33: 1597737426
+      Room_Builder_Floor_Connectors_16x16_34: -1527731186
+      Room_Builder_Floor_Connectors_16x16_35: -2138782716
+      Room_Builder_Floor_Connectors_16x16_36: 1046757514
+      Room_Builder_Floor_Connectors_16x16_37: 1381364988
+      Room_Builder_Floor_Connectors_16x16_38: -1292247954
+      Room_Builder_Floor_Connectors_16x16_39: -1480739052
+      Room_Builder_Floor_Connectors_16x16_4: 426754286
+      Room_Builder_Floor_Connectors_16x16_40: 1888928444
       Room_Builder_Floor_Connectors_16x16_41: -1252194944
+      Room_Builder_Floor_Connectors_16x16_42: -254336911
+      Room_Builder_Floor_Connectors_16x16_43: -1456589544
+      Room_Builder_Floor_Connectors_16x16_44: 1775911311
+      Room_Builder_Floor_Connectors_16x16_45: 1108642480
+      Room_Builder_Floor_Connectors_16x16_46: 617378582
+      Room_Builder_Floor_Connectors_16x16_47: 146332785
+      Room_Builder_Floor_Connectors_16x16_48: 1193986872
+      Room_Builder_Floor_Connectors_16x16_49: -1126696071
+      Room_Builder_Floor_Connectors_16x16_5: 1391078183
+      Room_Builder_Floor_Connectors_16x16_50: -395380094
+      Room_Builder_Floor_Connectors_16x16_51: -763479824
+      Room_Builder_Floor_Connectors_16x16_52: -1587584963
+      Room_Builder_Floor_Connectors_16x16_53: -1167794667
+      Room_Builder_Floor_Connectors_16x16_54: -668248552
+      Room_Builder_Floor_Connectors_16x16_55: -102159328
+      Room_Builder_Floor_Connectors_16x16_56: -1240123155
+      Room_Builder_Floor_Connectors_16x16_57: 1888625314
+      Room_Builder_Floor_Connectors_16x16_58: -1220544259
+      Room_Builder_Floor_Connectors_16x16_59: 339799619
+      Room_Builder_Floor_Connectors_16x16_6: 1274933646
+      Room_Builder_Floor_Connectors_16x16_60: 1099182823
+      Room_Builder_Floor_Connectors_16x16_61: 553272207
+      Room_Builder_Floor_Connectors_16x16_62: -701729307
+      Room_Builder_Floor_Connectors_16x16_63: -6401639
+      Room_Builder_Floor_Connectors_16x16_64: -934768976
+      Room_Builder_Floor_Connectors_16x16_65: 1957517473
+      Room_Builder_Floor_Connectors_16x16_66: -1719420270
+      Room_Builder_Floor_Connectors_16x16_67: -577351334
+      Room_Builder_Floor_Connectors_16x16_68: 1539743304
+      Room_Builder_Floor_Connectors_16x16_69: 1236921713
+      Room_Builder_Floor_Connectors_16x16_7: 1372824319
+      Room_Builder_Floor_Connectors_16x16_70: 26230508
+      Room_Builder_Floor_Connectors_16x16_71: -42102805
+      Room_Builder_Floor_Connectors_16x16_72: 1991884032
+      Room_Builder_Floor_Connectors_16x16_73: 1704037373
+      Room_Builder_Floor_Connectors_16x16_74: -1522638952
+      Room_Builder_Floor_Connectors_16x16_75: -238399862
+      Room_Builder_Floor_Connectors_16x16_76: -1566049054
+      Room_Builder_Floor_Connectors_16x16_77: -1952128023
+      Room_Builder_Floor_Connectors_16x16_78: -920565120
+      Room_Builder_Floor_Connectors_16x16_79: -1261741974
+      Room_Builder_Floor_Connectors_16x16_8: 385045815
+      Room_Builder_Floor_Connectors_16x16_80: -1474619038
+      Room_Builder_Floor_Connectors_16x16_81: 1679068291
+      Room_Builder_Floor_Connectors_16x16_82: 953152759
+      Room_Builder_Floor_Connectors_16x16_83: 1096149520
+      Room_Builder_Floor_Connectors_16x16_84: -579409864
+      Room_Builder_Floor_Connectors_16x16_85: 664483751
+      Room_Builder_Floor_Connectors_16x16_86: -907066699
+      Room_Builder_Floor_Connectors_16x16_87: 526827179
+      Room_Builder_Floor_Connectors_16x16_88: 191269826
+      Room_Builder_Floor_Connectors_16x16_89: 1022713816
+      Room_Builder_Floor_Connectors_16x16_9: 88007844
+      Room_Builder_Floor_Connectors_16x16_90: -1439444202
+      Room_Builder_Floor_Connectors_16x16_91: 717316611
+      Room_Builder_Floor_Connectors_16x16_92: -1368387998
       Room_Builder_Floor_Connectors_16x16_93: 1886885809
+      Room_Builder_Floor_Connectors_16x16_94: 1579034747
+      Room_Builder_Floor_Connectors_16x16_95: 76651957
+      Room_Builder_Floor_Connectors_16x16_96: -245803618
+      Room_Builder_Floor_Connectors_16x16_97: -1348090623
+      Room_Builder_Floor_Connectors_16x16_98: 349871776
+      Room_Builder_Floor_Connectors_16x16_99: -25962472
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

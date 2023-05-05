@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 64
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -92,6 +92,18 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 64
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -367,18 +379,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      1weapons_3: -47636727
-      1weapons_8: 574784905
-      1weapons_9: 1269505787
       1weapons_0: 309831904
-      1weapons_7: -682226709
-      1weapons_5: -669579004
-      1weapons_2: -1969001891
+      1weapons_1: 787045830
       1weapons_10: 438188305
       1weapons_11: 1626134001
-      1weapons_6: 790364677
-      1weapons_1: 787045830
+      1weapons_2: -1969001891
+      1weapons_3: -47636727
       1weapons_4: 899807594
+      1weapons_5: -669579004
+      1weapons_6: 790364677
+      1weapons_7: -682226709
+      1weapons_8: 574784905
+      1weapons_9: 1269505787
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

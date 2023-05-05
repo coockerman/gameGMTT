@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -91,6 +91,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -451,22 +463,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      male_character_12: -1098295497
-      male_character_8: 549999869
-      male_character_11: 646490765
-      male_character_10: 414519085
-      male_character_3: -2047149131
-      male_character_9: -1500854797
-      male_character_13: 370427425
-      male_character_5: -1363334065
       male_character_0: 1930390587
-      male_character_14: 507802417
-      male_character_7: 1422147064
-      male_character_2: 708986871
-      male_character_15: 211022596
-      male_character_6: 1625413352
-      male_character_4: -355245183
       male_character_1: -717289159
+      male_character_10: 414519085
+      male_character_11: 646490765
+      male_character_12: -1098295497
+      male_character_13: 370427425
+      male_character_14: 507802417
+      male_character_15: 211022596
+      male_character_2: 708986871
+      male_character_3: -2047149131
+      male_character_4: -355245183
+      male_character_5: -1363334065
+      male_character_6: 1625413352
+      male_character_7: 1422147064
+      male_character_8: 549999869
+      male_character_9: -1500854797
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
