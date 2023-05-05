@@ -422,7 +422,7 @@ MonoBehaviour:
   VP10: {fileID: 1332446021846080876, guid: 5fff0fef8fc967e4ead652ea51951909, type: 3}
   manaRecovery: {fileID: 956220233630913494, guid: b61af3ec8be4fda40bc13af42cdea86d, type: 3}
   uiManagerEnemy: {fileID: 0}
-  CreateHPdied: 0.2
+  CreateHPdied: 0.05
   itemBlood: 30
   itemMana: 20
   itemVP1: 40

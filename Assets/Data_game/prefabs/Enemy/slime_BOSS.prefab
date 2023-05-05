@@ -332,7 +332,7 @@ MonoBehaviour:
   EnemyMaxHealth: 1500
   EnemyCurrentHealth: 0
   EnemyUpHealth: 0
-  expToGive: 1500
+  expToGive: 2000
   bloodRecovery: {fileID: 956220233630913494, guid: 0948bf984273b4c4a8223c549332821d, type: 3}
   VP1: {fileID: 1332446021846080876, guid: 3e58142c54422854eb69420a284cc048, type: 3}
   VP2: {fileID: 1332446021846080876, guid: b9eff655ecc8bca4d83a5db47ac8b2d2, type: 3}
@@ -346,7 +346,7 @@ MonoBehaviour:
   VP10: {fileID: 1332446021846080876, guid: 5fff0fef8fc967e4ead652ea51951909, type: 3}
   manaRecovery: {fileID: 956220233630913494, guid: b61af3ec8be4fda40bc13af42cdea86d, type: 3}
   uiManagerEnemy: {fileID: 0}
-  CreateHPdied: 1.5
+  CreateHPdied: 1
   itemBlood: 100
   itemMana: 0
   itemVP1: 0
@@ -354,7 +354,7 @@ MonoBehaviour:
   itemVP3: 0
   itemVP4: 0
   itemVP5: 40
-  itemVP6: 10
+  itemVP6: 20
   itemVP7: 5
   itemVP8: 0
   itemVP9: 0
@@ -411,7 +411,7 @@ MonoBehaviour:
   moveSpeed: 10
   xRangeMove: 6
   yRangeMove: 6
-  timeBetweenMove: 0.5
+  timeBetweenMove: 1
   timeToMove: 1.5
 --- !u!114 &75360946615602520
 MonoBehaviour:

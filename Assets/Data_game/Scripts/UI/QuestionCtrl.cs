@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+[System.Serializable]
+public class VP{
+    public int stt;
+    public int count;
+}
 public class QuestionCtrl : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI textMeshQuestion;
@@ -21,16 +25,29 @@ public class QuestionCtrl : MonoBehaviour
     [SerializeField] Color clTrue;
     [SerializeField] Color clFlase;
 
+    BagCtrl bagCtrl;
+    [SerializeField] string addressDialog;
+    [SerializeField] VP[] vps;
+
     GameManager gameManager;
     bool CheckAnswer;
     private void OnEnable()
     {
+        PlayerPrefs.SetInt(addressDialog, 1);
         gameManager = FindObjectOfType<GameManager>();
+        bagCtrl = FindObjectOfType<BagCtrl>();
         gameManager.playDialog = true;
         CheckAnswer = false;
         textMeshQuestion.text = question;
         textMeshAnswerA.text = answerA;
         textMeshAnswerB.text = answerB;
+    }
+    void CheckQua()
+    {
+        foreach(VP vp in vps)
+        {
+            bagCtrl.TangVatPham(vp.stt, vp.count);
+        }
     }
     public void CheckDapAn(int dapAn)
     {
@@ -46,6 +63,7 @@ public class QuestionCtrl : MonoBehaviour
             {
                 imgAnswerB.color = clTrue;
             }
+            CheckQua();
         }else
         {
             if(dapAn == 1)

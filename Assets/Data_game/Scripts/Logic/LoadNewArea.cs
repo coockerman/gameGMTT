@@ -27,7 +27,6 @@ public class LoadNewArea : MonoBehaviour
         if(collision.gameObject.name == "Player")
         {
             LoadLevel(leverToload);
-            //SceneManager.LoadScene(leverToload);
             thePlayer.StartPoint = ExitMap;
         }
     }

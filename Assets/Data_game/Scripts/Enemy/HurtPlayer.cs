@@ -15,7 +15,7 @@ public class HurtPlayer : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Player" && playerHearth.BatTu == false)
+        if (collision.gameObject.name == "Player" && playerHearth.BatTu == false && playerHearth.BatTu2 == false)
         {
             collision.gameObject.GetComponent<PlayerHearthManager>().HurtPlayer(damageToGive);
 

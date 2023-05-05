@@ -408,7 +408,7 @@ MonoBehaviour:
   EnemyMaxHealth: 600
   EnemyCurrentHealth: 0
   EnemyUpHealth: 0
-  expToGive: 200
+  expToGive: 250
   bloodRecovery: {fileID: 956220233630913494, guid: 0948bf984273b4c4a8223c549332821d, type: 3}
   VP1: {fileID: 1332446021846080876, guid: 3e58142c54422854eb69420a284cc048, type: 3}
   VP2: {fileID: 1332446021846080876, guid: b9eff655ecc8bca4d83a5db47ac8b2d2, type: 3}
@@ -422,15 +422,15 @@ MonoBehaviour:
   VP10: {fileID: 1332446021846080876, guid: 5fff0fef8fc967e4ead652ea51951909, type: 3}
   manaRecovery: {fileID: 956220233630913494, guid: b61af3ec8be4fda40bc13af42cdea86d, type: 3}
   uiManagerEnemy: {fileID: 0}
-  CreateHPdied: 1.2
-  itemBlood: 20
-  itemMana: 70
+  CreateHPdied: 0.6
+  itemBlood: 50
+  itemMana: 50
   itemVP1: 0
-  itemVP2: 5
-  itemVP3: 20
+  itemVP2: 0
+  itemVP3: 30
   itemVP4: 30
-  itemVP5: 10
-  itemVP6: 5
+  itemVP5: 5
+  itemVP6: 3
   itemVP7: 0
   itemVP8: 0
   itemVP9: 0
