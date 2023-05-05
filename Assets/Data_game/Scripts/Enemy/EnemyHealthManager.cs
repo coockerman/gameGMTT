@@ -60,6 +60,7 @@ public class EnemyHealthManager : MonoBehaviour
         SetMaxHealth();
         SetMaxHealth();
         uiManagerEnemy.UpdateName(PlayerPrefs.GetInt("enemyLv" + gameObject.name));
+        SetTiLe();
 
     }
     void SetTiLe()
@@ -86,7 +87,6 @@ public class EnemyHealthManager : MonoBehaviour
         if (EnemyCurrentHealth <= 0)
         {
             thePlayerStats.AddExperience(expToGive);
-            SetTiLe();
 
             DropHealingItem();
             Invoke("HoiSinhEnemy", 10);
@@ -109,6 +109,7 @@ public class EnemyHealthManager : MonoBehaviour
             GameObject mana = Instantiate(manaRecovery, posHealth, transform.rotation);
             mana.name = manaRecovery.name;
         }
+        Debug.Log(ratio);
         //////////////////////////////////////
         if (ratio <= itemVP1)
         {

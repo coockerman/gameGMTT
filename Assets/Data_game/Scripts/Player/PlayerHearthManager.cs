@@ -15,6 +15,7 @@ public class PlayerHearthManager : MonoBehaviour
     private int flashSize = 3;
 
     public bool BatTu = false;
+    public bool BatTu2 = false;
 
     private float TimeNow = 0;
     private float TimeFlash = 0.3f;
@@ -33,6 +34,11 @@ public class PlayerHearthManager : MonoBehaviour
         {
             gameObject.SetActive(false);
             SetMaxHealth();
+        }
+        if (BatTu2 == true)
+        {
+            SetOnColor();
+            return;
         }
         GetFlashActive();
     }

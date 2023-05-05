@@ -120,7 +120,7 @@ public class MissionManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("NV7Check", 1);
         }
-        if (PlayerPrefs.GetInt("AtanDialogs1") == 1)
+        if (PlayerPrefs.GetInt("AtanDialog1") == 1)
         {
             indexNV = 8;
         }
