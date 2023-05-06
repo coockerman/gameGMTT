@@ -329,11 +329,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40aa2729a4149c4e80637bf64310f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyMaxHealth: 1500
+  EnemyMaxHealth: 3000
   EnemyCurrentHealth: 0
   EnemyUpHealth: 0
-  expToGive: 2000
-  bloodRecovery: {fileID: 956220233630913494, guid: 0948bf984273b4c4a8223c549332821d, type: 3}
+  expToGive: 4000
+  bloodRecovery: {fileID: 956220233630913494, guid: 44e2aa7fee7dc2c40a77b9304dbf11b3, type: 3}
   VP1: {fileID: 1332446021846080876, guid: 3e58142c54422854eb69420a284cc048, type: 3}
   VP2: {fileID: 1332446021846080876, guid: b9eff655ecc8bca4d83a5db47ac8b2d2, type: 3}
   VP3: {fileID: 1332446021846080876, guid: 94ea3b4cfa6c323469f5d885004ffeac, type: 3}
@@ -344,16 +344,16 @@ MonoBehaviour:
   VP8: {fileID: 1332446021846080876, guid: 1716c3f5fc644f342bfcc2a64dcf7414, type: 3}
   VP9: {fileID: 1332446021846080876, guid: 67caff680b8b8664d9f58d38222ae356, type: 3}
   VP10: {fileID: 1332446021846080876, guid: 5fff0fef8fc967e4ead652ea51951909, type: 3}
-  manaRecovery: {fileID: 956220233630913494, guid: b61af3ec8be4fda40bc13af42cdea86d, type: 3}
+  manaRecovery: {fileID: 956220233630913494, guid: ab4be55c3680cd048a7844c51e958bca, type: 3}
   uiManagerEnemy: {fileID: 0}
-  CreateHPdied: 1
-  itemBlood: 100
-  itemMana: 0
+  CreateHPdied: 0.8
+  itemBlood: 60
+  itemMana: 10
   itemVP1: 0
   itemVP2: 0
-  itemVP3: 0
-  itemVP4: 0
-  itemVP5: 40
+  itemVP3: 10
+  itemVP4: 10
+  itemVP5: 55
   itemVP6: 20
   itemVP7: 5
   itemVP8: 0
@@ -408,11 +408,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75670af73ddcd945889dd6f55a65831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  xRangeMove: 6
+  moveSpeed: 7
+  xRangeMove: 8
   yRangeMove: 6
-  timeBetweenMove: 1
-  timeToMove: 1.5
+  timeBetweenMove: 0.5
+  timeToMove: 1
 --- !u!114 &75360946615602520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1269adcb68d42e8439b2285c0b0f4a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 200
+  damageToGive: 400
   damageNumber: {fileID: 4713038738293079610, guid: 262ef7bcc995bf1458811432f0a65ca4, type: 3}
   playerHearth: {fileID: 2351792378862334908, guid: 599f8c9d816ad2c47b858ae695627eed, type: 3}
 --- !u!114 &7160810556113952513

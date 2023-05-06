@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class HurtSkillTwo : HurtEnemy
 {
-    public override void Update()
+    [SerializeField] AudioClip Dam;
+
+    void Update()
     {
-        base.Update();
         damageToGive = SetDame(2f);
+    }
+    protected override void OnShot()
+    {
+        audioPlayer.PlayOneShot(Dam);
     }
 }

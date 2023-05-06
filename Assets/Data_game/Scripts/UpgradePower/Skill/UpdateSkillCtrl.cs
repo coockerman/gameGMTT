@@ -31,8 +31,8 @@ public class UpdateSkillCtrl : MonoBehaviour
     float countTimeTocChay;
     private void Start()
     {
-        TimeCDDacBiet = 20;
-        TimeCDHoiPhuc = 10;
+        TimeCDDacBiet = 30;
+        TimeCDHoiPhuc = 60;
     }
     private void Update()
     {
@@ -82,7 +82,7 @@ public class UpdateSkillCtrl : MonoBehaviour
             timeThongBaoDacBiet.gameObject.SetActive(false);
             checkDB = false;
         }
-        if (Input.GetKeyDown(KeyCode.P) && !checkDB)
+        if (Input.GetKeyDown(KeyCode.P) && !checkDB && PlayerPrefs.GetInt("playerLV") >= 5)
         {
             checkDB = true;
             timeThongBaoDacBiet.gameObject.SetActive(true);
@@ -108,7 +108,7 @@ public class UpdateSkillCtrl : MonoBehaviour
             timeThongBaoHoiPhuc.gameObject.SetActive(false);
             checkHP = false;
         }
-        if (Input.GetKeyDown(KeyCode.O) && !checkHP)
+        if (Input.GetKeyDown(KeyCode.O) && !checkHP && PlayerPrefs.GetInt("playerLV") >= 7)
         {
             checkHP = true;
             timeThongBaoHoiPhuc.gameObject.SetActive(true);

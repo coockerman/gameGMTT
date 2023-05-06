@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40aa2729a4149c4e80637bf64310f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyMaxHealth: 50
+  EnemyMaxHealth: 60
   EnemyCurrentHealth: 0
   EnemyUpHealth: 0
   expToGive: 15
@@ -423,9 +423,9 @@ MonoBehaviour:
   manaRecovery: {fileID: 956220233630913494, guid: b61af3ec8be4fda40bc13af42cdea86d, type: 3}
   uiManagerEnemy: {fileID: 0}
   CreateHPdied: 0.05
-  itemBlood: 30
+  itemBlood: 20
   itemMana: 20
-  itemVP1: 40
+  itemVP1: 55
   itemVP2: 10
   itemVP3: 0
   itemVP4: 0
@@ -487,8 +487,8 @@ MonoBehaviour:
   moveSpeed: 4
   xRangeMove: 5
   yRangeMove: 5
-  timeBetweenMove: 3
-  timeToMove: 2
+  timeBetweenMove: 2
+  timeToMove: 1.5
 --- !u!114 &-8089384406001030714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,7 +501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1269adcb68d42e8439b2285c0b0f4a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 8
+  damageToGive: 15
   damageNumber: {fileID: 4713038738293079610, guid: 262ef7bcc995bf1458811432f0a65ca4, type: 3}
   playerHearth: {fileID: 0}
 --- !u!114 &7914874716073409439

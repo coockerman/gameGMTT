@@ -52,6 +52,13 @@ public class MissionManager : MonoBehaviour
         else if (indexNV == 9) NV9();
         else if (indexNV == 10) NV10();
         else if (indexNV == 11) NV11();
+        else if (indexNV == 12) NV12();
+        else if (indexNV == 13) NV13();
+        else if (indexNV == 14) NV14();
+        else if (indexNV == 15) NV15();
+        else if (indexNV == 16) NV16();
+        else if (indexNV == 17) NV17();
+
     }
     void NV1()
     {
@@ -169,6 +176,62 @@ public class MissionManager : MonoBehaviour
     void NV11()
     {
         textMission.text = missionData[11];
+        if (PlayerPrefs.GetInt("playerLV") >= 5)
+        {
+            indexNV = 12;
+        }
+    }
+    void NV12()
+    {
+        textMission.text = missionData[12];
+        if (PlayerPrefs.GetInt("NV12Check") != 1)
+        {
+            PlayerPrefs.SetInt("NV12Check", 1);
+        }
+        if (PlayerPrefs.GetInt("AtanDialog3") == 1)
+        {
+            if (PlayerPrefs.GetInt("NhanQuaNV12") == 0)
+            {
+                bagCtrl.TangVatPham(2, 15);
+                PlayerPrefs.SetInt("NhanQuaNV12", 1);
+            }
+            indexNV = 13;
+        }
+    }
+    void NV13()
+    {
+        textMission.text = missionData[13];
+        if(PlayerPrefs.GetInt("lvBatTu") >= 1)
+        {
+            indexNV = 14;
+        }
+    }
+    void NV14()
+    {
+        textMission.text = missionData[14];
+        if (PlayerPrefs.GetInt("NV14Check") != 1)
+        {
+            PlayerPrefs.SetInt("NV14Check", 1);
+        }
+        if (PlayerPrefs.GetInt("DenyDialog4") == 1)
+        {
+            indexNV = 15;
+        }
+    }
+    void NV15()
+    {
+        textMission.text = missionData[15];
+        if (PlayerPrefs.GetInt("playerLV") >= 7)
+        {
+            indexNV = 16;
+        }
+    }
+    void NV16()
+    {
+        textMission.text = missionData[16];
+    }
+    void NV17()
+    {
 
     }
 }

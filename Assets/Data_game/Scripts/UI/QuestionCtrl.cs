@@ -13,6 +13,7 @@ public class QuestionCtrl : MonoBehaviour
     [SerializeField] TextMeshProUGUI textMeshQuestion;
     [SerializeField] TextMeshProUGUI textMeshAnswerA;
     [SerializeField] TextMeshProUGUI textMeshAnswerB;
+    [SerializeField] TextMeshProUGUI textPT;
 
     [SerializeField] string question;
     [SerializeField] string answerA;
@@ -41,6 +42,7 @@ public class QuestionCtrl : MonoBehaviour
         textMeshQuestion.text = question;
         textMeshAnswerA.text = answerA;
         textMeshAnswerB.text = answerB;
+        EditTextPT();
     }
     void CheckQua()
     {
@@ -48,6 +50,15 @@ public class QuestionCtrl : MonoBehaviour
         {
             bagCtrl.TangVatPham(vp.stt, vp.count);
         }
+    }
+    void EditTextPT()
+    {
+        string ptText = "";
+        foreach (VP vp in vps)
+        {
+            ptText += "" + bagCtrl.GetNameVP(vp.stt) + " x" + vp.count + "\n"; 
+        }
+        textPT.text = ptText;
     }
     public void CheckDapAn(int dapAn)
     {

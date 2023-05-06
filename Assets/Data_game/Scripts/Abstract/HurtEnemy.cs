@@ -5,45 +5,28 @@ using UnityEngine;
 
 public abstract class HurtEnemy : MonoBehaviour
 {
-    [SerializeField] AudioSource audioPlayer;
-    [SerializeField] AudioClip chem;
-    [SerializeField] AudioClip Dam;
+    [SerializeField] protected AudioSource audioPlayer;
     public float damageToGive;
     public GameObject damageBurst;
     public GameObject damageNumber;
     public PlayerAttackManager playerAttack;
     
-    protected virtual void Start()
-    {
-        playerAttack = FindObjectOfType<PlayerAttackManager>();
-        
-    }
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(damageToGive);
-            if (damageToGive > playerAttack.damageToGive)
-            {
-                audioPlayer.PlayOneShot(Dam);
-            }
-            else
-            {
-                audioPlayer.PlayOneShot(chem);
-            }
             Instantiate(damageBurst, collision.transform.position, collision.transform.rotation);
             Instantiate(damageNumber, collision.transform.position, collision.transform.rotation);
+            OnShot();
         }
     }
-    public virtual void Update()
+    protected virtual void OnShot()
     {
-        
 
     }
     protected virtual float SetDame(float HeSo)
     {
-        
-            
         float damage = HeSo * playerAttack.damageToGive;
         return damage;
     }

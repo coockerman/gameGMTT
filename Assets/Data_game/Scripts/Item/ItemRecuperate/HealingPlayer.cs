@@ -5,15 +5,13 @@ using UnityEngine;
 public class HealingPlayer : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
-    protected int healing;
+    [SerializeField] protected int healing;
+
     protected PlayerHearthManager playerHearth;
+
     private void Awake()
     {
         playerHearth = FindObjectOfType<PlayerHearthManager>();
-    }
-    private void Start()
-    {
-        healing = 30;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

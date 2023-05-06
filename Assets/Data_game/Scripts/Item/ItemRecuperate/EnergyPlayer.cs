@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnergyPlayer : MonoBehaviour
 {
     [SerializeField] AudioSource m_AudioSource;
-    protected int ManaBuff;
+    [SerializeField] protected int ManaBuff;
     protected PlayerManaManager playerMana;
     private void Awake()
     {

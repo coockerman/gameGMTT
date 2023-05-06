@@ -12,6 +12,7 @@ public class MissionHouseOnMountain1 : MonoBehaviour
         CheckNV4();
         CheckNV7();
         CheckNV9();
+        CheckNV12();
     }
     void CheckNV2()
     {
@@ -46,6 +47,14 @@ public class MissionHouseOnMountain1 : MonoBehaviour
         {
             AtanDialogManager.AddDialog();
             PlayerPrefs.SetInt("NV9Check", 0);
+        }
+    }
+    void CheckNV12()
+    {
+        if (PlayerPrefs.GetInt("NV12Check") == 1)
+        {
+            AtanDialogManager.AddDialog();
+            PlayerPrefs.SetInt("NV12Check", 0);
         }
     }
 }
