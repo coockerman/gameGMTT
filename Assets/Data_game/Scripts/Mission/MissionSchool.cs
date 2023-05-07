@@ -10,6 +10,7 @@ public class MissionSchool : MonoBehaviour
     void Start()
     {
         CheckNV14();
+        CheckNV16();
     }
 
     void CheckNV14()
@@ -21,6 +22,14 @@ public class MissionSchool : MonoBehaviour
             DenyDialogManager.AddDialog();
             DenyDialogManager.AddDialog();
             PlayerPrefs.SetInt("NV14Check", 0);
+        }
+    }
+    void CheckNV16()
+    {
+        if (PlayerPrefs.GetInt("NV16Check") == 1)
+        {
+            DenyDialogManager.AddDialog();
+            PlayerPrefs.SetInt("NV16Check", 0);
         }
     }
 }

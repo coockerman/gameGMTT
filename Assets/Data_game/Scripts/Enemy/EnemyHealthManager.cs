@@ -29,6 +29,7 @@ public class EnemyHealthManager : MonoBehaviour
     protected int ratio;
     protected int ratioHealthy;
     public float CreateHPdied;
+    int SoluongQuaiDied;
 
     [SerializeField]int itemBlood;
     [SerializeField] int itemMana;
@@ -87,7 +88,8 @@ public class EnemyHealthManager : MonoBehaviour
         if (EnemyCurrentHealth <= 0)
         {
             thePlayerStats.AddExperience(expToGive);
-
+            SoluongQuaiDied = PlayerPrefs.GetInt("QuaiDaTieuDiet");
+            PlayerPrefs.SetInt("QuaiDaTieuDiet", SoluongQuaiDied + 1);
             DropHealingItem();
             Invoke("HoiSinhEnemy", 10);
 

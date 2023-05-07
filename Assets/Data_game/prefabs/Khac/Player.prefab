@@ -193,10 +193,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioPlayer: {fileID: 7260675974357774923}
-  damageToGive: 0
   damageBurst: {fileID: 2754937975515831534, guid: 2bf75e5f879ee394a87a62c1d34b0e55, type: 3}
   damageNumber: {fileID: 4713038738293079610, guid: c1c9e3505e92b5c498812e14ab3250ee, type: 3}
   playerAttack: {fileID: 3003024832835564592}
+  TiLeDame: 0
+  damageToGive: 0
   Chem: {fileID: 8300000, guid: b2d4bf8078734dd4f855743a21fd3bc5, type: 3}
 --- !u!1 &1412310490
 GameObject:
@@ -426,10 +427,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioPlayer: {fileID: 7260675974357774923}
-  damageToGive: 0
   damageBurst: {fileID: 2754937975515831534, guid: 2bf75e5f879ee394a87a62c1d34b0e55, type: 3}
   damageNumber: {fileID: 4713038738293079610, guid: c1c9e3505e92b5c498812e14ab3250ee, type: 3}
   playerAttack: {fileID: 3003024832835564592}
+  TiLeDame: 0
+  damageToGive: 0
   Dam: {fileID: 8300000, guid: 632908200ac7eca4a92415fd5c676cdc, type: 3}
 --- !u!1 &3916939558523522115
 GameObject:
@@ -850,7 +852,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0076584816, y: -0.6904669}
+  m_Offset: {x: -0.0076584816, y: -0.40408075}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -861,7 +863,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.67864895, y: 0.6387272}
+  m_Size: {x: 0.67864895, y: 0.85305595}
   m_EdgeRadius: 0
 --- !u!114 &9119249406096677834
 MonoBehaviour:
@@ -893,6 +895,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageToGive: 0
   damagePlayer: 8
+  TangPhanTramDame: 0
 --- !u!114 &1561545965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -917,7 +920,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b722ca34a8c682a4ba0b505ab240e979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAttack: {fileID: 0}
+  textCount: {fileID: 0}
+  TangChiSo: 0
+  SLVatPham: 0
+  SttVatPham: 0
 --- !u!114 &1699387522059187034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -930,7 +936,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaf5a45e94e732e4bb3b4fd6855ea872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHearth: {fileID: 0}
+  textCount: {fileID: 0}
+  TangChiSo: 0
+  SLVatPham: 0
+  SttVatPham: 0
+  hearthManager: {fileID: 0}
 --- !u!114 &2413375912465762969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -943,7 +953,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d9456fb1c28a4b44aac9f35f770adf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMana: {fileID: 0}
+  textCount: {fileID: 0}
+  TangChiSo: 0
+  SLVatPham: 0
+  SttVatPham: 0
+  manaManager: {fileID: 0}
 --- !u!114 &355975533640114542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -976,7 +990,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.9175091
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0

@@ -16,6 +16,10 @@ public class UpdateSkillCtrl : MonoBehaviour
     [SerializeField] SkillHoiHp skillHoiHp;
     [SerializeField] SkillHoiKi skillHoiKi;
 
+    [SerializeField] GameObject Player;
+    [SerializeField] GameObject textLV5;
+    [SerializeField] GameObject textLV7;
+    [SerializeField] GameObject textNangKyNang;
     bool checkDB = false;
     int TimeCDDacBiet;
     float countTimeDacBiet;
@@ -36,6 +40,7 @@ public class UpdateSkillCtrl : MonoBehaviour
     }
     private void Update()
     {
+        
         OnSkillDB();
         CheckBatTu();
         CheckTocChay();
@@ -82,8 +87,20 @@ public class UpdateSkillCtrl : MonoBehaviour
             timeThongBaoDacBiet.gameObject.SetActive(false);
             checkDB = false;
         }
-        if (Input.GetKeyDown(KeyCode.P) && !checkDB && PlayerPrefs.GetInt("playerLV") >= 5)
+        
+        if (Input.GetKeyDown(KeyCode.P) && !checkDB)
         {
+            if (PlayerPrefs.GetInt("playerLV") < 5)
+            {
+                Instantiate(textLV5, Player.transform.position, Player.transform.rotation);
+                return;
+            }
+            if(PlayerPrefs.GetInt(skillBatTu.SAVE_LVBatTu) == 0 
+                && PlayerPrefs.GetInt(skillTocChay.SAVE_LVTocChay) == 0)
+            {
+                Instantiate(textNangKyNang, Player.transform.position, Player.transform.rotation);
+                return;
+            }
             checkDB = true;
             timeThongBaoDacBiet.gameObject.SetActive(true);
             countTimeDacBiet = TimeCDDacBiet;
@@ -108,8 +125,20 @@ public class UpdateSkillCtrl : MonoBehaviour
             timeThongBaoHoiPhuc.gameObject.SetActive(false);
             checkHP = false;
         }
-        if (Input.GetKeyDown(KeyCode.O) && !checkHP && PlayerPrefs.GetInt("playerLV") >= 7)
+        
+        if (Input.GetKeyDown(KeyCode.O) && !checkHP)
         {
+            if (PlayerPrefs.GetInt("playerLV") < 7)
+            {
+                Instantiate(textLV7, Player.transform.position, Player.transform.rotation);
+                return;
+            }
+            if (PlayerPrefs.GetInt(skillHoiHp.SAVE_LV) == 0
+                && PlayerPrefs.GetInt(skillHoiKi.SAVE_LV) == 0)
+            {
+                Instantiate(textNangKyNang, Player.transform.position, Player.transform.rotation);
+                return;
+            }
             checkHP = true;
             timeThongBaoHoiPhuc.gameObject.SetActive(true);
             countTimeHoiPhuc = TimeCDHoiPhuc;

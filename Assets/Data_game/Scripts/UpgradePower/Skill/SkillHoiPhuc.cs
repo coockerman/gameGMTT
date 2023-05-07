@@ -12,7 +12,7 @@ public class SkillHoiPhuc : MonoBehaviour
     [SerializeField] protected TextMeshProUGUI ChuThichHoiPhuc;
     [SerializeField] TextMeshProUGUI textLv;
     [SerializeField] TextMeshProUGUI textNeedNL;
-    protected string SAVE_LV;
+    public string SAVE_LV;
     protected float hoiPhuc;
     protected int lvHoiPhuc;
     //public bool activeHealth = false;

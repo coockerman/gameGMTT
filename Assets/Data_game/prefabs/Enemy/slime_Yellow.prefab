@@ -438,7 +438,7 @@ MonoBehaviour:
   VP10: {fileID: 1332446021846080876, guid: 5fff0fef8fc967e4ead652ea51951909, type: 3}
   manaRecovery: {fileID: 956220233630913494, guid: cccd6207dc4762741bd8fb824b90eb9d, type: 3}
   uiManagerEnemy: {fileID: 0}
-  CreateHPdied: 0.15
+  CreateHPdied: 0.2
   itemBlood: 20
   itemMana: 20
   itemVP1: 10
@@ -501,7 +501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1269adcb68d42e8439b2285c0b0f4a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 40
+  damageToGive: 45
   damageNumber: {fileID: 4713038738293079610, guid: 262ef7bcc995bf1458811432f0a65ca4, type: 3}
   playerHearth: {fileID: 2351792378862334908, guid: 599f8c9d816ad2c47b858ae695627eed, type: 3}
 --- !u!114 &7914874716073409439

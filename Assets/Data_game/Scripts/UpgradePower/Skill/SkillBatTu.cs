@@ -18,7 +18,7 @@ public class SkillBatTu : MonoBehaviour
     [SerializeField] TextMeshProUGUI textLvBatTu;
     [SerializeField] TextMeshProUGUI textNeedNL;
 
-    string SAVE_LVBatTu;
+    public string SAVE_LVBatTu;
     public float timeBattu;
     int lvBatTu;
     //public bool activeBatTu = false;

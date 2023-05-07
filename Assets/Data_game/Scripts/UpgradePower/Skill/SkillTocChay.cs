@@ -18,7 +18,7 @@ public class SkillTocChay : MonoBehaviour
     [SerializeField] TextMeshProUGUI textLvTocChay;
     [SerializeField] TextMeshProUGUI textNeedNL;
 
-    string SAVE_LVTocChay;
+    public string SAVE_LVTocChay;
     public float timeTocChay;
     int lvTocChay;
     //public bool activeTocChay = false;

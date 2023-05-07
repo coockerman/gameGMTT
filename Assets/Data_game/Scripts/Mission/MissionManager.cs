@@ -229,8 +229,25 @@ public class MissionManager : MonoBehaviour
     void NV16()
     {
         textMission.text = missionData[16];
+        if (PlayerPrefs.GetInt("NV16Check") != 1)
+        {
+            PlayerPrefs.SetInt("NV16Check", 1);
+        }
+        if (PlayerPrefs.GetInt("DenyDialog5") == 1)
+        {
+            indexNV = 17;
+        }
     }
     void NV17()
+    {
+        int soluongQuai = PlayerPrefs.GetInt("QuaiDaTieuDiet");
+        textMission.text = missionData[17] + soluongQuai + "/80";
+        if(soluongQuai>=80)
+        {
+            indexNV = 18;
+        }
+    }
+    void NV18()
     {
 
     }

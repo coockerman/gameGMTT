@@ -501,7 +501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1269adcb68d42e8439b2285c0b0f4a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 70
+  damageToGive: 120
   damageNumber: {fileID: 4713038738293079610, guid: 262ef7bcc995bf1458811432f0a65ca4, type: 3}
   playerHearth: {fileID: 2351792378862334908, guid: 599f8c9d816ad2c47b858ae695627eed, type: 3}
 --- !u!114 &7914874716073409439
