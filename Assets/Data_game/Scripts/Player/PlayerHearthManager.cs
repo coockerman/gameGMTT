@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerHearthManager : MonoBehaviour
 {
+    public static PlayerHearthManager instance;
     [SerializeField] AudioSource audioPlayer;
     [SerializeField] AudioClip danh;
     public int playerMaxHealth;
@@ -20,6 +21,10 @@ public class PlayerHearthManager : MonoBehaviour
     private float TimeNow = 0;
     private float TimeFlash = 0.3f;
     private SpriteRenderer playerSprite;
+    private void Awake()
+    {
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {

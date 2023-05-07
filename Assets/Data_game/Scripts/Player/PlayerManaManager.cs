@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerManaManager : MonoBehaviour
 {
+    public static PlayerManaManager instance;
     public int playerMaxMana;
     public int playerCurrentMana;
 
@@ -12,9 +13,14 @@ public class PlayerManaManager : MonoBehaviour
     private float TimeCreateMana = 1;
 
     public GameObject textHetMana;
+    private void Awake()
+    {
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
+
         SetMaxMana();
 
     }

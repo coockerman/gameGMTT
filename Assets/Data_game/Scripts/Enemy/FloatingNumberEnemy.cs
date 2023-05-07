@@ -10,7 +10,7 @@ public class FloatingNumberEnemy : FloatingNumber
     void Start()
     {
         damageInEnemy = FindObjectOfType<HurtEnemy>();
-        damageNumber = damageInEnemy.damageToGive;
+        damageNumber = (int)damageInEnemy.damageToGive;
     }
 
     // Update is called once per frame
