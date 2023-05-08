@@ -8,6 +8,10 @@ public class BulletMove : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] float speed;
     [SerializeField] float TimeMove;
+    private void Start()
+    {
+        target = FindObjectOfType<PlayerCtrl>().transform;
+    }
     private void OnEnable()
     {
         StartMove = transform.position;
