@@ -50,6 +50,11 @@ MonoBehaviour:
   damageToGive: 3
   damageNumber: {fileID: 4713038738293079610, guid: 35b12d6a2d9786f4ea1a6c7acf941ad3, type: 3}
   playerHearth: {fileID: 0}
+  LoaiTangDame: 1
+  TangDameMacDinh: 0.2
+  CongSai: 0.1
+  TangDamePhanTram: 0
+  enemyHealth: {fileID: 0}
 --- !u!114 &7730873669918433060
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -214,6 +214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2673708410115322137}
   - component: {fileID: 2673708410115322130}
+  - component: {fileID: 884179536036898141}
   - component: {fileID: 2673708410115322133}
   - component: {fileID: 1231517096855387204}
   - component: {fileID: 2673708410115322132}
@@ -296,6 +297,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &884179536036898141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2673708410115322136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ef17aba89f44646bec6fa0e2f397a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  KhoangCach: 5
+  TimeBan: 10
+  bullet: {fileID: 0}
 --- !u!95 &2673708410115322133
 Animator:
   serializedVersion: 5
@@ -346,6 +363,8 @@ MonoBehaviour:
   VP10: {fileID: 1332446021846080876, guid: 5fff0fef8fc967e4ead652ea51951909, type: 3}
   manaRecovery: {fileID: 956220233630913494, guid: ab4be55c3680cd048a7844c51e958bca, type: 3}
   uiManagerEnemy: {fileID: 0}
+  EnemyHealth_NAME: 
+  EnemyLV_NAME: 
   CreateHPdied: 0.7
   itemBlood: 60
   itemMana: 10
@@ -408,10 +427,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75670af73ddcd945889dd6f55a65831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  moveSpeed: 5
   xRangeMove: 8
   yRangeMove: 6
-  timeBetweenMove: 0.5
+  timeBetweenMove: 1
   timeToMove: 1
 --- !u!114 &75360946615602520
 MonoBehaviour:
@@ -428,6 +447,11 @@ MonoBehaviour:
   damageToGive: 500
   damageNumber: {fileID: 4713038738293079610, guid: 262ef7bcc995bf1458811432f0a65ca4, type: 3}
   playerHearth: {fileID: 2351792378862334908, guid: 599f8c9d816ad2c47b858ae695627eed, type: 3}
+  LoaiTangDame: 2
+  TangDameMacDinh: 0
+  CongSai: 0
+  TangDamePhanTram: 45
+  enemyHealth: {fileID: 0}
 --- !u!114 &7160810556113952513
 MonoBehaviour:
   m_ObjectHideFlags: 0

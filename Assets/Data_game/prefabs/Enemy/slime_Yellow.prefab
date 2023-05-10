@@ -423,8 +423,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  KhoangCach: 0
-  TimeBan: 0
+  KhoangCach: 3
+  TimeBan: 5
   bullet: {fileID: 0}
 --- !u!114 &4738904992701242550
 MonoBehaviour:
@@ -455,6 +455,8 @@ MonoBehaviour:
   VP10: {fileID: 1332446021846080876, guid: 5fff0fef8fc967e4ead652ea51951909, type: 3}
   manaRecovery: {fileID: 956220233630913494, guid: cccd6207dc4762741bd8fb824b90eb9d, type: 3}
   uiManagerEnemy: {fileID: 0}
+  EnemyHealth_NAME: 
+  EnemyLV_NAME: 
   CreateHPdied: 0.2
   itemBlood: 20
   itemMana: 20
@@ -501,7 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75670af73ddcd945889dd6f55a65831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 4
   xRangeMove: 5
   yRangeMove: 5
   timeBetweenMove: 1.8
@@ -521,6 +523,11 @@ MonoBehaviour:
   damageToGive: 45
   damageNumber: {fileID: 4713038738293079610, guid: 262ef7bcc995bf1458811432f0a65ca4, type: 3}
   playerHearth: {fileID: 2351792378862334908, guid: 599f8c9d816ad2c47b858ae695627eed, type: 3}
+  LoaiTangDame: 2
+  TangDameMacDinh: 0
+  CongSai: 0
+  TangDamePhanTram: 14
+  enemyHealth: {fileID: 0}
 --- !u!114 &7914874716073409439
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -25,7 +25,9 @@ public class EnemyHealthManager : MonoBehaviour
     public GameObject VP10;
     public GameObject manaRecovery;
     public UiManagerEnemy uiManagerEnemy;
-    
+    public string EnemyHealth_NAME;
+    public string EnemyLV_NAME;
+
     protected int ratio;
     protected int ratioHealthy;
     public float CreateHPdied;
@@ -52,15 +54,17 @@ public class EnemyHealthManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EnemyUpHealth = PlayerPrefs.GetFloat("enemyUpHealth" + gameObject.name);
-        if(PlayerPrefs.GetInt("enemyLv" + gameObject.name)<=1)
+        EnemyHealth_NAME = "enemyUpHealth" + gameObject.name;
+        EnemyLV_NAME = "enemyLv" + gameObject.name;
+        EnemyUpHealth = PlayerPrefs.GetFloat(EnemyHealth_NAME);
+        if(PlayerPrefs.GetInt(EnemyLV_NAME) <=1)
         {
-            PlayerPrefs.SetInt("enemyLv" + gameObject.name, 1);
+            PlayerPrefs.SetInt(EnemyLV_NAME, 1);
         }
         EnemyMaxHealth = EnemyMaxHealth + EnemyUpHealth;
         SetMaxHealth();
         SetMaxHealth();
-        uiManagerEnemy.UpdateName(PlayerPrefs.GetInt("enemyLv" + gameObject.name));
+        uiManagerEnemy.UpdateName(PlayerPrefs.GetInt(EnemyLV_NAME));
         SetTiLe();
 
     }
@@ -168,9 +172,9 @@ public class EnemyHealthManager : MonoBehaviour
     {
         gameObject.SetActive(true);
         EnemyUpHealth += EnemyMaxHealth * CreateHPdied;
-        PlayerPrefs.SetFloat("enemyUpHealth" + gameObject.name, EnemyUpHealth);
-        PlayerPrefs.SetInt("enemyLv" + gameObject.name, PlayerPrefs.GetInt("enemyLv" + gameObject.name) + 1);
-        uiManagerEnemy.UpdateName(PlayerPrefs.GetInt("enemyLv" + gameObject.name));
+        PlayerPrefs.SetFloat(EnemyHealth_NAME, EnemyUpHealth);
+        PlayerPrefs.SetInt(EnemyLV_NAME, PlayerPrefs.GetInt(EnemyLV_NAME) + 1);
+        uiManagerEnemy.UpdateName(PlayerPrefs.GetInt(EnemyLV_NAME));
         
         EnemyMaxHealth *= (1+ CreateHPdied);
 
