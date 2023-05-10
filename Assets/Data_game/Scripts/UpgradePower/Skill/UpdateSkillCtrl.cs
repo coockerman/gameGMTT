@@ -95,8 +95,8 @@ public class UpdateSkillCtrl : MonoBehaviour
                 Instantiate(textLV5, Player.transform.position, Player.transform.rotation);
                 return;
             }
-            if(PlayerPrefs.GetInt(skillBatTu.SAVE_LVBatTu) == 0 
-                && PlayerPrefs.GetInt(skillTocChay.SAVE_LVTocChay) == 0)
+            if(PlayerPrefs.GetInt("lvBatTu") == 0 
+                && PlayerPrefs.GetInt("lvTocChay") == 0)
             {
                 Instantiate(textNangKyNang, Player.transform.position, Player.transform.rotation);
                 return;
@@ -133,8 +133,8 @@ public class UpdateSkillCtrl : MonoBehaviour
                 Instantiate(textLV7, Player.transform.position, Player.transform.rotation);
                 return;
             }
-            if (PlayerPrefs.GetInt(skillHoiHp.SAVE_LV) == 0
-                && PlayerPrefs.GetInt(skillHoiKi.SAVE_LV) == 0)
+            if (PlayerPrefs.GetInt("lvHealth") == 0
+                && PlayerPrefs.GetInt("lvMana") == 0)
             {
                 Instantiate(textNangKyNang, Player.transform.position, Player.transform.rotation);
                 return;

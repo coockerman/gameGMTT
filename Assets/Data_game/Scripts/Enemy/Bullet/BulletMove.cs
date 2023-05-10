@@ -30,13 +30,13 @@ public class BulletMove : MonoBehaviour
 
         }
     }
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if(collision.gameObject.tag == "Player")
-    //    {
-    //        OffObj();
-    //    }
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            OffObj();
+        }
+    }
     void OffObj()
     {
         Debug.Log("v");
