@@ -5,11 +5,14 @@ using UnityEngine;
 
 public class UpMana : UpChiSo
 {
-    [SerializeField] PlayerManaManager manaManager;
+    PlayerManaManager manaManager;
 
     // Start is called before the first frame update
     
-
+    private void Awake()
+    {
+        manaManager = PlayerManaManager.instance;
+    }
     protected override void UpChiSoCoBan(int TangChiSo)
     {
         manaManager.UpMana(TangChiSo);

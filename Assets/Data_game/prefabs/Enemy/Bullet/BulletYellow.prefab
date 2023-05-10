@@ -64,7 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartMove: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
-  speed: 5
+  speed: 15
   TimeMove: 3
 --- !u!58 &966332488022213281
 CircleCollider2D:

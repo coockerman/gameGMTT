@@ -17,11 +17,12 @@ public class SkillHoiPhuc : MonoBehaviour
     protected int lvHoiPhuc;
     //public bool activeHealth = false;
 
-    private void Start()
+    protected virtual void Start()
     {
         SetTimeHoiPhuc();
         SetChuThich();
     }
+    
 
     public virtual void OnHoiPhuc()
     {

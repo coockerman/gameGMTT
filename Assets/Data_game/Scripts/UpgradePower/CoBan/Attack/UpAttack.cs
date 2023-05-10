@@ -6,12 +6,10 @@ public class UpAttack : UpChiSo
 {
     PlayerAttackManager acttackManager;
 
-    // Start is called before the first frame update
-    void Awake()
+    private void Awake()
     {
         acttackManager = PlayerAttackManager.instance;
     }
-
     protected override void UpChiSoCoBan(int TangChiSo)
     {
         acttackManager.UpDamage(TangChiSo);

@@ -5,9 +5,10 @@ using UnityEngine;
 public class SkillHoiKi : SkillHoiPhuc
 {
     [SerializeField] PlayerManaManager playerMana;
-    private void Start()
+    protected override void Start()
     {
         SAVE_LV = "lvMana";
+        base.Start();
     }
     public override void OnHoiPhuc()
     {

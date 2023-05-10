@@ -6,15 +6,13 @@ public class UpAttackPercen : UpChiSo
 {
     PlayerAttackManager acttackManager;
 
-    // Start is called before the first frame update
-    void Awake()
+    private void Awake()
     {
         acttackManager = PlayerAttackManager.instance;
     }
-
     protected override void UpChiSoCoBan(int TangChiSo)
     {
-        acttackManager.UpPhanTramDame(TangChiSo);
+        acttackManager.UpPhanTramDame((float)TangChiSo);
     }
 
     protected override void GetCountIndex()

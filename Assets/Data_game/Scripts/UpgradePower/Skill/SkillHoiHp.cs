@@ -6,9 +6,11 @@ using UnityEngine;
 public class SkillHoiHp : SkillHoiPhuc
 {
     [SerializeField] PlayerHearthManager playerHearth;
-    private void Start()
+    protected override void Start()
     {
         SAVE_LV = "lvHealth";
+        base.Start();
+
     }
     public override void OnHoiPhuc()
     {
