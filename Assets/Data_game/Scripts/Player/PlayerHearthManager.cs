@@ -12,8 +12,8 @@ public class PlayerHearthManager : MonoBehaviour
     public int MatDame;
 
     private bool flashActive = false;
-    private int flashCount = 3;
-    private int flashSize = 3;
+    private int flashCount = 2;
+    private int flashSize = 1;
 
     public bool BatTu = false;
     public bool BatTu2 = false;

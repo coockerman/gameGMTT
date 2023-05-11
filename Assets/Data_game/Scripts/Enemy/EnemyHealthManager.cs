@@ -1,16 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class EnemyHealthManager : MonoBehaviour
 {
+    CircleCollider2D my_collider;
+    EnemyCtrl enemyCtrl;
     public float EnemyMaxHealth;
     public float EnemyCurrentHealth;
     public float EnemyUpHealth;
 
     protected PlayerStats thePlayerStats;
+    float moveSpeedEnm;
     public int expToGive;
+
+    [SerializeField] float TimeHoiSinh;
 
     public GameObject bloodRecovery;
     public GameObject VP1;
@@ -32,6 +38,7 @@ public class EnemyHealthManager : MonoBehaviour
     protected int ratioHealthy;
     public float CreateHPdied;
     int SoluongQuaiDied;
+    [SerializeField] Animator animSmile;
 
     [SerializeField]int itemBlood;
     [SerializeField] int itemMana;
@@ -46,6 +53,8 @@ public class EnemyHealthManager : MonoBehaviour
     [SerializeField] int itemVP9;
     [SerializeField] int itemVP10;
 
+    [SerializeField] TextMeshProUGUI textExp;
+
     private void Awake()
     {
         thePlayerStats = FindObjectOfType<PlayerStats>();
@@ -54,6 +63,9 @@ public class EnemyHealthManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animSmile = GetComponent<Animator>();
+        my_collider = GetComponent<CircleCollider2D>();
+        enemyCtrl = GetComponent<EnemyCtrl>();
         EnemyHealth_NAME = "enemyUpHealth" + gameObject.name;
         EnemyLV_NAME = "enemyLv" + gameObject.name;
         EnemyUpHealth = PlayerPrefs.GetFloat(EnemyHealth_NAME);
@@ -64,9 +76,9 @@ public class EnemyHealthManager : MonoBehaviour
         EnemyMaxHealth = EnemyMaxHealth + EnemyUpHealth;
         SetMaxHealth();
         SetMaxHealth();
+        moveSpeedEnm = enemyCtrl.moveSpeed;
         uiManagerEnemy.UpdateName(PlayerPrefs.GetInt(EnemyLV_NAME));
         SetTiLe();
-
     }
     void SetTiLe()
     {
@@ -91,13 +103,21 @@ public class EnemyHealthManager : MonoBehaviour
     {
         if (EnemyCurrentHealth <= 0)
         {
+            enemyCtrl.moveSpeed = 0;
+            my_collider.enabled = false;
+
+            EnemyCurrentHealth = 1;
+            OnTextEXP();
             thePlayerStats.AddExperience(expToGive);
             SoluongQuaiDied = PlayerPrefs.GetInt("QuaiDaTieuDiet");
             PlayerPrefs.SetInt("QuaiDaTieuDiet", SoluongQuaiDied + 1);
-            DropHealingItem();
-            Invoke("HoiSinhEnemy", 10);
 
-            gameObject.SetActive(false);
+            DropHealingItem();
+
+            Invoke("HoiSinhEnemy", TimeHoiSinh);
+
+            if (animSmile != null) animSmile.SetBool("SmileDied", true);
+            Invoke("OffObj", 1.3f);
         }
     }
     protected virtual void DropHealingItem()
@@ -170,6 +190,10 @@ public class EnemyHealthManager : MonoBehaviour
     
     protected virtual void HoiSinhEnemy()
     {
+        if (animSmile != null) animSmile.SetBool("SmileDied", false);
+        my_collider.enabled = true;
+        enemyCtrl.moveSpeed = moveSpeedEnm;
+        
         gameObject.SetActive(true);
         EnemyUpHealth += EnemyMaxHealth * CreateHPdied;
         PlayerPrefs.SetFloat(EnemyHealth_NAME, EnemyUpHealth);
@@ -187,5 +211,19 @@ public class EnemyHealthManager : MonoBehaviour
     public virtual void SetMaxHealth()
     {
         EnemyCurrentHealth = EnemyMaxHealth;
+    }
+    void OnTextEXP()
+    {
+        textExp.text = "+ " + expToGive;
+        textExp.gameObject.SetActive(true);
+        Invoke("OffTextEXP", 1);
+    }
+    void OffTextEXP()
+    {
+        textExp.gameObject.SetActive(false);
+    }
+    void OffObj()
+    {
+            gameObject.SetActive(false);
     }
 }

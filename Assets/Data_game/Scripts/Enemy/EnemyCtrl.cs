@@ -39,6 +39,11 @@ public class EnemyCtrl : MonoBehaviour
     }
     protected virtual void SetMovingEnemy()
     {
+        if (moveSpeed == 0)
+        {
+            EnemyStand();
+            return;
+        }
         if (moving == true) EnemyMoving();
         else EnemyStand();
     }

@@ -44,7 +44,7 @@ public class HurtPlayer : MonoBehaviour
         }
         else if (LoaiTangDame == 2)
         {
-            TangDame = damageToGive * Mathf.Pow((1 + TangDamePhanTram / 100), (lvEnemy - 1));
+            TangDame = damageToGive * (Mathf.Pow((1 + TangDamePhanTram / 100), (lvEnemy - 1)) - 1);
         }
         else
         {

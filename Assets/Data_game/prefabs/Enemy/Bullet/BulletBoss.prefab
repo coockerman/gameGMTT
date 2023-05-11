@@ -47,12 +47,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1269adcb68d42e8439b2285c0b0f4a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 150
+  damageToGive: 75
   damageNumber: {fileID: 4713038738293079610, guid: 35b12d6a2d9786f4ea1a6c7acf941ad3, type: 3}
   playerHearth: {fileID: 0}
   LoaiTangDame: 1
-  TangDameMacDinh: 10
-  CongSai: 20
+  TangDameMacDinh: 20
+  CongSai: 15
   TangDamePhanTram: 0
   enemyHealth: {fileID: 0}
 --- !u!114 &7730873669918433060
