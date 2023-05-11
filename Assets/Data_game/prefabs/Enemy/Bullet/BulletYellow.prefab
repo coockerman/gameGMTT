@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1269adcb68d42e8439b2285c0b0f4a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 7
+  damageToGive: 10
   damageNumber: {fileID: 4713038738293079610, guid: 35b12d6a2d9786f4ea1a6c7acf941ad3, type: 3}
   playerHearth: {fileID: 0}
   LoaiTangDame: 1
@@ -67,7 +67,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25717a2001d2f6e49bb06306e491092a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartMove: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
   speed: 15
   TimeMove: 3

@@ -114,6 +114,12 @@ public class EnemyHealthManager : MonoBehaviour
 
             DropHealingItem();
 
+            EnemyUpHealth += EnemyMaxHealth * CreateHPdied;
+            PlayerPrefs.SetFloat(EnemyHealth_NAME, EnemyUpHealth);
+            PlayerPrefs.SetInt(EnemyLV_NAME, PlayerPrefs.GetInt(EnemyLV_NAME) + 1);
+            EnemyMaxHealth *= (1 + CreateHPdied);
+            EnemyCurrentHealth = EnemyMaxHealth;
+
             Invoke("HoiSinhEnemy", TimeHoiSinh);
 
             if (animSmile != null) animSmile.SetBool("SmileDied", true);
@@ -195,14 +201,10 @@ public class EnemyHealthManager : MonoBehaviour
         enemyCtrl.moveSpeed = moveSpeedEnm;
         
         gameObject.SetActive(true);
-        EnemyUpHealth += EnemyMaxHealth * CreateHPdied;
-        PlayerPrefs.SetFloat(EnemyHealth_NAME, EnemyUpHealth);
-        PlayerPrefs.SetInt(EnemyLV_NAME, PlayerPrefs.GetInt(EnemyLV_NAME) + 1);
+        
         uiManagerEnemy.UpdateName(PlayerPrefs.GetInt(EnemyLV_NAME));
         
-        EnemyMaxHealth *= (1+ CreateHPdied);
-
-        EnemyCurrentHealth = EnemyMaxHealth;
+        
     }
     public virtual void HurtEnemy(float damageToGive)
     {

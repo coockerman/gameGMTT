@@ -459,7 +459,7 @@ MonoBehaviour:
   uiManagerEnemy: {fileID: 0}
   EnemyHealth_NAME: 
   EnemyLV_NAME: 
-  CreateHPdied: 0.2
+  CreateHPdied: 0.3
   animSmile: {fileID: 0}
   itemBlood: 35
   itemMana: 30
@@ -530,7 +530,7 @@ MonoBehaviour:
   LoaiTangDame: 2
   TangDameMacDinh: 0
   CongSai: 0
-  TangDamePhanTram: 14
+  TangDamePhanTram: 15
   enemyHealth: {fileID: 0}
 --- !u!114 &7914874716073409439
 MonoBehaviour:

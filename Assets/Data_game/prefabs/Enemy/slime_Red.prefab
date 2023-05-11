@@ -578,7 +578,7 @@ MonoBehaviour:
   uiManagerEnemy: {fileID: 0}
   EnemyHealth_NAME: 
   EnemyLV_NAME: 
-  CreateHPdied: 0.1
+  CreateHPdied: 0.2
   animSmile: {fileID: 3147431742016148875}
   itemBlood: 35
   itemMana: 30
