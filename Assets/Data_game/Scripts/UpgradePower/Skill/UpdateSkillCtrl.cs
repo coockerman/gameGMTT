@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -36,7 +34,7 @@ public class UpdateSkillCtrl : MonoBehaviour
     private void Start()
     {
         TimeCDDacBiet = 30;
-        TimeCDHoiPhuc = 60;
+        TimeCDHoiPhuc = 20;
     }
     private void Update()
     {

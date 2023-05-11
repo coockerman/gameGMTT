@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
@@ -47,7 +44,7 @@ public class PlayerCtrl : MonoBehaviour
     {
         attackTime = 0.25f;
         skillOneTime = 0.6f;
-        skillTwoTime = 0.6f;
+        skillTwoTime = 0.7f;
 
         playerManaManager = GetComponent<PlayerManaManager>();
 

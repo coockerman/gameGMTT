@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,11 +5,12 @@ public class GameManager : MonoBehaviour
 {
     protected float waitToReload = 2;
     private static bool gameManager = false;
-    public PlayerCtrl Player;
+    [SerializeField] PlayerCtrl Player;
     public bool playDialog;
     
     private void Start()
     {
+        if(Player == null)
         Player = FindObjectOfType<PlayerCtrl>();
         if (!gameManager)
         {
@@ -36,7 +35,7 @@ public class GameManager : MonoBehaviour
         if (waitToReload < 0)
         {
             waitToReload = 2;
-            SceneManager.LoadScene(SceneManager.sceneCount - 1);
+            Player.transform.position = new Vector3(-1, 18, 0);
             Player.transform.gameObject.SetActive(true);
 
         }
