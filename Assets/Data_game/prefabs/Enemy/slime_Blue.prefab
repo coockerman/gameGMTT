@@ -179,7 +179,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4280930657
-  m_fontColor: {r: 0.27358502, g: 0.8207547, b: 0, a: 1}
+  m_fontColor: {r: 0.33492827, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -580,8 +580,8 @@ MonoBehaviour:
   EnemyLV_NAME: 
   CreateHPdied: 0.3
   animSmile: {fileID: 3147431742016148875}
-  itemBlood: 20
-  itemMana: 20
+  itemBlood: 40
+  itemMana: 30
   itemVP1: 0
   itemVP2: 10
   itemVP3: 50

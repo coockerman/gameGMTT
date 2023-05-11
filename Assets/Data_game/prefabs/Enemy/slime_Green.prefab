@@ -461,8 +461,8 @@ MonoBehaviour:
   EnemyLV_NAME: 
   CreateHPdied: 0.2
   animSmile: {fileID: 0}
-  itemBlood: 20
-  itemMana: 20
+  itemBlood: 35
+  itemMana: 30
   itemVP1: 10
   itemVP2: 50
   itemVP3: 10
@@ -548,7 +548,7 @@ MonoBehaviour:
   manaBar: {fileID: 0}
   HealthObject: {fileID: 4738904992701242550}
   nameEnm: {fileID: 2474119498232636438}
-  nameEnemy: "Th\u1EA1ch Uy\u1EC3n"
+  nameEnemy: "Phong t\u01B0\u1EDBc"
 --- !u!1 &4295557858901944690
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,7 +797,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4280930657
-  m_fontColor: {r: 0.27358502, g: 0.8207547, b: 0, a: 1}
+  m_fontColor: {r: 0, g: 1, b: 0.10068703, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

@@ -179,7 +179,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278247499
-  m_fontColor: {r: 0.29245296, g: 0.8773585, b: 0, a: 1}
+  m_fontColor: {r: 0.006289184, g: 1, b: 0.14579238, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -580,8 +580,8 @@ MonoBehaviour:
   EnemyLV_NAME: 
   CreateHPdied: 0.1
   animSmile: {fileID: 3147431742016148875}
-  itemBlood: 20
-  itemMana: 20
+  itemBlood: 35
+  itemMana: 30
   itemVP1: 60
   itemVP2: 10
   itemVP3: 0
@@ -683,7 +683,7 @@ MonoBehaviour:
   manaBar: {fileID: 0}
   HealthObject: {fileID: 0}
   nameEnm: {fileID: 462493550567254057}
-  nameEnemy: "C\u1EF1 nham"
+  nameEnemy: "Nham th\u1EA1ch"
 --- !u!1 &3335326966458829031
 GameObject:
   m_ObjectHideFlags: 0

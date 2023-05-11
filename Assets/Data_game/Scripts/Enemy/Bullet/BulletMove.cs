@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BulletMove : MonoBehaviour
 {
-    [SerializeField] Vector3 StartMove;
     [SerializeField] Transform target;
     [SerializeField] float speed;
     [SerializeField] float TimeMove;
@@ -14,7 +13,6 @@ public class BulletMove : MonoBehaviour
     }
     private void OnEnable()
     {
-        StartMove = transform.position;
         Invoke("OffObj", TimeMove);
     }
     void Update()
@@ -39,7 +37,6 @@ public class BulletMove : MonoBehaviour
     }
     void OffObj()
     {
-        Debug.Log("v");
         gameObject.SetActive(false);
     }
 }

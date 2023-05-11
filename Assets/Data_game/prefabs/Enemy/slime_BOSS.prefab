@@ -369,7 +369,7 @@ MonoBehaviour:
   EnemyLV_NAME: 
   CreateHPdied: 0.7
   animSmile: {fileID: 0}
-  itemBlood: 60
+  itemBlood: 75
   itemMana: 10
   itemVP1: 0
   itemVP2: 0
@@ -625,7 +625,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4280930657
-  m_fontColor: {r: 0.2767297, g: 0.8301887, b: 0, a: 1}
+  m_fontColor: {r: 0.007843137, g: 1, b: 0.14846846, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -642,8 +642,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.25
-  m_fontSizeBase: 0.25
+  m_fontSize: 0.35
+  m_fontSizeBase: 0.35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -10,28 +10,34 @@ public class UiManagerPlayer : UiManager
     public PlayerManaManager manaObject;
     public TextMeshProUGUI HPText;
     public TextMeshProUGUI ManaText;
-    private static bool UiExits = false;
+    //private static bool UiExits = false;
+
+    private static UiManagerPlayer _instance;
+
 
     private void Awake()
     {
-        HealthObject = FindObjectOfType<PlayerHearthManager>();
-        manaObject = FindObjectOfType<PlayerManaManager>();
+        
     }
     // Start is called before the first frame update
     void Start()
     {
-        
-        healthBar.maxValue = HealthObject.playerMaxHealth;
-
-        if (!UiExits)
+        if (_instance == null)
         {
-            UiExits = true;
-            DontDestroyOnLoad(transform.gameObject);
+            DontDestroyOnLoad(gameObject);
+
+            _instance = this;
         }
         else
         {
             Destroy(gameObject);
         }
+        if (HealthObject == null)
+        HealthObject = FindObjectOfType<PlayerHearthManager>();
+        if(manaObject == null)
+        manaObject = FindObjectOfType<PlayerManaManager>();
+
+        healthBar.maxValue = HealthObject.playerMaxHealth;
     }
 
     // Update is called once per frame
