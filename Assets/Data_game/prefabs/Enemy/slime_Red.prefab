@@ -362,7 +362,7 @@ SpriteRenderer:
   m_SortingLayerID: 532259689
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1284785793, guid: 245aa9e6569f201478e005c19d3ec8bf, type: 3}
+  m_Sprite: {fileID: 4367289792872251007, guid: d4e8a5c5eececab46942986a743fd7d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -383,7 +383,7 @@ Animator:
   m_GameObject: {fileID: 3147431742016148870}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 75de2f5913bf23840ba11ad9eda84544, type: 2}
+  m_Controller: {fileID: 9100000, guid: dfdb4d2f80da0fd449348e31347bc646, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -544,7 +544,7 @@ MonoBehaviour:
   manaBar: {fileID: 0}
   HealthObject: {fileID: 0}
   nameEnm: {fileID: 462493550567254057}
-  nameEnemy: Red
+  nameEnemy: "C\u1EF1 nham"
 --- !u!1 &3335326966458829031
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,8 +638,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.3
-  m_fontSizeBase: 0.3
+  m_fontSize: 0.25
+  m_fontSizeBase: 0.25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -674,7 +674,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -0.13209629, y: 0, z: -0.12635326, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
