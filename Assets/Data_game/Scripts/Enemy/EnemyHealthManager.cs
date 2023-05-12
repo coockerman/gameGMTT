@@ -40,7 +40,7 @@ public class EnemyHealthManager : MonoBehaviour
     int SoluongQuaiDied;
     [SerializeField] Animator animSmile;
 
-    [SerializeField]int itemBlood;
+    [SerializeField] int itemBlood;
     [SerializeField] int itemMana;
     [SerializeField] int itemVP1;
     [SerializeField] int itemVP2;
@@ -69,7 +69,7 @@ public class EnemyHealthManager : MonoBehaviour
         EnemyHealth_NAME = "enemyUpHealth" + gameObject.name;
         EnemyLV_NAME = "enemyLv" + gameObject.name;
         EnemyUpHealth = PlayerPrefs.GetFloat(EnemyHealth_NAME);
-        if(PlayerPrefs.GetInt(EnemyLV_NAME) <=1)
+        if (PlayerPrefs.GetInt(EnemyLV_NAME) <= 1)
         {
             PlayerPrefs.SetInt(EnemyLV_NAME, 1);
         }
@@ -93,7 +93,7 @@ public class EnemyHealthManager : MonoBehaviour
         itemVP9 += itemVP8;
         itemVP10 += itemVP9;
     }
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -118,7 +118,6 @@ public class EnemyHealthManager : MonoBehaviour
             PlayerPrefs.SetFloat(EnemyHealth_NAME, EnemyUpHealth);
             PlayerPrefs.SetInt(EnemyLV_NAME, PlayerPrefs.GetInt(EnemyLV_NAME) + 1);
             EnemyMaxHealth *= (1 + CreateHPdied);
-            EnemyCurrentHealth = EnemyMaxHealth;
 
             Invoke("HoiSinhEnemy", TimeHoiSinh);
 
@@ -128,15 +127,16 @@ public class EnemyHealthManager : MonoBehaviour
     }
     protected virtual void DropHealingItem()
     {
-        Vector3 posHealth = new Vector3(transform.position.x-0.5f,transform.position.y,transform.position.z);
-        Vector3 posItem = new Vector3(transform.position.x+0.5f,transform.position.y,transform.position.z);
+        Vector3 posHealth = new Vector3(transform.position.x - 0.5f, transform.position.y, transform.position.z);
+        Vector3 posItem = new Vector3(transform.position.x + 0.5f, transform.position.y, transform.position.z);
         ratioHealthy = Random.Range(1, 100);
         ratio = Random.Range(1, 100);
-        if(ratioHealthy <= itemBlood)
+        if (ratioHealthy <= itemBlood)
         {
             GameObject blood = Instantiate(bloodRecovery, posHealth, transform.rotation);
             blood.name = bloodRecovery.name;
-        }else if(ratioHealthy <= itemMana)
+        }
+        else if (ratioHealthy <= itemMana)
         {
             GameObject mana = Instantiate(manaRecovery, posHealth, transform.rotation);
             mana.name = manaRecovery.name;
@@ -152,7 +152,7 @@ public class EnemyHealthManager : MonoBehaviour
             GameObject vp2 = Instantiate(VP2, posItem, transform.rotation);
             vp2.name = VP2.name;
         }
-        else if(ratio <= itemVP3)
+        else if (ratio <= itemVP3)
         {
             GameObject vp3 = Instantiate(VP3, posItem, transform.rotation);
             vp3.name = VP3.name;
@@ -193,18 +193,19 @@ public class EnemyHealthManager : MonoBehaviour
             vp10.name = VP10.name;
         }
     }
-    
+
     protected virtual void HoiSinhEnemy()
     {
         if (animSmile != null) animSmile.SetBool("SmileDied", false);
         my_collider.enabled = true;
         enemyCtrl.moveSpeed = moveSpeedEnm;
-        
+        EnemyCurrentHealth = EnemyMaxHealth;
+
         gameObject.SetActive(true);
-        
+
         uiManagerEnemy.UpdateName(PlayerPrefs.GetInt(EnemyLV_NAME));
-        
-        
+
+
     }
     public virtual void HurtEnemy(float damageToGive)
     {
@@ -226,6 +227,6 @@ public class EnemyHealthManager : MonoBehaviour
     }
     void OffObj()
     {
-            gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 }

@@ -40,7 +40,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0.14}
-  m_SizeDelta: {x: 25, y: 25}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2022772504088920565
 Canvas:
@@ -377,7 +377,7 @@ MonoBehaviour:
   itemVP4: 10
   itemVP5: 60
   itemVP6: 20
-  itemVP7: 5
+  itemVP7: 0
   itemVP8: 0
   itemVP9: 0
   itemVP10: 0

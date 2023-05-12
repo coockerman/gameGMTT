@@ -14,6 +14,7 @@ public class SkillHoiHp : SkillHoiPhuc
     }
     public override void OnHoiPhuc()
     {
+        SAVE_LV = "lvHealth";
         base.OnHoiPhuc();
         hoiPhuc = playerHearth.playerMaxHealth * dataLVHoiPhuc[lvHoiPhuc] * 0.01f;
         playerHearth.HoiHp((int)hoiPhuc);

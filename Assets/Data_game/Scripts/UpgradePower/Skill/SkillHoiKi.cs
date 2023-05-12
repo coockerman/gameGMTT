@@ -10,6 +10,7 @@ public class SkillHoiKi : SkillHoiPhuc
     }
     public override void OnHoiPhuc()
     {
+        SAVE_LV = "lvMana";
         base.OnHoiPhuc();
         hoiPhuc = playerMana.playerMaxMana * dataLVHoiPhuc[lvHoiPhuc] * 0.01f;
         playerMana.HoiMana((int)hoiPhuc);

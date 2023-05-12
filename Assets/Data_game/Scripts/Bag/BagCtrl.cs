@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BagCtrl : MonoBehaviour
 {
+    [SerializeField] string[] nameVP;
     public void TangVatPham(int stt, int count)
     {
         PlayerPrefs.SetInt("VatPham" + stt, PlayerPrefs.GetInt("VatPham" + stt) + count);
@@ -14,31 +15,6 @@ public class BagCtrl : MonoBehaviour
     }
     public string GetNameVP(int stt)
     {
-        switch (stt)
-        {
-            case 1:
-                return "Giấy cường hoá";
-            case 2:
-                return "Đá tăng cấp";
-            case 3:
-                return "Đùi gà";
-            case 4:
-                return "Sách";
-            case 5:
-                return "Thỏi bạc";
-            case 6:
-                return "Dây chuyền";
-            case 7:
-                return "Tăng tốc";
-            case 8:
-                return "Băng tay";
-            case 9:
-                return "Rìu";
-            case 10:
-                return "Nhẫn";
-            default:
-                break;
-        }
-        return "";
+        return nameVP[stt - 1];
     }
 }
