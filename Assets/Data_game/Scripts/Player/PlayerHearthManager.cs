@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerHearthManager : MonoBehaviour
 {
     public static PlayerHearthManager instance;
+    PlayerCtrl playerCtrl;
     [SerializeField] AudioSource audioPlayer;
     [SerializeField] AudioClip danh;
     public int playerMaxHealth;
@@ -17,7 +18,7 @@ public class PlayerHearthManager : MonoBehaviour
     public bool BatTu2 = false;
 
     private float TimeNow = 0;
-    private float TimeFlash = 0.3f;
+    private float TimeFlash = 0.25f;
     private SpriteRenderer playerSprite;
     private void Awake()
     {
@@ -26,6 +27,7 @@ public class PlayerHearthManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerCtrl = GetComponent<PlayerCtrl>();
         playerSprite = GetComponent<SpriteRenderer>();
         SetMaxHealth();
     }
@@ -35,8 +37,8 @@ public class PlayerHearthManager : MonoBehaviour
     {
         if (playerCurrentHealth <= 0)
         {
-            gameObject.SetActive(false);
-            SetMaxHealth();
+            playerCtrl.OffSkill();
+            Invoke("Died", 0.8f);
         }
         if (BatTu2 == true)
         {
@@ -45,7 +47,11 @@ public class PlayerHearthManager : MonoBehaviour
         }
         GetFlashActive();
     }
-
+    void Died()
+    {
+        gameObject.SetActive(false);
+        SetMaxHealth();
+    }
     private void GetFlashActive()
     {
         if (flashActive == false) SetOnColor();
@@ -84,6 +90,10 @@ public class PlayerHearthManager : MonoBehaviour
         audioPlayer.PlayOneShot(danh);
         MatDame = damageToGive;
         playerCurrentHealth -= damageToGive;
+        if (playerCurrentHealth < 0)
+        {
+            playerCurrentHealth = 0;
+        }
         flashActive = true;
         flashCount = 0;
     }

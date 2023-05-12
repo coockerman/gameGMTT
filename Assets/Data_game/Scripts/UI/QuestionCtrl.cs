@@ -32,7 +32,7 @@ public class QuestionCtrl : MonoBehaviour
 
     GameManager gameManager;
     bool CheckAnswer;
-    private void OnEnable()
+    private void Start()
     {
         PlayerPrefs.SetInt(addressDialog, 1);
         gameManager = FindObjectOfType<GameManager>();

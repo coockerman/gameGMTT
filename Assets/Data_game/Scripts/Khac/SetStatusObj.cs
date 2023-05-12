@@ -7,9 +7,18 @@ public class SetStatusObj : MonoBehaviour
     [SerializeField] GameObject obj;
     [SerializeField] KeyCode keyName;
     [SerializeField] bool OnObjAwake;
-    private void Awake()
+    [SerializeField] string NameSavePrefs;
+    private void Start()
     {
-        if(OnObjAwake) OnGameObject();
+        if (OnObjAwake)
+        {
+            if(PlayerPrefs.GetInt(NameSavePrefs) ==1)
+            {
+                return;
+            }
+            PlayerPrefs.SetInt(NameSavePrefs, 1);
+            OnGameObject();
+        }
     }
     public void OnGameObject()
     {

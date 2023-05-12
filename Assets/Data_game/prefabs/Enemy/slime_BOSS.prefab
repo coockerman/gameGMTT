@@ -311,8 +311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  KhoangCach: 5
-  TimeBan: 10
+  KhoangCach: 6
+  TimeBan: 8
   bullet: {fileID: 0}
 --- !u!95 &2673708410115322133
 Animator:
@@ -347,10 +347,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40aa2729a4149c4e80637bf64310f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyMaxHealth: 1800
+  EnemyMaxHealth: 1500
   EnemyCurrentHealth: 0
   EnemyUpHealth: 0
-  expToGive: 1500
+  expToGive: 1600
   TimeHoiSinh: 15
   bloodRecovery: {fileID: 956220233630913494, guid: 44e2aa7fee7dc2c40a77b9304dbf11b3, type: 3}
   VP1: {fileID: 1332446021846080876, guid: 3e58142c54422854eb69420a284cc048, type: 3}
@@ -367,10 +367,10 @@ MonoBehaviour:
   uiManagerEnemy: {fileID: 0}
   EnemyHealth_NAME: 
   EnemyLV_NAME: 
-  CreateHPdied: 0.8
+  CreateHPdied: 0.7
   animSmile: {fileID: 0}
   itemBlood: 75
-  itemMana: 10
+  itemMana: 15
   itemVP1: 0
   itemVP2: 0
   itemVP3: 10
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  xRangeMove: 5
+  xRangeMove: 4
   yRangeMove: 4
   timeBetweenMove: 1
   timeToMove: 1
@@ -448,13 +448,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1269adcb68d42e8439b2285c0b0f4a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 400
+  damageToGive: 250
   damageNumber: {fileID: 4713038738293079610, guid: 262ef7bcc995bf1458811432f0a65ca4, type: 3}
   playerHearth: {fileID: 2351792378862334908, guid: 599f8c9d816ad2c47b858ae695627eed, type: 3}
   LoaiTangDame: 2
   TangDameMacDinh: 0
   CongSai: 0
-  TangDamePhanTram: 50
+  TangDamePhanTram: 30
   enemyHealth: {fileID: 0}
 --- !u!114 &7160810556113952513
 MonoBehaviour:

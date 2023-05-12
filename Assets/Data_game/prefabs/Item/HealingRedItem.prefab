@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 7529358194781814937}
-  healing: 15
+  healing: 18
 --- !u!1 &9089689843930980404
 GameObject:
   m_ObjectHideFlags: 0

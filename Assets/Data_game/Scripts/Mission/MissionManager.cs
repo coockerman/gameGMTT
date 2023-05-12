@@ -58,7 +58,7 @@ public class MissionManager : MonoBehaviour
         else if (indexNV == 15) NV15();
         else if (indexNV == 16) NV16();
         else if (indexNV == 17) NV17();
-
+        else if (indexNV == 18) NV18();
     }
     void NV1()
     {
@@ -241,14 +241,14 @@ public class MissionManager : MonoBehaviour
     void NV17()
     {
         int soluongQuai = PlayerPrefs.GetInt("QuaiDaTieuDiet");
-        textMission.text = missionData[17] + soluongQuai + "/80";
-        if(soluongQuai>=80)
+        textMission.text = missionData[17] + soluongQuai + "/150";
+        if(soluongQuai>=150)
         {
             indexNV = 18;
         }
     }
     void NV18()
     {
-
+        textMission.text = missionData[18];
     }
 }

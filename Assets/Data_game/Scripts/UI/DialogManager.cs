@@ -21,15 +21,13 @@ public class DialogManager : MonoBehaviour
     private void Start()
     {
         AniQuestion.SetActive(true);
-
+        gameManager = FindAnyObjectByType<GameManager>();
     }
     private void OnEnable()
     {
         SAVE_index = "indexDialog" + gameObject.name;
         SAVE_indexAdd = "indexAddDialog" + gameObject.name;
         PlayerPrefs.SetInt(SAVE_indexAdd, 0);
-
-        gameManager = FindAnyObjectByType<GameManager>();
     }
     private void Update()
     {
@@ -60,7 +58,7 @@ public class DialogManager : MonoBehaviour
         if (gameManager.playDialog == true) return;
 
         countDialog = PlayerPrefs.GetInt(SAVE_index);
-        if (countDialog >= dialog.Count) return;
+        if (countDialog > dialog.Count) return;
 
         Instantiate(dialog[countDialog]);
         countDialog++;
@@ -69,6 +67,8 @@ public class DialogManager : MonoBehaviour
     
     public void AddDialog()
     {
+        SAVE_index = "indexDialog" + gameObject.name;
+        SAVE_indexAdd = "indexAddDialog" + gameObject.name;
         dialog.Add(dialogData[PlayerPrefs.GetInt(SAVE_indexAdd)]);
         PlayerPrefs.SetInt(SAVE_indexAdd, PlayerPrefs.GetInt(SAVE_indexAdd)+1);
         if (countDialog < dialog.Count)

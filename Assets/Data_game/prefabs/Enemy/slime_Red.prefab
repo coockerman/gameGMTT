@@ -561,7 +561,7 @@ MonoBehaviour:
   EnemyMaxHealth: 60
   EnemyCurrentHealth: 0
   EnemyUpHealth: 0
-  expToGive: 15
+  expToGive: 20
   TimeHoiSinh: 8
   bloodRecovery: {fileID: 956220233630913494, guid: 0948bf984273b4c4a8223c549332821d, type: 3}
   VP1: {fileID: 1332446021846080876, guid: 3e58142c54422854eb69420a284cc048, type: 3}
@@ -578,10 +578,10 @@ MonoBehaviour:
   uiManagerEnemy: {fileID: 0}
   EnemyHealth_NAME: 
   EnemyLV_NAME: 
-  CreateHPdied: 0.2
+  CreateHPdied: 0.15
   animSmile: {fileID: 3147431742016148875}
   itemBlood: 35
-  itemMana: 30
+  itemMana: 35
   itemVP1: 60
   itemVP2: 10
   itemVP3: 0
@@ -659,13 +659,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1269adcb68d42e8439b2285c0b0f4a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 15
+  damageToGive: 10
   damageNumber: {fileID: 4713038738293079610, guid: 262ef7bcc995bf1458811432f0a65ca4, type: 3}
   playerHearth: {fileID: 0}
   LoaiTangDame: 2
   TangDameMacDinh: 0
   CongSai: 0
-  TangDamePhanTram: 10
+  TangDamePhanTram: 8
   enemyHealth: {fileID: 0}
 --- !u!114 &7914874716073409439
 MonoBehaviour:

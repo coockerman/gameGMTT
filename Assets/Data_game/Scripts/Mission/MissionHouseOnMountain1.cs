@@ -6,7 +6,7 @@ public class MissionHouseOnMountain1 : MonoBehaviour
 {
     [SerializeField] DialogManager BrumDialogManager;
     [SerializeField] DialogManager AtanDialogManager;
-    private void Start()
+    private void OnEnable()
     {
         CheckNV2();
         CheckNV4();

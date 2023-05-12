@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AudioSource: {fileID: 4824148719293695165}
-  ManaBuff: 150
+  ManaBuff: 180
 --- !u!1 &1874439437933256816
 GameObject:
   m_ObjectHideFlags: 0

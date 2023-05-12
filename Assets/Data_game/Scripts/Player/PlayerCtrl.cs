@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerCtrl : MonoBehaviour
 {
     [SerializeField] AudioSource audioPlayer;
     protected Rigidbody2D body;
-    private Animator anim;
+    protected Animator anim;
     protected PlayerManaManager playerManaManager;
     [SerializeField] GameManager gameManager;
     protected float horizontal;
@@ -16,16 +17,19 @@ public class PlayerCtrl : MonoBehaviour
     private bool attacking = false;
     private float attackTime;
     private float attackTimeCount;
+    float TimeOffAttack;
 
     //Skill one
     private bool skillOnePlay = false;
     private float skillOneTime;
     private float skillOneTimeCount;
+    float TimeOffSkillOne;
 
     //Skill two
     private bool skillTwoPlay = false;
     private float skillTwoTime;
     private float skillTwoTimeCount;
+    float TimeOffSkillTwo;
 
     public float runSpeed;
     [SerializeField] protected float currentRunSpeed;
@@ -42,10 +46,13 @@ public class PlayerCtrl : MonoBehaviour
     private Vector2 lastMove;
     void Start()
     {
-        attackTime = 0.25f;
+        attackTime = 0.3f;
         skillOneTime = 0.6f;
         skillTwoTime = 0.7f;
 
+        TimeOffAttack = 0.1f;
+        TimeOffSkillOne = 0.6f;
+        TimeOffSkillTwo = 0.7f;
         playerManaManager = GetComponent<PlayerManaManager>();
 
         body = GetComponent<Rigidbody2D>();
@@ -151,7 +158,6 @@ public class PlayerCtrl : MonoBehaviour
         {
             attackTimeCount = attackTime;
             attacking = false;
-            anim.SetBool("Attack", false);
         }
         return;
     }
@@ -159,7 +165,12 @@ public class PlayerCtrl : MonoBehaviour
     {
         body.velocity = new Vector2(0, 0);
         anim.SetBool("Attack", true);
+        Invoke("OffAttackThuong", TimeOffAttack);
         attacking = true;
+    }
+    void OffAttackThuong()
+    {
+        anim.SetBool("Attack", false);
     }
     protected virtual void LoadSkillOne()
     {
@@ -181,7 +192,6 @@ public class PlayerCtrl : MonoBehaviour
         {
             skillOneTimeCount = skillOneTime;
             skillOnePlay = false;
-            anim.SetBool("SkillOne", false);
         }
     }
     protected virtual void SkillOne()
@@ -189,9 +199,13 @@ public class PlayerCtrl : MonoBehaviour
 
         body.velocity = new Vector2(0, 0);
         anim.SetBool("SkillOne", true);
+        Invoke("OffSkillOne", TimeOffSkillOne);
         skillOnePlay = true;
     }
-
+    void OffSkillOne()
+    {
+        anim.SetBool("SkillOne", false);
+    }
     protected virtual void LoadSkillTwo()
     {
         if (moveActive == false || moveActiveBag == false || moveActiveMission == false || moveActiveUpgradePower == false || moveActiveUiSetting == false) return;
@@ -211,7 +225,6 @@ public class PlayerCtrl : MonoBehaviour
         {
             skillTwoTimeCount = skillTwoTime;
             skillTwoPlay = false;
-            anim.SetBool("SkillTwo", false);
         }
     }
     protected virtual void SkillTwo()
@@ -219,8 +232,20 @@ public class PlayerCtrl : MonoBehaviour
 
         body.velocity = new Vector2(0, 0);
         anim.SetBool("SkillTwo", true);
+        Invoke("OffSkillTwo", TimeOffSkillTwo);
         skillTwoPlay = true;
     }
+    void OffSkillTwo()
+    {
+        anim.SetBool("SkillTwo", false);
 
+    }
+    public void OffSkill()
+    {
+        anim.SetBool("SkillOne", false);
+        anim.SetBool("SkillTwo", false);
+        anim.SetBool("Attack", false);
+
+    }
 
 }
