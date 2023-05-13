@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &393641794798855158
 Transform:
   m_ObjectHideFlags: 0
@@ -55,6 +55,7 @@ MonoBehaviour:
   CongSai: 0.08
   TangDamePhanTram: 0
   enemyHealth: {fileID: 0}
+  damageBurst: {fileID: 0}
 --- !u!114 &7730873669918433060
 MonoBehaviour:
   m_ObjectHideFlags: 0

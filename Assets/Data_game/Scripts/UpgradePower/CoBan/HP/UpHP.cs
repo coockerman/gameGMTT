@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class UpHP : UpChiSo
 {
-    PlayerHearthManager hearthManager;
+    [SerializeField] PlayerHearthManager hearthManager;
 
-    private void Awake()
-    {
-        hearthManager = PlayerHearthManager.instance;
-    }
+    
     protected override void UpChiSoCoBan(int TangChiSo)
     {
         hearthManager.UpHp(TangChiSo);

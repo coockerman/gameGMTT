@@ -1,10 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
-//using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+
 
 public class LoadNewArea : MonoBehaviour
 {
@@ -17,7 +16,6 @@ public class LoadNewArea : MonoBehaviour
     public GameObject loading;
     public Slider slider;
     public TextMeshProUGUI textMeshPro;
-    int scene;
     private void Start()
     {
         thePlayer = FindObjectOfType<PlayerCtrl>();

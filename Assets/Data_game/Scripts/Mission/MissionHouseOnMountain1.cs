@@ -4,57 +4,32 @@ using UnityEngine;
 
 public class MissionHouseOnMountain1 : MonoBehaviour
 {
-    [SerializeField] DialogManager BrumDialogManager;
-    [SerializeField] DialogManager AtanDialogManager;
-    private void OnEnable()
-    {
-        CheckNV2();
-        CheckNV4();
-        CheckNV7();
-        CheckNV9();
-        CheckNV12();
-    }
-    void CheckNV2()
-    {
-        if(PlayerPrefs.GetInt("NV2Check") == 1)
-        {
-            BrumDialogManager.AddDialog();
-            PlayerPrefs.SetInt("NV2Check", 0);
 
-        }
-    }
-    void CheckNV4()
+    [SerializeField] DialogManager brumDialogManager;
+    [SerializeField] DialogManager atanDialogManager;
+    private void Start()
     {
-        if (PlayerPrefs.GetInt("NV4Check") == 1)
-        {
-            BrumDialogManager.AddDialog();
-            PlayerPrefs.SetInt("NV4Check", 0);
-        }
+        CheckDialogs();
     }
-    void CheckNV7()
+    
+    private void CheckDialogs()
     {
+        CheckDialog(2, brumDialogManager,1);
+        CheckDialog(4, brumDialogManager, 1);
+        CheckDialog(7, atanDialogManager, 1);
+        CheckDialog(9, atanDialogManager, 1);
+        CheckDialog(12, atanDialogManager, 1);
+    }
 
-        if (PlayerPrefs.GetInt("NV7Check") == 1)
+    private void CheckDialog(int nvNow, DialogManager dialogManager, int sl)
+    {
+        if (DataCheckNV.NVnow >= nvNow)
         {
-            AtanDialogManager.AddDialog();
-            PlayerPrefs.SetInt("NV7Check", 0);
+            for(int i = 0; i < sl; i++)
+            {
+                dialogManager.AddDialog();
+            }
         }
     }
     
-    void CheckNV9()
-    {
-        if (PlayerPrefs.GetInt("NV9Check") == 1)
-        {
-            AtanDialogManager.AddDialog();
-            PlayerPrefs.SetInt("NV9Check", 0);
-        }
-    }
-    void CheckNV12()
-    {
-        if (PlayerPrefs.GetInt("NV12Check") == 1)
-        {
-            AtanDialogManager.AddDialog();
-            PlayerPrefs.SetInt("NV12Check", 0);
-        }
-    }
 }

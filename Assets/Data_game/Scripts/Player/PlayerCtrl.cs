@@ -75,7 +75,7 @@ public class PlayerCtrl : MonoBehaviour
     }
     public void GetInput()
     {
-        if (moveActive == true && moveActiveBag == true && moveActiveMission == true && moveActiveUpgradePower == true && moveActiveUiSetting == true && gameManager.playDialog == false)
+        if (moveActive == true && moveActiveBag == true && moveActiveMission == true && moveActiveUpgradePower == true && moveActiveUiSetting == true && GameManager.playDialog == false)
         {
             horizontal = Input.GetAxisRaw("Horizontal");
             vertical = Input.GetAxisRaw("Vertical");

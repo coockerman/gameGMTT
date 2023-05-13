@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class PlayerStartPoint : MonoBehaviour
 {
     [SerializeField] private PlayerCtrl thePlayer;
@@ -9,7 +9,7 @@ public class PlayerStartPoint : MonoBehaviour
     // Start is called before the first frame update
 
     public string pointName;
-
+    
     void Start()
     {
         thePlayer = FindObjectOfType<PlayerCtrl>();

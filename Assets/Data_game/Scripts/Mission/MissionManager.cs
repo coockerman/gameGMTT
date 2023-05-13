@@ -15,7 +15,7 @@ public class MissionManager : MonoBehaviour
 
     [Header("NV7")]
     private static MissionManager _instance;
-
+    private Dictionary<int, Action> missionDictionary = new Dictionary<int, Action>();
 
     private void Awake()
     {
@@ -27,6 +27,10 @@ public class MissionManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+        if (missionDictionary.Count == 0)
+        {
+            InitializeMissionDictionary();
         }
     }
     
@@ -41,29 +45,43 @@ public class MissionManager : MonoBehaviour
     }
     protected virtual void SetNV()
     {
-        if (indexNV == 1) NV1();
-        else if (indexNV == 2) NV2();
-        else if (indexNV == 3) NV3();
-        else if (indexNV == 4) NV4();
-        else if (indexNV == 5) NV5();
-        else if (indexNV == 6) NV6();
-        else if (indexNV == 7) NV7();
-        else if (indexNV == 8) NV8();
-        else if (indexNV == 9) NV9();
-        else if (indexNV == 10) NV10();
-        else if (indexNV == 11) NV11();
-        else if (indexNV == 12) NV12();
-        else if (indexNV == 13) NV13();
-        else if (indexNV == 14) NV14();
-        else if (indexNV == 15) NV15();
-        else if (indexNV == 16) NV16();
-        else if (indexNV == 17) NV17();
-        else if (indexNV == 18) NV18();
+        CheckNVNow();
+        if (missionDictionary.ContainsKey(indexNV))
+        {
+            missionDictionary[indexNV].Invoke();
+        }
+    }
+    private void InitializeMissionDictionary()
+    {
+        missionDictionary.Add(1, NV1);
+        missionDictionary.Add(2, NV2);
+        missionDictionary.Add(3, NV3);
+        missionDictionary.Add(4, NV4);
+        missionDictionary.Add(5, NV5);
+        missionDictionary.Add(6, NV6);
+        missionDictionary.Add(7, NV7);
+        missionDictionary.Add(8, NV8);
+        missionDictionary.Add(9, NV9);
+        missionDictionary.Add(10, NV10);
+        missionDictionary.Add(11, NV11);
+        missionDictionary.Add(12, NV12);
+        missionDictionary.Add(13, NV13);
+        missionDictionary.Add(14, NV14);
+        missionDictionary.Add(15, NV15);
+        missionDictionary.Add(16, NV16);
+        missionDictionary.Add(17, NV17);
+        missionDictionary.Add(18, NV18);
+    }
+    void CheckNVNow()
+    {
+        if (DataCheckNV.NVnow <= indexNV)
+        {
+            DataCheckNV.NVnow = indexNV;
+        }
     }
     void NV1()
     {
         textMission.text = missionData[1];
-
         if (PlayerPrefs.GetInt("BonDialog1") == 1)
         {
             indexNV = 2;
@@ -184,13 +202,14 @@ public class MissionManager : MonoBehaviour
     void NV12()
     {
         textMission.text = missionData[12];
-        if (PlayerPrefs.GetInt("NV12Check") != 1)
+        if (PlayerPrefs.GetInt("NV12Checkk") != 1)
         {
-            PlayerPrefs.SetInt("NV12Check", 1);
+            PlayerPrefs.SetInt("NV12Checkk", 1);
         }
+
         if (PlayerPrefs.GetInt("AtanDialog3") == 1)
         {
-            if (PlayerPrefs.GetInt("NhanQuaNV12") == 0)
+            if (PlayerPrefs.HasKey("NhanQuaNV12") == false)
             {
                 bagCtrl.TangVatPham(2, 15);
                 PlayerPrefs.SetInt("NhanQuaNV12", 1);

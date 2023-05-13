@@ -12,6 +12,7 @@ public class HurtPlayer : MonoBehaviour
     [SerializeField] float CongSai;
     [SerializeField] float TangDamePhanTram;
     [SerializeField]EnemyHealthManager enemyHealth;
+    public ParticleSystem damageBurst;
     string SavelvEnemy;
     float TangDame;
     private void Awake()
@@ -28,6 +29,13 @@ public class HurtPlayer : MonoBehaviour
             SetTangDame();
             collision.gameObject.GetComponent<PlayerHearthManager>().HurtPlayer(damageToGive + (int)TangDame);
             Instantiate(damageNumber, collision.transform.position, collision.transform.rotation);
+            if (damageBurst != null)
+            {
+                damageBurst.transform.position = collision.transform.position;
+                damageBurst.Play();
+                
+            }
+
         }
     }
 

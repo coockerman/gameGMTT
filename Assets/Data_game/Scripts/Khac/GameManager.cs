@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
     protected float waitToReload = 2;
     private static bool gameManager = false;
     [SerializeField] PlayerCtrl Player;
-    public bool playDialog;
+    public static bool playDialog;
     
     private void Start()
     {

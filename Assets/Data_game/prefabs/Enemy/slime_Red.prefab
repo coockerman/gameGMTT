@@ -558,10 +558,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40aa2729a4149c4e80637bf64310f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyMaxHealth: 60
+  EnemyMaxHealth: 50
   EnemyCurrentHealth: 0
   EnemyUpHealth: 0
-  expToGive: 20
+  expToGive: 25
   TimeHoiSinh: 8
   bloodRecovery: {fileID: 956220233630913494, guid: 0948bf984273b4c4a8223c549332821d, type: 3}
   VP1: {fileID: 1332446021846080876, guid: 3e58142c54422854eb69420a284cc048, type: 3}

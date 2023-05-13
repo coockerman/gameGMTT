@@ -45,9 +45,7 @@ public class PlayerManaManager : MonoBehaviour
     {
         playerCurrentMana = playerMaxMana;
         if (PlayerPrefs.GetFloat("playerManaSpeed") != 0) speedCreateMana = PlayerPrefs.GetFloat("playerManaSpeed");
-        //else speedCreateMana = 1;
-
-        //speedCreateMana = PlayerPrefs.GetInt("playerManaSpeed");
+      
     }
 
     public void UpMana(int UpMana)

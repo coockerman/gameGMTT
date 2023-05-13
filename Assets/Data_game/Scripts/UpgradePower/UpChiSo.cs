@@ -9,7 +9,7 @@ public abstract class UpChiSo : MonoBehaviour
     [SerializeField] int TangChiSo;
     [SerializeField] int SLVatPham;
     [SerializeField] int SttVatPham;
-    protected virtual void Start()
+    protected virtual void OnEnable()
     {
         GetCountIndex();
     }

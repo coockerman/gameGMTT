@@ -48,11 +48,6 @@ public class UpdateSkillCtrl : MonoBehaviour
     {
         if (countTimeBatTu > 0)
         {
-            if (countTimeBatTu < 0)
-            {
-                countTimeBatTu = 0;
-                return;
-            }
             countTimeBatTu -= Time.deltaTime;
             TimeCDBatTu = (int)(countTimeBatTu);
             timeThongBaoBatTu.text = TimeCDBatTu.ToString() + "s";
@@ -62,11 +57,6 @@ public class UpdateSkillCtrl : MonoBehaviour
     {
         if (countTimeTocChay > 0)
         {
-            if (countTimeTocChay < 0)
-            {
-                countTimeTocChay = 0;
-                return;
-            }
             countTimeTocChay -= Time.deltaTime;
             TimeCDTocChay = (int)(countTimeTocChay);
             timeThongBaoTocChay.text = TimeCDTocChay.ToString() + "s";
@@ -77,7 +67,7 @@ public class UpdateSkillCtrl : MonoBehaviour
         if (countTimeDacBiet > 0)
         {
             countTimeDacBiet -= Time.deltaTime;
-            float t = countTimeDacBiet;
+            float t = Mathf.Max(countTimeDacBiet, 0);
             timeThongBaoDacBiet.text = ((int)t).ToString() + "s";
         }
         if (countTimeDacBiet <= 0 && checkDB)
@@ -115,7 +105,7 @@ public class UpdateSkillCtrl : MonoBehaviour
         if (countTimeHoiPhuc > 0)
         {
             countTimeHoiPhuc -= Time.deltaTime;
-            float t = countTimeHoiPhuc;
+            float t = Mathf.Max(countTimeHoiPhuc, 0); ;
             timeThongBaoHoiPhuc.text = ((int)t).ToString() + "s";
         }
         if (countTimeHoiPhuc <= 0 && checkHP)

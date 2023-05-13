@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class UpAttack : UpChiSo
 {
-    PlayerAttackManager acttackManager;
+    [SerializeField] PlayerAttackManager acttackManager;
 
-    private void Awake()
-    {
-        acttackManager = PlayerAttackManager.instance;
-    }
+    
     protected override void UpChiSoCoBan(int TangChiSo)
     {
         acttackManager.UpDamage(TangChiSo);

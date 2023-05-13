@@ -531,8 +531,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02150b6cca28dd478b06f5d7283632b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameDialog: Bon
-  addressDialog: BonDialog1
+  nameDialog: Atan
+  addressDialog: AtanDialog4
   dataDialog:
   - "Bon: Xin ch\xE0o t\xF4i l\xE0 Bon"
   - 

@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class UpAttackPercen : UpChiSo
 {
-    PlayerAttackManager acttackManager;
+    [SerializeField] PlayerAttackManager acttackManager;
 
-    private void Awake()
-    {
-        acttackManager = PlayerAttackManager.instance;
-    }
+    
     protected override void UpChiSoCoBan(int TangChiSo)
     {
         acttackManager.UpPhanTramDame((float)TangChiSo);
