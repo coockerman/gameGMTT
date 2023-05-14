@@ -33,17 +33,6 @@ public class PlayerStats : MonoBehaviour
         LoadPlayerData();
         UpLoadLvText();
     }
-    void LoadPlayerData2()
-    {
-        //Set data
-        if (PlayerPrefs.GetInt("playerHearth") != 0) playerHearth.playerMaxHealth = PlayerPrefs.GetInt("playerHearth");
-        if (PlayerPrefs.GetInt("playerAttack") != 0) playerAttack.damagePlayer = PlayerPrefs.GetInt("playerAttack");
-        if (PlayerPrefs.GetInt("playerMana") != 0) playerMana.playerMaxMana = PlayerPrefs.GetInt("playerMana");
-        //if (PlayerPrefs.GetInt("playerManaSpeed") != 0) playerMana.speedCreateMana = PlayerPrefs.GetInt("playerManaSpeed");
-
-        if (PlayerPrefs.GetInt("playerLV") != 0) currentLevel = PlayerPrefs.GetInt("playerLV");
-        if (PlayerPrefs.GetInt("playerExp") != 0) currentExp = PlayerPrefs.GetInt("playerExp");
-    }
     void LoadPlayerData()
     {
         currentLevel = PlayerPrefs.GetInt("playerLV", currentLevel);

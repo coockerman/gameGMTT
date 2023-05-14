@@ -588,9 +588,9 @@ MonoBehaviour:
   itemVP4: 10
   itemVP5: 5
   itemVP6: 0
-  itemVP7: 2
+  itemVP7: 0
   itemVP8: 0
-  itemVP9: 0
+  itemVP9: 3
   itemVP10: 0
   textExp: {fileID: 100185085763192798}
 --- !u!58 &3147431742016148874
@@ -667,6 +667,7 @@ MonoBehaviour:
   CongSai: 0
   TangDamePhanTram: 20
   enemyHealth: {fileID: 0}
+  damageBurst: {fileID: 0}
 --- !u!114 &7914874716073409439
 MonoBehaviour:
   m_ObjectHideFlags: 0

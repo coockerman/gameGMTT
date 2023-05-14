@@ -9,7 +9,7 @@ public abstract class SpawnBullet : MonoBehaviour
     [SerializeField] float TimeBan;
     bool DangBan;
     float distance;
-    private void Start()
+    protected virtual void Start()
     {
         player = FindObjectOfType<PlayerCtrl>().gameObject;
     }

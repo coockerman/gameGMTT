@@ -10,5 +10,6 @@ public class ReloadGame : MonoBehaviour
     public void ButtonReloadGame()
     {
         PlayerPrefs.DeleteAll();
+        
     }
 }

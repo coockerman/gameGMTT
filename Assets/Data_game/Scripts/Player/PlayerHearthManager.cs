@@ -29,7 +29,11 @@ public class PlayerHearthManager : MonoBehaviour
     {
         playerCtrl = GetComponent<PlayerCtrl>();
         playerSprite = GetComponent<SpriteRenderer>();
+        if (PlayerPrefs.GetInt("playerHearth") == 0)
+            PlayerPrefs.SetInt("playerHearth", playerMaxHealth);
+        playerMaxHealth = PlayerPrefs.GetInt("playerHearth");
         SetMaxHealth();
+        
     }
 
     // Update is called once per frame

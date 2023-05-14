@@ -34,6 +34,8 @@ public class EnemyHealthManager : MonoBehaviour
     public string EnemyHealth_NAME;
     public string EnemyLV_NAME;
 
+    public bool statusEnemy = true;
+
     protected int ratio;
     protected int ratioHealthy;
     public float CreateHPdied;
@@ -66,33 +68,20 @@ public class EnemyHealthManager : MonoBehaviour
         animSmile = GetComponent<Animator>();
         my_collider = GetComponent<CircleCollider2D>();
         enemyCtrl = GetComponent<EnemyCtrl>();
-        EnemyHealth_NAME = "enemyUpHealth" + gameObject.name;
+
         EnemyLV_NAME = "enemyLv" + gameObject.name;
-        EnemyUpHealth = PlayerPrefs.GetFloat(EnemyHealth_NAME);
         if (PlayerPrefs.GetInt(EnemyLV_NAME) <= 1)
-        {
             PlayerPrefs.SetInt(EnemyLV_NAME, 1);
-        }
-        EnemyMaxHealth = EnemyMaxHealth + EnemyUpHealth;
+
+        CreateNewMaxEnemy();
         SetMaxHealth();
-        SetMaxHealth();
+
         moveSpeedEnm = enemyCtrl.moveSpeed;
         uiManagerEnemy.UpdateName(PlayerPrefs.GetInt(EnemyLV_NAME));
+
         SetTiLe();
     }
-    void SetTiLe()
-    {
-        itemMana += itemBlood;
-        itemVP2 += itemVP1;
-        itemVP3 += itemVP2;
-        itemVP4 += itemVP3;
-        itemVP5 += itemVP4;
-        itemVP6 += itemVP5;
-        itemVP7 += itemVP6;
-        itemVP8 += itemVP7;
-        itemVP9 += itemVP8;
-        itemVP10 += itemVP9;
-    }
+    
 
     // Update is called once per frame
     void Update()
@@ -103,6 +92,7 @@ public class EnemyHealthManager : MonoBehaviour
     {
         if (EnemyCurrentHealth <= 0)
         {
+            statusEnemy = false;
             enemyCtrl.moveSpeed = 0;
             my_collider.enabled = false;
 
@@ -114,16 +104,20 @@ public class EnemyHealthManager : MonoBehaviour
 
             DropHealingItem();
 
-            EnemyUpHealth += EnemyMaxHealth * CreateHPdied;
             PlayerPrefs.SetFloat(EnemyHealth_NAME, EnemyUpHealth);
             PlayerPrefs.SetInt(EnemyLV_NAME, PlayerPrefs.GetInt(EnemyLV_NAME) + 1);
-            EnemyMaxHealth *= (1 + CreateHPdied);
+            CreateNewMaxEnemy();
 
             Invoke("HoiSinhEnemy", TimeHoiSinh);
 
             if (animSmile != null) animSmile.SetBool("SmileDied", true);
-            Invoke("OffObj", 1.3f);
+            Invoke("OffObj", 1f);
         }
+    }
+    void CreateNewMaxEnemy()
+    {
+        int lvEnemy = PlayerPrefs.GetInt(EnemyLV_NAME);
+        EnemyMaxHealth = EnemyMaxHealth * Mathf.Pow(1+CreateHPdied, lvEnemy);
     }
     protected virtual void DropHealingItem()
     {
@@ -197,9 +191,10 @@ public class EnemyHealthManager : MonoBehaviour
     protected virtual void HoiSinhEnemy()
     {
         if (animSmile != null) animSmile.SetBool("SmileDied", false);
+        statusEnemy = true;
         my_collider.enabled = true;
         enemyCtrl.moveSpeed = moveSpeedEnm;
-        EnemyCurrentHealth = EnemyMaxHealth;
+        SetMaxHealth();
 
         gameObject.SetActive(true);
 
@@ -228,5 +223,18 @@ public class EnemyHealthManager : MonoBehaviour
     void OffObj()
     {
         gameObject.SetActive(false);
+    }
+    void SetTiLe()
+    {
+        itemMana += itemBlood;
+        itemVP2 += itemVP1;
+        itemVP3 += itemVP2;
+        itemVP4 += itemVP3;
+        itemVP5 += itemVP4;
+        itemVP6 += itemVP5;
+        itemVP7 += itemVP6;
+        itemVP8 += itemVP7;
+        itemVP9 += itemVP8;
+        itemVP10 += itemVP9;
     }
 }

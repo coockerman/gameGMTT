@@ -23,7 +23,7 @@ public class SkillBatTu : MonoBehaviour
     int lvBatTu;
     //public bool activeBatTu = false;
     
-    private void Start()
+    private void OnEnable()
     {
         SetTimeBatTu();
         SetChuThich();
@@ -63,6 +63,7 @@ public class SkillBatTu : MonoBehaviour
         PlayerPrefs.SetInt("VatPham2", vatpham2);
         lvBatTu++;
         PlayerPrefs.SetInt(SAVE_LVBatTu, lvBatTu);
+        SetTimeBatTu();
         SetChuThich();
     }
     void SetChuThich()

@@ -23,7 +23,7 @@ public class SkillTocChay : MonoBehaviour
     int lvTocChay;
     //public bool activeTocChay = false;
 
-    private void Start()
+    private void OnEnable()
     {
         SetTimeTocChay();
         SetChuThich();
@@ -63,6 +63,7 @@ public class SkillTocChay : MonoBehaviour
         PlayerPrefs.SetInt("VatPham2", vatpham2);
         lvTocChay++;
         PlayerPrefs.SetInt(SAVE_LVTocChay, lvTocChay);
+        SetTimeTocChay();
         SetChuThich();
     }
     void SetChuThich()

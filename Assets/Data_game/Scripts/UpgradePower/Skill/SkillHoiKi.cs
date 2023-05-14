@@ -3,10 +3,10 @@
 public class SkillHoiKi : SkillHoiPhuc
 {
     [SerializeField] PlayerManaManager playerMana;
-    protected override void Start()
+    protected override void OnEnable()
     {
         SAVE_LV = "lvMana";
-        base.Start();
+        base.OnEnable();
     }
     public override void OnHoiPhuc()
     {
