@@ -90,10 +90,6 @@ public class MissionManager : MonoBehaviour
     void NV2()
     {
         textMission.text = missionData[2];
-        if (PlayerPrefs.GetInt("NV2Check") != 1)
-        {
-            PlayerPrefs.SetInt("NV2Check", 1);
-        }
         if (PlayerPrefs.GetInt("BrumDialog1") == 1)
         {
             indexNV = 3;
@@ -110,8 +106,6 @@ public class MissionManager : MonoBehaviour
     void NV4()
     {
         textMission.text = missionData[4];
-        if (PlayerPrefs.GetInt("NV4Check") != 1)
-            PlayerPrefs.SetInt("NV4Check", 1);
         if (PlayerPrefs.GetInt("BrumDialog2") == 1)
         {
             indexNV = 5;
@@ -120,10 +114,6 @@ public class MissionManager : MonoBehaviour
     void NV5()
     {
         textMission.text = missionData[5];
-        if (PlayerPrefs.GetInt("NV5Check") != 1)
-        {
-            PlayerPrefs.SetInt("NV5Check", 1);
-        }
         if (PlayerPrefs.GetInt("KaLinDialog3") == 1)
         {
             indexNV = 6;
@@ -141,10 +131,6 @@ public class MissionManager : MonoBehaviour
     void NV7()
     {
         textMission.text = missionData[7];
-        if (PlayerPrefs.GetInt("NV7Check") != 1)
-        {
-            PlayerPrefs.SetInt("NV7Check", 1);
-        }
         if (PlayerPrefs.GetInt("AtanDialog1") == 1)
         {
             indexNV = 8;
@@ -153,10 +139,6 @@ public class MissionManager : MonoBehaviour
     void NV8()
     {
         textMission.text = missionData[8];
-        if (PlayerPrefs.GetInt("NV8Check") != 1)
-        {
-            PlayerPrefs.SetInt("NV8Check", 1);
-        }
         if (PlayerPrefs.GetInt("AnTromDialog1") == 1)
         {
             indexNV = 9;
@@ -165,10 +147,6 @@ public class MissionManager : MonoBehaviour
     void NV9()
     {
         textMission.text = missionData[9];
-        if (PlayerPrefs.GetInt("NV9Check") != 1)
-        {
-            PlayerPrefs.SetInt("NV9Check", 1);
-        }
         if (PlayerPrefs.GetInt("AtanDialog2") == 1)
         {
             if(PlayerPrefs.GetInt("NhanQuaNV9")==0)
@@ -182,10 +160,6 @@ public class MissionManager : MonoBehaviour
     void NV10()
     {
         textMission.text = missionData[10];
-        if (PlayerPrefs.GetInt("NV10Check") != 1)
-        {
-            PlayerPrefs.SetInt("NV10Check", 1);
-        }
         if (PlayerPrefs.GetInt("BonDialog4") == 1)
         {
             indexNV = 11;
@@ -202,11 +176,6 @@ public class MissionManager : MonoBehaviour
     void NV12()
     {
         textMission.text = missionData[12];
-        if (PlayerPrefs.GetInt("NV12Checkk") != 1)
-        {
-            PlayerPrefs.SetInt("NV12Checkk", 1);
-        }
-
         if (PlayerPrefs.GetInt("AtanDialog3") == 1)
         {
             if (PlayerPrefs.HasKey("NhanQuaNV12") == false)
@@ -228,10 +197,6 @@ public class MissionManager : MonoBehaviour
     void NV14()
     {
         textMission.text = missionData[14];
-        if (PlayerPrefs.GetInt("NV14Check") != 1)
-        {
-            PlayerPrefs.SetInt("NV14Check", 1);
-        }
         if (PlayerPrefs.GetInt("DenyDialog4") == 1)
         {
             indexNV = 15;
@@ -248,10 +213,6 @@ public class MissionManager : MonoBehaviour
     void NV16()
     {
         textMission.text = missionData[16];
-        if (PlayerPrefs.GetInt("NV16Check") != 1)
-        {
-            PlayerPrefs.SetInt("NV16Check", 1);
-        }
         if (PlayerPrefs.GetInt("DenyDialog5") == 1)
         {
             indexNV = 17;

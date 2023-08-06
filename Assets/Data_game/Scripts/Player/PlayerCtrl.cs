@@ -175,7 +175,7 @@ public class PlayerCtrl : MonoBehaviour
     protected virtual void LoadSkillOne()
     {
         if (moveActive == false || moveActiveBag == false || moveActiveMission == false || moveActiveUpgradePower == false || moveActiveUiSetting == false) return;
-        if (Input.GetKeyDown(KeyCode.K) && playerManaManager.playerCurrentMana < 10)
+        if (Input.GetKeyDown(KeyCode.K) && playerManaManager.playerCurrentMana < 5)
         {
             playerManaManager.HetMana();
         }
@@ -183,7 +183,7 @@ public class PlayerCtrl : MonoBehaviour
         {
             skillOneTimeCount = skillOneTime;
             SkillOne();
-            playerManaManager.GiamMana(10);
+            playerManaManager.GiamMana(5);
 
         }
         if (skillOnePlay == false) return;
